@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
 $LOAD_PATH.push File.expand_path('lib', __dir__)
+require 'spacex/version'
 
 Gem::Specification.new do |s|
   s.name        = 'spacex'
-  s.version     = '0.0.1'
+  s.version     = SPACEX::VERSION
   s.date        = '2018-08-17'
   s.summary     = 'Swap SpaceX API with Ruby'
   s.description = 'Ruby library to consume SpaceX launch data'
