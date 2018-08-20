@@ -1,11 +1,20 @@
-# SpaceX Ruby Client
-Ruby library to consume SpaceX API
+SpaceX Ruby Client
+===============
 
----
+[![Gem Version](https://badge.fury.io/rb/spacex.svg)](https://badge.fury.io/rb/spacex)
+[![Build Status](https://travis-ci.org/rodolfobandeira/spacex.svg?branch=master)](https://travis-ci.org/rodolfobandeira/spacex)
 
-### Using:
+Ruby library that consumes SpaceX API
+
+### Install
+
+`gem install spacex`
+
+
+### Using
 
 ```ruby
+require 'spacex'
 latest_launch = SPACEX::Launches.latest
 
 latest_launch.flight_number # 67
