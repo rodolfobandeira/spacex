@@ -7,3 +7,4 @@ require 'hashie'
 
 require_relative 'spacex/version'
 require_relative 'spacex/launches'
+require_relative 'spacex/company_info'
