@@ -7,8 +7,7 @@ Gem::Specification.new do |s|
   s.name        = 'spacex'
   s.bindir      = 'bin'
   s.version     = SPACEX::VERSION
-  s.date        = '2018-08-17'
-  s.summary     = 'Swap SpaceX API with Ruby'
+  s.summary     = 'SpaceX API with Ruby'
   s.description = 'Ruby library to consume SpaceX launch data'
   s.authors     = ['Rodolfo Bandeira']
   s.email       = 'rodolfobandeira@protonmail.com'
