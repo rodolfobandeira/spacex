@@ -13,6 +13,7 @@ Ruby library that consumes SpaceX API
 - [Usage](#usage)
   - [Latest Launch](#latest-launch)
   - [Company Info](#company-info)
+  - [Roadster](#roadster)
 - [Contributing](#contributing)
 - [Copyright](#copyright)
 
@@ -125,6 +126,37 @@ company_info.headquarters.city # 'Hawthorne'
 company_info.headquarters.state # 'California'
 company_info.summary # 'SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.'
 ```
+
+### Roadster
+
+```ruby
+roadster = SPACEX::Roadster.info
+
+roadster.name # "Elon Musk's Tesla Roadster"
+roadster.launch_date_utc # '2018-02-06T20:45:00.000Z'
+roadster.launch_date_unix # 1_517_949_900
+roadster.launch_date_kg # nil
+roadster.launch_date_lbs # nil
+roadster.norad_id # 43_205
+roadster.epoch_jd # 2_458_353.027800926
+roadster.orbit_type # 'heliocentric'
+roadster.apoapsis_au # 1.663757412460597
+roadster.periapsis_au # 0.9860953641129515
+roadster.semo_major_axis_au # nil
+roadster.eccentricity # 0.2557357353354217
+roadster.inclination # 1.077474057737451
+roadster.longitude # 317.0962040947829
+roadster.periapsis_arg # 177.491390597234
+roadster.speed_kph # 76_703.72399999999
+roadster.speed_mph # 47_661.469685603995
+roadster.earth_distance_km # 172_954_806.23899576
+roadster.earth_distance_mi # 107_469_100.90753104
+roadster.mars_distance_km # 147_648_108.6344399
+roadster.mars_distance_mi # 91_744_252.91029055
+roadster.wikipedia # 'https://en.wikipedia.org/wiki/Elon_Musk%27s_Tesla_Roadster'
+roadster.details # "Elon Musk's Tesla Roadster is an electric sports car that served as the dummy payload for the February 2018 Falcon Heavy test flight and is now an artificial satellite of the Sun. Starman, a mannequin dressed in a spacesuit, occupies the driver's seat. The car and rocket are products of Tesla and SpaceX, both companies founded by Elon Musk. This 2008-model Roadster was previously used by Musk for commuting, and is the only consumer car sent into space."
+```
+
 
 ## Contributing
 

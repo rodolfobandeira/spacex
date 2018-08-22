@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v2/info/roadster
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Aug 2018 12:43:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=de099dbdaf8adee64cc1bb8b455b7e35f1534941824; expires=Thu, 22-Aug-19
+        12:43:44 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Koa-Redis-Cache:
+      - 'true'
+      X-Response-Time:
+      - 2ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 44e56d43de24aba2-YYZ
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"Elon Musk''s Tesla Roadster","launch_date_utc":"2018-02-06T20:45:00.000Z","launch_date_unix":1517949900,"launch_mass_kg":1350,"launch_mass_lbs":2976,"norad_id":43205,"epoch_jd":2458353.027800926,"orbit_type":"heliocentric","apoapsis_au":1.663757412460597,"periapsis_au":0.9860953641129515,"semi_major_axis_au":128.9377154487144,"eccentricity":0.2557357353354217,"inclination":1.077474057737451,"longitude":317.0962040947829,"periapsis_arg":177.491390597234,"period_days":557.0395762229033,"speed_kph":76703.72399999999,"speed_mph":47661.469685603995,"earth_distance_km":172954806.23899576,"earth_distance_mi":107469100.90753104,"mars_distance_km":147648108.6344399,"mars_distance_mi":91744252.91029055,"wikipedia":"https://en.wikipedia.org/wiki/Elon_Musk%27s_Tesla_Roadster","details":"Elon
+        Musk''s Tesla Roadster is an electric sports car that served as the dummy
+        payload for the February 2018 Falcon Heavy test flight and is now an artificial
+        satellite of the Sun. Starman, a mannequin dressed in a spacesuit, occupies
+        the driver''s seat. The car and rocket are products of Tesla and SpaceX, both
+        companies founded by Elon Musk. This 2008-model Roadster was previously used
+        by Musk for commuting, and is the only consumer car sent into space."}'
+    http_version: 
+  recorded_at: Wed, 22 Aug 2018 12:43:44 GMT
+recorded_with: VCR 4.0.0
