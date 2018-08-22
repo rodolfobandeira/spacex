@@ -1,25 +1,9 @@
 # frozen_string_literal: true
 
-require 'ostruct'
-
 module SPACEX
   module Launches
-    ROOT_URI = 'https://api.spacexdata.com/v2'
-
     def self.latest
-      path = 'launches/latest'
-
-      data = Faraday.new(
-        url: "#{ROOT_URI}/#{path}",
-        request: {
-          params_encoder: Faraday::FlatParamsEncoder
-        }
-      ) do |c|
-        c.use ::FaradayMiddleware::ParseJson
-        c.use Faraday::Response::RaiseError
-        c.use Faraday::Adapter::NetHttp
-      end
-      Hashie::Mash.new(data.get.body)
+      SPACEX::BaseRequest.get('launches/latest')
     end
   end
 end
