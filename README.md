@@ -19,7 +19,13 @@ Ruby library that consumes SpaceX API
 
 ## Installation
 
-`gem install spacex`
+Add to Gemfile.
+
+```
+gem 'spacex'
+```
+
+Run `bundle install`.
 
 
 ## Usage
@@ -122,11 +128,11 @@ company_info.summary # 'SpaceX designs, manufactures and launches advanced rocke
 
 ## Contributing
 
-See [CONTRIBUTING](CONTRIBUTING.md).
+Want to help? Create an issue, open a pull request. Any help is welcome.
 
 
 ## Copyright
 
 Copyright (c) Rodolfo Bandeira, 2018
 
-MIT License, see [LICENSE](LICENSE.txt) for details.
+MIT License, see [LICENSE](https://github.com/rodolfobandeira/spacex/blob/master/LICENSE) for details.
