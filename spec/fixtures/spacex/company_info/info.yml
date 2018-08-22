@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v2/info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Aug 2018 20:39:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d1ba4d49d7091324dcf832d773eb43b981534883949; expires=Wed, 21-Aug-19
+        20:39:09 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Koa-Redis-Cache:
+      - 'true'
+      X-Response-Time:
+      - 2ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 44dfe84c7ee53024-YYZ
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"SpaceX","founder":"Elon Musk","founded":2002,"employees":7000,"vehicles":3,"launch_sites":3,"test_sites":1,"ceo":"Elon
+        Musk","cto":"Elon Musk","coo":"Gwynne Shotwell","cto_propulsion":"Tom Mueller","valuation":15000000000,"headquarters":{"address":"Rocket
+        Road","city":"Hawthorne","state":"California"},"summary":"SpaceX designs,
+        manufactures and launches advanced rockets and spacecraft. The company was
+        founded in 2002 to revolutionize space technology, with the ultimate goal
+        of enabling people to live on other planets."}'
+    http_version: 
+  recorded_at: Tue, 21 Aug 2018 20:39:09 GMT
+recorded_with: VCR 4.0.0

@@ -6,12 +6,14 @@ SpaceX Ruby Client
 
 Ruby library that consumes SpaceX API
 
-### Install
+## Install
 
 `gem install spacex`
 
 
-### Using
+## Using
+
+### Latest Launch
 
 ```ruby
 require 'spacex'
@@ -83,3 +85,26 @@ latest_launch.upcoming # false
 latest_launch.static_fire_date_utc # '2018-08-02T15:53:00.000Z'
 ```
 
+
+### Company Info
+
+```ruby
+company_info = SPACEX::CompanyInfo.info
+
+company_info.name # 'SpaceX'
+company_info.founder # 'Elon Musk'
+company_info.founded # 2002
+company_info.employees # 7000
+company_info.vehicles # 3
+company_info.launche_sites # nil
+company_info.test_sites # 1
+company_info.ceo # 'Elon Musk'
+company_info.cto # 'Elon Musk'
+company_info.coo # 'Gwynne Shotwell'
+company_info.cto_propulsion # 'Tom Mueller'
+company_info.valuation # 15_000_000_000
+company_info.headquarters.address # 'Rocket Road'
+company_info.headquarters.city # 'Hawthorne'
+company_info.headquarters.state # 'California'
+company_info.summary # 'SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.'
+```
