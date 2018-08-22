@@ -6,12 +6,23 @@ SpaceX Ruby Client
 
 Ruby library that consumes SpaceX API
 
-## Install
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Latest Launch](#latest-launch)
+  - [Company Info](#company-info)
+- [Contributing](#contributing)
+- [Copyright](#copyright)
+
+
+## Installation
 
 `gem install spacex`
 
 
-## Using
+## Usage
 
 ### Latest Launch
 
@@ -108,3 +119,14 @@ company_info.headquarters.city # 'Hawthorne'
 company_info.headquarters.state # 'California'
 company_info.summary # 'SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.'
 ```
+
+## Contributing
+
+See [CONTRIBUTING](CONTRIBUTING.md).
+
+
+## Copyright
+
+Copyright (c) Rodolfo Bandeira, 2018
+
+MIT License, see [LICENSE](LICENSE.txt) for details.
