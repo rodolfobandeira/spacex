@@ -157,6 +157,13 @@ roadster.wikipedia # 'https://en.wikipedia.org/wiki/Elon_Musk%27s_Tesla_Roadster
 roadster.details # "Elon Musk's Tesla Roadster is an electric sports car that served as the dummy payload for the February 2018 Falcon Heavy test flight and is now an artificial satellite of the Sun. Starman, a mannequin dressed in a spacesuit, occupies the driver's seat. The car and rocket are products of Tesla and SpaceX, both companies founded by Elon Musk. This 2008-model Roadster was previously used by Musk for commuting, and is the only consumer car sent into space."
 ```
 
+### Capsules
+```ruby
+capsule = SPACEX::Capsules.info
+
+roadster.info # ["dragon1", "dragon2"]
+```
+
 
 ## Contributing
 
