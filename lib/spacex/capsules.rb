@@ -2,8 +2,8 @@
 
 module SPACEX
   module Capsules
-    def self.info
-      SPACEX::BaseRequest.getAll('capsules')
+    def self.info(index=nil)
+      SPACEX::BaseRequest.getAll('capsules', index)
     end
   end
 end
