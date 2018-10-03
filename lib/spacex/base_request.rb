@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/MethodLength
+
 module SPACEX
   module BaseRequest
     def self.get(path)

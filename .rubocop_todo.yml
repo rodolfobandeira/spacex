@@ -36,5 +36,5 @@ Style/Documentation:
     - 'lib/spacex/company_info.rb'
     - 'lib/spacex/launches.rb'
     - 'lib/spacex/roadster.rb'
-    - 'lib/spacex/capsules.rb'
     - 'lib/spacex/version.rb'
+    - 'lib/spacex/capsules.rb'
