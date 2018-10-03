@@ -19,7 +19,7 @@ describe SPACEX do
       expect(subject.cto).to eq 'Elon Musk'
       expect(subject.coo).to eq 'Gwynne Shotwell'
       expect(subject.cto_propulsion).to eq 'Tom Mueller'
-      expect(subject.valuation).to eq 15_000_000_000
+      expect(subject.valuation).to eq 27500000000
       expect(subject.headquarters.address).to eq 'Rocket Road'
       expect(subject.headquarters.city).to eq 'Hawthorne'
       expect(subject.headquarters.state).to eq 'California'

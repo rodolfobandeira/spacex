@@ -14,6 +14,7 @@ Ruby library that consumes SpaceX API
   - [Latest Launch](#latest-launch)
   - [Company Info](#company-info)
   - [Roadster](#roadster)
+  - [Dragon Capsules](#dragon-capsules)
 - [Contributing](#contributing)
 - [Copyright](#copyright)
 
@@ -157,6 +158,103 @@ roadster.wikipedia # 'https://en.wikipedia.org/wiki/Elon_Musk%27s_Tesla_Roadster
 roadster.details # "Elon Musk's Tesla Roadster is an electric sports car that served as the dummy payload for the February 2018 Falcon Heavy test flight and is now an artificial satellite of the Sun. Starman, a mannequin dressed in a spacesuit, occupies the driver's seat. The car and rocket are products of Tesla and SpaceX, both companies founded by Elon Musk. This 2008-model Roadster was previously used by Musk for commuting, and is the only consumer car sent into space."
 ```
 
+### Dragon Capsules
+
+```ruby
+dragon_capsules = SPACEX::DragonCapsules.info
+
+dragon_capsules[0]['id'] # "dragon1"
+dragon_capsules[0]['name'] # "Dragon 1"
+dragon_capsules[0]['type'] # "capsule"
+dragon_capsules[0]['active'] # true
+dragon_capsules[0]['crew_capacity'] # 0
+dragon_capsules[0]['sidewall_angle_deg'] # 15
+dragon_capsules[0]['orbit_duration_yr'] # 2
+dragon_capsules[0]['dry_mass_kg'] # 4200
+dragon_capsules[0]['dry_mass_lb'] # 9300
+dragon_capsules[0]['first_flight'] # "2010-12-08"
+dragon_capsules[0]['heat_shield']['material'] # "PICA-X"
+dragon_capsules[0]['heat_shield']['size_meters'] # 3.6
+dragon_capsules[0]['heat_shield']['temp_degrees'] # 3000
+dragon_capsules[0]['heat_shield']['dev_partner'] # "NASA"
+dragon_capsules[0]['thrusters'][0]['type'] # "Draco"
+dragon_capsules[0]['thrusters'][0]['amount'] # 18
+dragon_capsules[0]['thrusters'][0]['pods'] # 4
+dragon_capsules[0]['thrusters'][0]['fuel_1'] # "nitrogen tetroxide"
+dragon_capsules[0]['thrusters'][0]['fuel_2'] # "monomethylhydrazine"
+dragon_capsules[0]['thrusters'][0]['thrust']['kN'] # 0.4
+dragon_capsules[0]['thrusters'][0]['thrust']['lbf'] # 90
+dragon_capsules[0]['launch_payload_mass']['kg'] # 6000
+dragon_capsules[0]['launch_payload_mass']['lb'] # 13228
+dragon_capsules[0]['launch_payload_vol']['cubic_meters'] # 25
+dragon_capsules[0]['launch_payload_vol']['cubic_feet'] # 883
+dragon_capsules[0]['return_payload_mass']['kg'] # 3000
+dragon_capsules[0]['return_payload_mass']['lb'] # 6614
+dragon_capsules[0]['return_payload_vol']['cubic_meters'] # 11
+dragon_capsules[0]['return_payload_vol']['cubic_feet'] # 388
+dragon_capsules[0]['pressurized_capsule']['payload_volume']['cubic_meters']) # 11
+dragon_capsules[0]['pressurized_capsule']['payload_volume']['cubic_feet'] # 388
+dragon_capsules[0]['trunk']['trunk_volume']['cubic_meters'] # 14
+dragon_capsules[0]['trunk']['trunk_volume']['cubic_feet'] # 494
+dragon_capsules[0]['trunk']['cargo']['solar_array'] # 2
+dragon_capsules[0]['trunk']['cargo']['unpressurized_cargo'] # true
+dragon_capsules[0]['height_w_trunk']['meters'] # 7.2
+dragon_capsules[0]['height_w_trunk']['feet'] # 23.6
+dragon_capsules[0]['diameter']['meters'] # 3.7
+dragon_capsules[0]['diameter']['feet'] # 12
+dragon_capsules[0]['wikipedia'] # "https://en.wikipedia.org/wiki/SpaceX_Dragon"
+dragon_capsules[0]['description'] # "Dragon is a reusable spacecraft developed by SpaceX, an American private space transportation company based in Hawthorne, California. Dragon is launched into space by the SpaceX Falcon 9 two-stage-to-orbit launch vehicle. The Dragon spacecraft was originally designed for human travel, but so far has only been used to deliver cargo to the International Space Station (ISS)."
+
+dragon_capsules[1]['id'] # "dragon2"
+dragon_capsules[1]['name'] # "Dragon 2"
+dragon_capsules[1]['type'] # "capsule"
+dragon_capsules[1]['active'] # false
+dragon_capsules[1]['crew_capacity'] # 7
+dragon_capsules[1]['sidewall_angle_deg'] # 15
+dragon_capsules[1]['orbit_duration_yr'] # 2
+dragon_capsules[1]['dry_mass_kg'] # 6350
+dragon_capsules[1]['dry_mass_lb'] # 14000
+dragon_capsules[1]['first_flight'] # "2018-11-01"
+dragon_capsules[1]['heat_shield']['material'] # "PICA-X"
+dragon_capsules[1]['heat_shield']['size_meters'] # 3.6
+dragon_capsules[1]['heat_shield']['temp_degrees'] # 3000
+dragon_capsules[1]['heat_shield']['dev_partner'] # "NASA"
+dragon_capsules[1]['thrusters'][0]['type'] # "Draco"
+dragon_capsules[1]['thrusters'][0]['amount']) #18
+dragon_capsules[1]['thrusters'][0]['pods'] # 4
+dragon_capsules[1]['thrusters'][0]['fuel_1'] # "nitrogen tetroxide"
+dragon_capsules[1]['thrusters'][0]['fuel_2'] # "monomethylhydrazine"
+dragon_capsules[1]['thrusters'][0]['thrust']['kN'] # 0.4
+dragon_capsules[1]['thrusters'][0]['thrust']['lbf'] # 90
+dragon_capsules[1]['thrusters'][1]['type'] # "SuperDraco"
+dragon_capsules[1]['thrusters'][1]['amount'] # 8
+dragon_capsules[1]['thrusters'][1]['pods'] # 4
+dragon_capsules[1]['thrusters'][1]['fuel_1'] # "dinitrogen tetroxide"
+dragon_capsules[1]['thrusters'][1]['fuel_2'] # "monomethylhydrazine"
+dragon_capsules[1]['thrusters'][1]['thrust']['kN'] # 71
+dragon_capsules[1]['thrusters'][1]['thrust']['lbf'] # 16000
+dragon_capsules[1]['launch_payload_mass']['kg'] # 6000
+dragon_capsules[1]['launch_payload_mass']['lb'] # 13228
+dragon_capsules[1]['launch_payload_vol']['cubic_meters'] # 25
+dragon_capsules[1]['launch_payload_vol']['cubic_feet'] # 883
+dragon_capsules[1]['return_payload_mass']['kg'] # 3000
+dragon_capsules[1]['return_payload_mass']['lb'] # 6614
+dragon_capsules[1]['return_payload_vol']['cubic_meters'] # 11
+dragon_capsules[1]['return_payload_vol']['cubic_feet'] # 388
+dragon_capsules[1]['pressurized_capsule']['payload_volume']['cubic_meters'] # 11
+dragon_capsules[1]['pressurized_capsule']['payload_volume']['cubic_feet'] # 388
+dragon_capsules[1]['trunk']['trunk_volume']['cubic_meters'] # 14
+dragon_capsules[1]['trunk']['trunk_volume']['cubic_feet'] # 494
+dragon_capsules[1]['trunk']['cargo']['solar_array'] # 2
+dragon_capsules[1]['trunk']['cargo']['unpressurized_cargo'] # true
+dragon_capsules[1]['height_w_trunk']['meters'] # 7.2
+dragon_capsules[1]['height_w_trunk']['feet'] # 23.6
+dragon_capsules[1]['diameter']['meters'] # 3.7
+dragon_capsules[1]['diameter']['feet'] # 12
+dragon_capsules[1]['wikipedia'] # "https://en.wikipedia.org/wiki/Dragon_2"
+dragon_capsules[1]['description'] # "Dragon 2 (also Crew Dragon, Dragon V2, or formerly DragonRider) is the second version of the SpaceX Dragon spacecraft, which will be a human-rated vehicle. It includes a set of four side-mounted thruster pods with two SuperDraco engines each, which can serve as a launch escape system or launch abort system (LAS). In addition, it has much larger windows, new flight computers and avionics, and redesigned solar arrays, and a modified outer mold line from the initial cargo Dragon that has been flying for several years."
+
+```
 
 ## Contributing
 

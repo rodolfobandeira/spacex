@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.spacexdata.com/v2/info/roadster
+    uri: https://api.spacexdata.com/v3/roadster
     body:
       encoding: US-ASCII
       string: ''
@@ -64,6 +64,6 @@ http_interactions:
         the driver''s seat. The car and rocket are products of Tesla and SpaceX, both
         companies founded by Elon Musk. This 2008-model Roadster was previously used
         by Musk for commuting, and is the only consumer car sent into space."}'
-    http_version: 
+    http_version:
   recorded_at: Wed, 22 Aug 2018 12:43:44 GMT
 recorded_with: VCR 4.0.0
