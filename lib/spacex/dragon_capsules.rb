@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 module SPACEX
-  module Roadster
+  module DragonCapsules
     def self.info
-      SPACEX::BaseRequest.get('roadster')
+      SPACEX::BaseRequest.getAll('dragons')
     end
   end
 end
