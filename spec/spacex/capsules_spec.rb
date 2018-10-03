@@ -8,7 +8,7 @@ describe SPACEX do
       SPACEX::Capsules.info(1)
     end
     it 'returns Capsules information index 1' do
-      expect(subject.name).to eq "Dragon 1"
+      expect(subject.name).to eq 'Dragon 1'
       expect(subject.type).to eq 'capsule'
       expect(subject.active).to eq true
       expect(subject.crew_capacity).to eq 0
@@ -16,7 +16,7 @@ describe SPACEX do
       expect(subject.orbit_duration_yr).to eq 2
       expect(subject.dry_mass_kg).to eq 4200
       expect(subject.dry_mass_lb).to eq 9300
-      expect(subject.first_flight).to eq "2010-12-08"
+      expect(subject.first_flight).to eq '2010-12-08'
     end
   end
 end
