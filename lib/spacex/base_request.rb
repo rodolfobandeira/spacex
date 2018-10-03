@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/MethodLength
+
 module SPACEX
   module BaseRequest
     def self.get(path)
@@ -15,6 +17,7 @@ module SPACEX
       end
       Hashie::Mash.new(data.get.body)
     end
+
     def self.getAll(path)
       data = Faraday.new(
         url: "#{SPACEX::ROOT_URI}/#{path}",
@@ -28,7 +31,7 @@ module SPACEX
       end
       arr = []
       data.get.body.map { |k| arr << k }
-      return arr
+      arr
     end
   end
 end
