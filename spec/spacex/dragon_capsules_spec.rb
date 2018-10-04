@@ -103,4 +103,17 @@ describe SPACEX do
       expect(subject[1]['description']).to eq 'Dragon 2 (also Crew Dragon, Dragon V2, or formerly DragonRider) is the second version of the SpaceX Dragon spacecraft, which will be a human-rated vehicle. It includes a set of four side-mounted thruster pods with two SuperDraco engines each, which can serve as a launch escape system or launch abort system (LAS). In addition, it has much larger windows, new flight computers and avionics, and redesigned solar arrays, and a modified outer mold line from the initial cargo Dragon that has been flying for several years.'
     end
   end
+
+  context 'Get specific Dragon Capsule', vcr: { cassette_name: 'dragon_capsules/info/dragon1' } do
+    subject do
+      SPACEX::DragonCapsules.info('dragon1')
+    end
+    it 'returns Dragon Capsule info for "dragon1"' do
+      expect(subject['id']).to eq 'dragon1'
+      expect(subject['name']).to eq 'Dragon 1'
+      expect(subject['type']).to eq 'capsule'
+      expect(subject['active']).to eq true
+      expect(subject['crew_capacity']).to eq 0
+    end
+  end
 end

@@ -11,11 +11,13 @@ Ruby library that consumes SpaceX API
 
 - [Installation](#installation)
 - [Usage](#usage)
-  - [Latest Launch](#latest-launch)
-  - [Company Info](#company-info)
-  - [Roadster](#roadster)
-  - [Dragon Capsules](#dragon-capsules)
-- [Contributing](#contributing)
+  - [Latest Launch](#latest-launch) - `SPACEX::Launches.latest`
+  - [Company Info](#company-info) - `SPACEX::CompanyInfo.info`
+  - [Roadster](#roadster) - `SPACEX::Roadster.info`
+  - [Dragon Capsules](#dragon-capsules) - `SPACEX::DragonCapsules.info`
+  - [Ships](#ships) - `SPACEX::Ships.info`
+- [Contributing](#contributing) 
+  - [Contributors / Changelog](#contributors)
 - [Copyright](#copyright)
 
 
@@ -160,6 +162,10 @@ roadster.details # "Elon Musk's Tesla Roadster is an electric sports car that se
 
 ### Dragon Capsules
 
+- `SPACEX::DragonCapsules.info` - Retrieve all Dragon Capsules;
+- `SPACEX::DragonCapsules.info('dragon_id')` Retrieve a specific dragon capsule. Ex: `dragon1`
+
+
 ```ruby
 dragon_capsules = SPACEX::DragonCapsules.info
 
@@ -256,7 +262,7 @@ dragon_capsules[1]['description'] # "Dragon 2 (also Crew Dragon, Dragon V2, or f
 
 ```
 
-### Ship Info
+### Ships
 
 ```ruby
 ship = SPACEX::Ships.info(1)
@@ -281,11 +287,15 @@ ship.url # 'https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/ves
 
 ## Contributing
 
-Want to help? Create an issue, open a pull request. Any help is welcome.
+See [CONTRIBUTING](CONTRIBUTING.md).
+
+## Contributors
+
+[Awesome people that already helped this project](CHANGELOG.md).
 
 
 ## Copyright
 
-Copyright (c) Rodolfo Bandeira, 2018
+Copyright (c) 2018, [Rodolfo Bandeira](https://twitter.com/rodolfobandeira) and [Contributors](CHANGELOG.md).
 
 MIT License, see [LICENSE](https://github.com/rodolfobandeira/spacex/blob/master/LICENSE) for details.
