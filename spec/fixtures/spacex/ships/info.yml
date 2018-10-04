@@ -56,7 +56,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '
-        {
+        [{
           "ship_id": "AMERICANCHAMPION",
           "ship_name": "American Champion",
           "ship_model": null,

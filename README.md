@@ -259,7 +259,7 @@ dragon_capsules[1]['description'] # "Dragon 2 (also Crew Dragon, Dragon V2, or f
 ### Ship Info
 
 ```ruby
-ship = SPACEX::Ship.info(1)
+ship = SPACEX::Ships.info(1)
 
 ship.abs # 571252
 ship.active # false
