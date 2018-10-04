@@ -38,3 +38,4 @@ Style/Documentation:
     - 'lib/spacex/roadster.rb'
     - 'lib/spacex/version.rb'
     - 'lib/spacex/dragon_capsules.rb'
+    - 'lib/spacex/missions.rb'
