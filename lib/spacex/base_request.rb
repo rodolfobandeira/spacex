@@ -33,5 +33,22 @@ module SPACEX
       data.get.body.map { |k| arr << k }
       arr
     end
+
+    def self.getMore(path, index)
+      data = Faraday.new(
+        url: "#{SPACEX::ROOT_URI}/#{path}",
+        request: {
+          params_encoder: Faraday::FlatParamsEncoder
+        }
+      ) do |c|
+        c.use ::FaradayMiddleware::ParseJson
+        c.use Faraday::Response::RaiseError
+        c.use Faraday::Adapter::NetHttp
+      end
+
+      i   = index - 1
+      res = data.get.body[i]
+      Hashie::Mash.new(res)
+    end
   end
 end

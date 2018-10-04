@@ -1,0 +1,148 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/ships
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 03 Oct 2018 04:56:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d03fb28f6e2ea1d4b7345693bbe78fd031538542609; expires=Thu, 03-Oct-19
+        04:56:49 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Response-Time:
+      - 36ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 463cd30d1ddc29fb-SEA
+    body:
+      encoding: ASCII-8BIT
+      string: '
+        {
+          "ship_id": "AMERICANCHAMPION",
+          "ship_name": "American Champion",
+          "ship_model": null,
+          "ship_type": "Tug",
+          "roles": [
+            "Support Ship",
+            "Barge Tug"
+          ],
+          "active": false,
+          "imo": 7434016,
+          "mmsi": 367020820,
+          "abs": 571252,
+          "class": 7604342,
+          "weight_lbs": 588000,
+          "weight_kg": 266712,
+          "year_built": 1976,
+          "home_port": "Port of Los Angeles",
+          "status": "Stopped",
+          "speed_kn": 0,
+          "course_deg": null,
+          "position": {
+            "latitude": 30.52852,
+            "longitude": -88.09869
+          },
+          "successful_landings": null,
+          "attempted_landings": null,
+          "missions": [
+            {
+              "name": "COTS 1",
+              "flight": 7
+            },
+            {
+              "name": "COTS 2",
+              "flight": 8
+            }
+          ],
+          "url": "https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/vessel:AMERICAN%20CHAMPION",
+          "image": "https://i.imgur.com/woCxpkj.jpg"
+        },
+        {
+          "ship_id": "AMERICANISLANDER",
+          "ship_name": "American Islander",
+          "ship_model": null,
+          "ship_type": "Cargo",
+          "roles": [
+            "Dragon Recovery"
+          ],
+          "active": false,
+          "imo": null,
+          "mmsi": 367035570,
+          "abs": null,
+          "class": null,
+          "weight_lbs": null,
+          "weight_kg": null,
+          "year_built": null,
+          "home_port": "Port of Los Angeles",
+          "status": "Stopped",
+          "speed_kn": 0,
+          "course_deg": null,
+          "position": {
+            "latitude": 33.73421,
+            "longitude": -118.2635
+          },
+          "successful_landings": null,
+          "attempted_landings": null,
+          "missions": [
+            {
+              "name": "CRS-1",
+              "flight": 9
+            },
+            {
+              "name": "CRS-2",
+              "flight": 10
+            },
+            {
+              "name": "CRS-3",
+              "flight": 14
+            },
+            {
+              "name": "CRS-4",
+              "flight": 18
+            }
+          ],
+          "url": "https://www.marinetraffic.com/en/ais/details/ships/shipid:435112/vessel:AMERICAN%20ISLANDER",
+          "image": "https://i.imgur.com/jmj8Sh2.jpg"
+        }]'
+    http_version: 
+  recorded_at: Wed, 03 Oct 2018 04:56:48 GMT
+recorded_with: VCR 4.0.0

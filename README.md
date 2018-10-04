@@ -256,6 +256,29 @@ dragon_capsules[1]['description'] # "Dragon 2 (also Crew Dragon, Dragon V2, or f
 
 ```
 
+### Ship Info
+
+```ruby
+ship = SPACEX::Ship.info(1)
+
+ship.abs # 571252
+ship.active # false
+ship.attempted_landings # nil
+ship.class # Hashie::Mash
+ship.course_deg # nil
+ship.home_port #"Port of Los Angeles"
+ship.image # 'https://i.imgur.com/woCxpkj.jpg'
+ship.imo # 7434016
+ship.missions.first.flight # 7
+ship.missions.first.name # COTS 1
+ship.mmsi # 367020820
+ship.position.latitude # 30.52852
+ship.position.longitude # -88.09869
+ship.roles # ["Support Ship", "Barge Tug"]
+ship.ship_id # AMERICANCHAMPION
+ship.url # 'https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/vessel:AMERICAN%20CHAMPION'
+```
+
 ## Contributing
 
 Want to help? Create an issue, open a pull request. Any help is welcome.
