@@ -10,7 +10,7 @@ module SPACEX
     property 'website'
     property 'twitter'
     property 'description'
-      
+
     class << self
       def retrieve_all
         data = SPACEX::BaseRequest.call_api('missions')
