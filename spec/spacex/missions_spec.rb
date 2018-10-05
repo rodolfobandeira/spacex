@@ -5,7 +5,7 @@ require 'spec_helper'
 describe SPACEX do
   context 'Missions', vcr: { cassette_name: 'missions/info' } do
     subject do
-      SPACEX::Missions.all
+      SPACEX::Missions.retrieve_all
     end
     it 'returns missions info' do
       expect(subject[0]['mission_name']).to eq 'Iridium NEXT'
