@@ -173,7 +173,7 @@ roadster.details # "Elon Musk's Tesla Roadster is an electric sports car that se
 ```ruby
 dragon_capsules = SPACEX::DragonCapsules.info
 
-dragon_capsules.first.id # "dragon1"
+dragon_capsules.first.capsule_id # "dragon1"
 dragon_capsules.first.name # "Dragon 1"
 dragon_capsules.first.type # "capsule"
 dragon_capsules.first.active # true
