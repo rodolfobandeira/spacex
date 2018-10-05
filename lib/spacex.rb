@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'faraday'
 require 'faraday_middleware'
 require 'faraday_middleware/response_middleware'
@@ -11,4 +9,5 @@ require_relative 'spacex/launches'
 require_relative 'spacex/company_info'
 require_relative 'spacex/roadster'
 require_relative 'spacex/dragon_capsules'
+require_relative 'spacex/ships'
 require_relative 'spacex/missions'

@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 03 Oct 2018 04:56:49 GMT
+      - Thu, 04 Oct 2018 13:25:52 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -27,8 +27,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d03fb28f6e2ea1d4b7345693bbe78fd031538542609; expires=Thu, 03-Oct-19
-        04:56:49 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      - __cfduid=d801e43cd0bf193d0b629faa25ab0c6e21538659552; expires=Fri, 04-Oct-19
+        13:25:52 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
       Vary:
       - Accept-Encoding, Origin
       X-Dns-Prefetch-Control:
@@ -46,13 +46,13 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Response-Time:
-      - 36ms
+      - 38ms
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 463cd30d1ddc29fb-SEA
+      - 4647fa1b58b9aba2-YYZ
     body:
       encoding: ASCII-8BIT
       string: '[{"id":"dragon1","name":"Dragon 1","type":"capsule","active":true,"crew_capacity":0,"sidewall_angle_deg":15,"orbit_duration_yr":2,"dry_mass_kg":4200,"dry_mass_lb":9300,"first_flight":"2010-12-08","heat_shield":{"material":"PICA-X","size_meters":3.6,"temp_degrees":3000,"dev_partner":"NASA"},"thrusters":[{"type":"Draco","amount":18,"pods":4,"fuel_1":"nitrogen
@@ -73,5 +73,5 @@ http_interactions:
         redesigned solar arrays, and a modified outer mold line from the initial cargo
         Dragon that has been flying for several years."}]'
     http_version: 
-  recorded_at: Wed, 03 Oct 2018 04:56:48 GMT
+  recorded_at: Thu, 04 Oct 2018 13:25:52 GMT
 recorded_with: VCR 4.0.0

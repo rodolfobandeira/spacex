@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module SPACEX
   module Roadster
     def self.info
