@@ -43,7 +43,7 @@ describe SPACEX do
 
       expect(subject.rocket.second_stage.payloads.first.orbit_params.reference_system).to eq 'geocentric'
       expect(subject.rocket.second_stage.payloads.first.orbit_params.regime).to eq 'geostationary'
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.longitude).to eq -108
+      expect(subject.rocket.second_stage.payloads.first.orbit_params.longitude).to eq '-108'.to_i
       expect(subject.rocket.second_stage.payloads.first.orbit_params.semi_major_axis_km).to eq 21_226.178
       expect(subject.rocket.second_stage.payloads.first.orbit_params.eccentricity).to eq 0.6904141
       expect(subject.rocket.second_stage.payloads.first.orbit_params.periapsis_km).to eq 193.19

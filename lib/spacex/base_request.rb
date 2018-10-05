@@ -1,41 +1,23 @@
-# frozen_string_literal: true
-
-# rubocop:disable Metrics/MethodLength
+require 'byebug'
 
 module SPACEX
+  class Response < Hashie::Mash
+    disable_warnings
+  end
+
   module BaseRequest
     def self.get(path)
-      data = Faraday.new(
-        url: "#{SPACEX::ROOT_URI}/#{path}",
-        request: {
-          params_encoder: Faraday::FlatParamsEncoder
-        }
-      ) do |c|
-        c.use ::FaradayMiddleware::ParseJson
-        c.use Faraday::Response::RaiseError
-        c.use Faraday::Adapter::NetHttp
-      end
-      Hashie::Mash.new(data.get.body)
+      data = call_api(path)
+      SPACEX::Response.new(data.get.body)
     end
 
-    def self.getAll(path)
-      data = Faraday.new(
-        url: "#{SPACEX::ROOT_URI}/#{path}",
-        request: {
-          params_encoder: Faraday::FlatParamsEncoder
-        }
-      ) do |c|
-        c.use ::FaradayMiddleware::ParseJson
-        c.use Faraday::Response::RaiseError
-        c.use Faraday::Adapter::NetHttp
-      end
-      arr = []
-      data.get.body.map { |k| arr << k }
-      arr
+    def self.retrieve_all(path)
+      data = call_api(path)
+      data.get.body.map { |k| [k] }
     end
 
-    def self.getMore(path, index)
-      data = Faraday.new(
+    def self.call_api(path)
+      Faraday.new(
         url: "#{SPACEX::ROOT_URI}/#{path}",
         request: {
           params_encoder: Faraday::FlatParamsEncoder
@@ -45,10 +27,6 @@ module SPACEX
         c.use Faraday::Response::RaiseError
         c.use Faraday::Adapter::NetHttp
       end
-
-      i   = index - 1
-      res = data.get.body[i]
-      Hashie::Mash.new(res)
     end
   end
 end
