@@ -252,7 +252,7 @@ ship.image # 'https://i.imgur.com/woCxpkj.jpg'
 ### Missions
 
 ```ruby
-missions = SPACEX::Missions.all
+missions = SPACEX::Missions.retrieve_all
 
 missions[0]['mission_name'] # "Iridium NEXT"
 missions[0]['mission_id'] # "F3364BF"
