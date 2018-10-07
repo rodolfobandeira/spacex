@@ -20,6 +20,9 @@ Ruby library that consumes SpaceX API
   - [Ships](#ships) - `SPACEX::Ships.info`
     - `SPACEX::Ships.info`
     - `SPACEX::Ships.info('ship_id')`
+  - [Missions](#missions) - `SPACEX::Missions.info`
+    - `SPACEX::Missions.info`
+    - `SPACEX::Missions.info('mission_id')`
 - [Contributing](#contributing) 
   - [Contributors / Changelog](#contributors)
 - [Copyright](#copyright)
@@ -218,7 +221,7 @@ dragon_capsules.first.description # "Dragon is a reusable spacecraft developed b
 
 ### Ships
 
-- `SPACEX::Ships.info` - Retrieve all Ships;
+- `SPACEX::Ships.info` Retrieve all Ships;
 - `SPACEX::Ships.info('ship_id')` Retrieve a specific ship. Ex: `AMERICANCHAMPION`
 
 ```ruby
@@ -251,17 +254,20 @@ ship.image # 'https://i.imgur.com/woCxpkj.jpg'
 
 ### Missions
 
-```ruby
-missions = SPACEX::Missions.retrieve_all
+- `SPACEX::Missions.info` Retrieve all Missions;
+- `SPACEX::Missions.info('mission_id')` Retrieve a specific mission. Ex: `F3364BF`
 
-missions[0]['mission_name'] # "Iridium NEXT"
-missions[0]['mission_id'] # "F3364BF"
-missions[0]['manufacturers'] # ["Orbital ATK"]
-missions[0]['payload_ids'] # ["Iridium NEXT 1", "Iridium NEXT 2", "Iridium NEXT 3", "Iridium NEXT 4", "Iridium NEXT 5", "Iridium NEXT 6", "Iridium NEXT 7"]
-missions[0]['wikipedia'] # "https://en.wikipedia.org/wiki/Iridium_satellite_constellation"
-missions[0]['website'] # "https://www.iridiumnext.com/"
-missions[0]['twitter'] # "https://twitter.com/IridiumBoss?lang=en"
-missions[0]['description'] # "In 2017, Iridium began launching Iridium NEXT, a second-generation worldwide network of telecommunications satellites, consisting of 66 active satellites, with another nine in-orbit spares and six on-ground spares. These satellites will incorporate features such as data transmission that were not emphasized in the original design. The constellation will provide L-band data speeds of up to 128 kbit/s to mobile terminals, up to 1.5 Mbit/s to Iridium Pilot marine terminals, and high-speed Ka-band service of up to 8 Mbit/s to fixed/transportable terminals. The next-generation terminals and service are expected to be commercially available by the end of 2018. However, Iridium's proposed use of its next-generation satellites has raised concerns the service will harmfully interfere with GPS devices. The satellites will incorporate a secondary payload for Aireon, a space-qualified ADS-B data receiver. This is for use by air traffic control and, via FlightAware, for use by airlines. A tertiary payload on 58 satellites is a marine AIS ship-tracker receiver, for Canadian company exactEarth Ltd. Iridium can also be used to provide a data link to other satellites in space, enabling command and control of other space assets regardless of the position of ground stations and gateways."
+```ruby
+missions = SPACEX::Missions.info
+
+missions.first.mission_id # "F3364BF"
+missions.first.mission_name # "Iridium NEXT"
+missions.first.manufacturers # ["Orbital ATK"]
+missions.first.payload_ids # ["Iridium NEXT 1", "Iridium NEXT 2", "Iridium NEXT 3", "Iridium NEXT 4", "Iridium NEXT 5", "Iridium NEXT 6", "Iridium NEXT 7"]
+missions.first.wikipedia # "https://en.wikipedia.org/wiki/Iridium_satellite_constellation"
+missions.first.website # "https://www.iridiumnext.com/"
+missions.first.twitter # "https://twitter.com/IridiumBoss?lang=en"
+missions.first.description # "In 2017, Iridium began launching Iridium NEXT, a second-generation worldwide network of telecommunications satellites, consisting of 66 active satellites, with another nine in-orbit spares and six on-ground spares. These satellites will incorporate features such as data transmission that were not emphasized in the original design. The constellation will provide L-band data speeds of up to 128 kbit/s to mobile terminals, up to 1.5 Mbit/s to Iridium Pilot marine terminals, and high-speed Ka-band service of up to 8 Mbit/s to fixed/transportable terminals. The next-generation terminals and service are expected to be commercially available by the end of 2018. However, Iridium's proposed use of its next-generation satellites has raised concerns the service will harmfully interfere with GPS devices. The satellites will incorporate a secondary payload for Aireon, a space-qualified ADS-B data receiver. This is for use by air traffic control and, via FlightAware, for use by airlines. A tertiary payload on 58 satellites is a marine AIS ship-tracker receiver, for Canadian company exactEarth Ltd. Iridium can also be used to provide a data link to other satellites in space, enabling command and control of other space assets regardless of the position of ground stations and gateways."
 ```
 
 ## Contributing
