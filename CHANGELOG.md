@@ -1,6 +1,9 @@
-### 0.0.7 (2018/10/07)
+### 0.0.8 (next)
 
 * Your contribution here.
+
+### 0.0.7 (2018/10/07)
+
 * Refactor responses getting multiple objects like Ships, Capsules to wrap a specific object. This helps translating specific properties like `id` and `class` to `ship_id`, `ship_class` - [@rodolfobandeira](https://github.com/rodolfobandeira).
 * Add ability to retrieve specific Ship via `.info('ship_id')` - [@rodolfobandeira](https://github.com/rodolfobandeira).
 * Add ability to retrieve specific Dragon Capsule via `.info('dragon_id')` - [@rodolfobandeira](https://github.com/rodolfobandeira).
