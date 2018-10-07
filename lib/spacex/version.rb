@@ -1,5 +1,5 @@
 module SPACEX
-  VERSION = '0.0.6'.freeze
+  VERSION = '0.0.7'.freeze
   ROOT_URI = 'https://api.spacexdata.com/v3'.freeze
 
   def self.help

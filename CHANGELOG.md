@@ -1,4 +1,4 @@
-### 0.0.7 (Next)
+### 0.0.7 (2018/10/07)
 
 * Your contribution here.
 * Refactor responses getting multiple objects like Ships, Capsules to wrap a specific object. This helps translating specific properties like `id` and `class` to `ship_id`, `ship_class` - [@rodolfobandeira](https://github.com/rodolfobandeira).

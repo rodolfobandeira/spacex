@@ -14,13 +14,13 @@ Ruby library that consumes SpaceX API
   - [Latest Launch](#latest-launch) - `SPACEX::Launches.latest`
   - [Company Info](#company-info) - `SPACEX::CompanyInfo.info`
   - [Roadster](#roadster) - `SPACEX::Roadster.info`
-  - [Dragon Capsules](#dragon-capsules) - `SPACEX::DragonCapsules.info`
+  - [Dragon Capsules](#dragon-capsules)
     - `SPACEX::DragonCapsules.info`
     - `SPACEX::DragonCapsules.info('dragon_id')`
-  - [Ships](#ships) - `SPACEX::Ships.info`
+  - [Ships](#ships)
     - `SPACEX::Ships.info`
     - `SPACEX::Ships.info('ship_id')`
-  - [Missions](#missions) - `SPACEX::Missions.info`
+  - [Missions](#missions)
     - `SPACEX::Missions.info`
     - `SPACEX::Missions.info('mission_id')`
 - [Contributing](#contributing) 
