@@ -6,6 +6,7 @@
 * Add ability to retrieve specific Dragon Capsule via `.info('dragon_id')` - [@rodolfobandeira](https://github.com/rodolfobandeira).
 * [#10](https://github.com/rodolfobandeira/spacex/pull/10): Added Ships information - [@zainalmustofa](https://github.com/zainalmustofa).
 * [#9](https://github.com/rodolfobandeira/spacex/pull/9): Added Dragon Capsules information - [@JackieCalapristi](https://github.com/JackieCalapristi).
+* [#16](https://github.com/rodolfobandeira/spacex/pull/16): Added missions information - [@maiafernando](https://github.com/maiafernando).
 
 ### 0.0.6 (2018/08/22)
 
