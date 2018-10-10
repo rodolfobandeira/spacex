@@ -6,7 +6,13 @@ module SPACEX
   module BaseRequest
     def self.get(path)
       data = call_api(path)
-      SPACEX::Response.new(data.get.body)
+      response_body = data.get.body
+
+      if response_body.is_a? Array
+        response_body.map { |element| SPACEX::Response.new(element) }
+      else
+        SPACEX::Response.new(data.get.body)
+      end
     end
 
     def self.call_api(path)
