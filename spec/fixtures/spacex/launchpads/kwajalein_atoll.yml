@@ -1,0 +1,133 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/launchpads/kwajalein_atoll
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 11 Oct 2018 17:21:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dbcadf4e2b1672cf14faca8d32874c2d41539278513; expires=Fri, 11-Oct-19
+        17:21:53 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Koa-Redis-Cache:
+      - 'true'
+      X-Response-Time:
+      - 2ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 46830176795f410c-HAM
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":1,"status":"retired","location":{"name":"Omelek Island","region":"Marshall
+        Islands","latitude":9.0477206,"longitude":167.7431292},"vehicles_launched":["Falcon
+        1"],"details":"SpaceX original launch site, where all of the Falcon 1 launches
+        occured. Abandoned as SpaceX decided against upgrading the pad to support
+        Falcon 9.","site_id":"kwajalein_atoll","site_name_long":"Kwajalein Atoll Omelek
+        Island"}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:21:53 GMT
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/launchpads/kwajalein_atoll
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 11 Oct 2018 17:21:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dbcadf4e2b1672cf14faca8d32874c2d41539278513; expires=Fri, 11-Oct-19
+        17:21:53 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Koa-Redis-Cache:
+      - 'true'
+      X-Response-Time:
+      - 1ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 468301782a98410c-HAM
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":1,"status":"retired","location":{"name":"Omelek Island","region":"Marshall
+        Islands","latitude":9.0477206,"longitude":167.7431292},"vehicles_launched":["Falcon
+        1"],"details":"SpaceX original launch site, where all of the Falcon 1 launches
+        occured. Abandoned as SpaceX decided against upgrading the pad to support
+        Falcon 9.","site_id":"kwajalein_atoll","site_name_long":"Kwajalein Atoll Omelek
+        Island"}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:21:54 GMT
+recorded_with: VCR 4.0.0

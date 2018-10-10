@@ -1,5 +1,6 @@
 ### 0.0.8 (next)
 
+* [#33](https://github.com/rodolfobandeira/spacex/pull/33): Added the `SPACEX::Launchpad` class which handles `launchpads` endpoints - [@walerian777](https://github.com/walerian777).
 * [#28](https://github.com/rodolfobandeira/spacex/pull/28): Add ability to query all launches - [@ludamillion](https://github.com/ludamillion)
 * [#26](https://github.com/rodolfobandeira/spacex/pull/26): Fix dependencies - [@harman28](https://github.com/harman28).
 * [#25](https://github.com/rodolfobandeira/spacex/pull/25): Add code coverage tools - [@harman28](https://github.com/harman28).
