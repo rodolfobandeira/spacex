@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'byebug'
 
 describe SPACEX do
   context 'DragonCapsules', vcr: { cassette_name: 'dragon_capsules/info' } do
