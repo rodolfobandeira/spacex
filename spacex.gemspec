@@ -17,13 +17,13 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split("\n")
   s.test_files  = `git ls-files -- spec/*`.split("\n")
   s.require_paths = ['lib']
-  s.add_dependency 'faraday', '>= 0.9'
-  s.add_dependency 'faraday_middleware'
+  s.add_dependency 'faraday', '~> 0.9'
+  s.add_dependency 'faraday_middleware', '~> 0.12'
   s.add_dependency 'hashie', '3.6.0'
   s.add_development_dependency 'coveralls'
   s.add_development_dependency 'rake', '~> 10'
-  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'rspec', '~> 3.8'
   s.add_development_dependency 'rubocop', '0.51.0'
-  s.add_development_dependency 'vcr'
-  s.add_development_dependency 'webmock'
+  s.add_development_dependency 'vcr', '~> 4'
+  s.add_development_dependency 'webmock', '~> 3.4'
 end

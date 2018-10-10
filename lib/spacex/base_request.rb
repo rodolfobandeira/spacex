@@ -1,5 +1,3 @@
-require 'byebug'
-
 module SPACEX
   class Response < Hashie::Mash
     disable_warnings
