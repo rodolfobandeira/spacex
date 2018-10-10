@@ -3,6 +3,7 @@ SpaceX Ruby Client
 
 [![Gem Version](https://badge.fury.io/rb/spacex.svg)](https://badge.fury.io/rb/spacex)
 [![Build Status](https://travis-ci.com/rodolfobandeira/spacex.svg?branch=master)](https://travis-ci.org/rodolfobandeira/spacex)
+[![Coverage Status](https://coveralls.io/repos/github/harman28/spacex/badge.svg?branch=master)](https://coveralls.io/github/harman28/spacex?branch=master)
 
 Ruby library that consumes SpaceX API
 
