@@ -258,6 +258,11 @@ ship.image # 'https://i.imgur.com/woCxpkj.jpg'
 - `SPACEX::Missions.info` Retrieve all Missions;
 - `SPACEX::Missions.info('mission_id')` Retrieve a specific mission. Ex: `F3364BF`
 
+### Launchpads
+
+- `SPACEX::Launchpad.all` returns all Launchpads.
+- `SPACEX::Launchpad.get(site_id: 'kwajalein_atoll')` returns a specific Launchpad with provided `site_id`.
+
 ```ruby
 missions = SPACEX::Missions.info
 

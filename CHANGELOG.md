@@ -1,6 +1,6 @@
-### 0.0.8 (next)
+### 0.0.8 (2018/10/10)
 
-* Your contribution here.
+* Added the `SPACEX::Launchpad` class which handles `launchpads` endpoints - [@walerian777](https://github.com/walerian777).
 
 ### 0.0.7 (2018/10/07)
 
