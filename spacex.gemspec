@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'faraday', '>= 0.9'
   s.add_dependency 'faraday_middleware'
   s.add_dependency 'hashie', '3.6.0'
+  s.add_development_dependency 'coveralls'
   s.add_development_dependency 'rake', '~> 10'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rubocop', '0.51.0'
