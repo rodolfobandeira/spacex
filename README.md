@@ -3,7 +3,6 @@ SpaceX Ruby Client
 
 [![Gem Version](https://badge.fury.io/rb/spacex.svg)](https://badge.fury.io/rb/spacex)
 [![Build Status](https://travis-ci.com/rodolfobandeira/spacex.svg?branch=master)](https://travis-ci.org/rodolfobandeira/spacex)
-[![Coverage Status](https://coveralls.io/repos/github/rodolfobandeira/spacex/badge.svg?branch=master)](https://coveralls.io/github/rodolfobandeira/spacex?branch=master)
 
 Ruby library that consumes SpaceX API
 
@@ -12,9 +11,7 @@ Ruby library that consumes SpaceX API
 
 - [Installation](#installation)
 - [Usage](#usage)
-  - [Launches](#launches)
-    - `SPACEX::Launches.latest`
-    - `SPACEX::Launches.info`
+  - [Latest Launch](#latest-launch) - `SPACEX::Launches.latest`
   - [Company Info](#company-info) - `SPACEX::CompanyInfo.info`
   - [Roadster](#roadster) - `SPACEX::Roadster.info`
   - [Dragon Capsules](#dragon-capsules)
@@ -26,7 +23,13 @@ Ruby library that consumes SpaceX API
   - [Missions](#missions)
     - `SPACEX::Missions.info`
     - `SPACEX::Missions.info('mission_id')`
-- [Contributing](#contributing) 
+  - [Capsules](#capsules)
+    - `SPACEX::Capsules.info`
+    - `SPACEX::Capsules.info('capsule_serial')`
+  - [Cores](#cores)
+    - `SPACEX::Cores.info`
+    - `SPACEX::Cores.info('core_serial')`
+- [Contributing](#contributing)
   - [Contributors / Changelog](#contributors)
 - [Copyright](#copyright)
 
@@ -44,10 +47,7 @@ Run `bundle install`.
 
 ## Usage
 
-### Launches
-
-- `SPACEX::Launches.info` Retrieve all Launches
-- `SPACEX::Launches.latest` Retrieve latest launch
+### Latest Launch
 
 ```ruby
 require 'spacex'
