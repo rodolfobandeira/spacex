@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe SPACEX do
-  context 'DragonCapsules', vcr: { cassette_name: 'dragon_capsules/info' } do
+describe SPACEX::DragonCapsules do
+  context '#info', vcr: { cassette_name: 'dragon_capsules/info' } do
     subject do
       SPACEX::DragonCapsules.info
     end
@@ -47,17 +47,18 @@ describe SPACEX do
       expect(subject.first.diameter['meters']).to eq 3.7
       expect(subject.first.diameter['feet']).to eq 12
       expect(subject.first.wikipedia).to eq 'https://en.wikipedia.org/wiki/SpaceX_Dragon'
-      expect(subject.first.description).to eq 'Dragon is a reusable spacecraft developed by SpaceX, an American private space transportation company based in Hawthorne, California. Dragon is launched into space by the SpaceX Falcon 9 two-stage-to-orbit launch vehicle. The Dragon spacecraft was originally designed for human travel, but so far has only been used to deliver cargo to the International Space Station (ISS).'
+      expect(subject.first.description).to start_with 'Dragon is a reusable spacecraft developed'
 
       expect(subject[1].capsule_id).to eq 'dragon2'
       expect(subject[1].name).to eq 'Dragon 2'
     end
   end
 
-  context 'Get specific Dragon Capsule', vcr: { cassette_name: 'dragon_capsules/info/dragon1' } do
+  context "#info('dragon1')", vcr: { cassette_name: 'dragon_capsules/info/dragon1' } do
     subject do
       SPACEX::DragonCapsules.info('dragon1')
     end
+
     it 'returns Dragon Capsule info for "dragon1"' do
       expect(subject.capsule_id).to eq 'dragon1'
       expect(subject.name).to eq 'Dragon 1'
@@ -100,7 +101,7 @@ describe SPACEX do
       expect(subject.diameter['meters']).to eq 3.7
       expect(subject.diameter['feet']).to eq 12
       expect(subject.wikipedia).to eq 'https://en.wikipedia.org/wiki/SpaceX_Dragon'
-      expect(subject.description).to eq 'Dragon is a reusable spacecraft developed by SpaceX, an American private space transportation company based in Hawthorne, California. Dragon is launched into space by the SpaceX Falcon 9 two-stage-to-orbit launch vehicle. The Dragon spacecraft was originally designed for human travel, but so far has only been used to deliver cargo to the International Space Station (ISS).'
+      expect(subject.description).to start_with 'Dragon is a reusable spacecraft developed by Space'
     end
   end
 end

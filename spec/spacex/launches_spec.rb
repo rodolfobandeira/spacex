@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'spec_helper'
 
 describe SPACEX::Launches do
@@ -7,6 +5,7 @@ describe SPACEX::Launches do
     subject do
       SPACEX::Launches.latest
     end
+
     it 'returns latest launch' do
       expect(subject.flight_number).to eq 67
       expect(subject.mission_name).to eq 'Merah Putih'
@@ -15,11 +14,9 @@ describe SPACEX::Launches do
       expect(subject.launch_date_utc).to eq '2018-08-07T05:18:00.000Z'
       expect(subject.launch_date_local).to eq '2018-08-07T01:18:00-04:00'
       expect(subject.launch_success).to eq true
-
       expect(subject.rocket.rocket_id).to eq 'falcon9'
       expect(subject.rocket.rocket_name).to eq 'Falcon 9'
       expect(subject.rocket.rocket_type).to eq 'FT'
-
       expect(subject.rocket.first_stage.cores.first.core_serial).to eq 'B1046'
       expect(subject.rocket.first_stage.cores.first.flight).to eq 2
       expect(subject.rocket.first_stage.cores.first.block).to eq 5
@@ -27,9 +24,7 @@ describe SPACEX::Launches do
       expect(subject.rocket.first_stage.cores.first.land_success).to eq true
       expect(subject.rocket.first_stage.cores.first.landing_type).to eq 'ASDS'
       expect(subject.rocket.first_stage.cores.first.landing_vehicle).to eq 'OCISLY'
-
       expect(subject.rocket.second_stage.block).to eq 5
-
       expect(subject.rocket.second_stage.payloads.first.payload_id).to eq 'Telkom-4'
       expect(subject.rocket.second_stage.payloads.first.norad_id.first).to eq 43_587
       expect(subject.rocket.second_stage.payloads.first.reused).to eq false
@@ -40,8 +35,6 @@ describe SPACEX::Launches do
       expect(subject.rocket.second_stage.payloads.first.payload_mass_kg).to eq 5800
       expect(subject.rocket.second_stage.payloads.first.payload_mass_lbs).to eq 12_786.81
       expect(subject.rocket.second_stage.payloads.first.orbit).to eq 'GTO'
-
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.reference_system).to eq 'geocentric'
       expect(subject.rocket.second_stage.payloads.first.orbit_params.regime).to eq 'geostationary'
       expect(subject.rocket.second_stage.payloads.first.orbit_params.longitude).to eq '-108'.to_i
       expect(subject.rocket.second_stage.payloads.first.orbit_params.semi_major_axis_km).to eq 21_226.178
@@ -54,20 +47,16 @@ describe SPACEX::Launches do
       expect(subject.rocket.second_stage.payloads.first.orbit_params.epoch).to eq '2018-08-07T06:57:16.000Z'
       expect(subject.rocket.second_stage.payloads.first.orbit_params.mean_motion).to eq 2.80734018
       expect(subject.rocket.second_stage.payloads.first.orbit_params.raan).to eq 227.0228
-
       expect(subject.telemetry.flight_club).to eq nil
       expect(subject.reuse.core).to eq true
       expect(subject.reuse.sire_core1).to eq nil
       expect(subject.reuse.side_core2).to eq false
       expect(subject.reuse.fairings).to eq false
       expect(subject.reuse.capsule).to eq false
-
       expect(subject.launch_site.site_id).to eq 'ccafs_slc_40'
       expect(subject.launch_site.site_name).to eq 'CCAFS SLC 40'
       expect(subject.launch_site.site_name_long).to eq 'Cape Canaveral Air Force Station Space Launch Complex 40'
-
       expect(subject.launch_success).to eq true
-
       expect(subject.links.mission_patch).to eq 'https://images2.imgbox.com/a8/f5/ZgdsrbqW_o.png'
       expect(subject.links.mision_patch_small).to eq nil
       expect(subject.links.reddit_campaign).to eq 'https://www.reddit.com/r/spacex/comments/91gwfg/merah_putih_telkom4_launch_campaign_thread/'
@@ -78,20 +67,17 @@ describe SPACEX::Launches do
       expect(subject.links.article_link).to eq 'https://spaceflightnow.com/2018/08/07/indonesian-communications-satellite-deployed-in-orbit-by-spacex/'
       expect(subject.links.wikipedia).to eq 'https://en.wikipedia.org/wiki/Telkom_Indonesia'
       expect(subject.links.video_link).to eq 'https://www.youtube.com/watch?v=FjfQNBYv2IY'
-
       expect(subject.details).to eq 'Indonesian comsat intended to replace the aging Telkom 1 at 108° E. First reflight of a Block 5-version booster.'
       expect(subject.upcoming).to eq false
       expect(subject.static_fire_date_utc).to eq '2018-08-02T15:53:00.000Z'
     end
   end
-end
 
-describe SPACEX::Launches do
-  subject do
-    SPACEX::Launches.all
-  end
+  context '#info', vcr: { cassette_name: 'launches' } do
+    subject do
+      SPACEX::Launches.info
+    end
 
-  context '#all', vcr: { cassette_name: 'launches/all' } do
     it 'returns and array of launch hashes' do
       expect(subject).to be_an Array
       expect(subject.first).to be_a Hash
@@ -99,14 +85,6 @@ describe SPACEX::Launches do
 
     it 'returns the correct number of launches' do
       expect(subject.count).to eq 90
-    end
-  end
-end
-
-describe SPACEX::Launches do
-  context '#all', vcr: { cassette_name: 'launches/all' } do
-    subject do
-      SPACEX::Launches.all
     end
 
     it 'returns the subject.first launch' do
@@ -117,11 +95,9 @@ describe SPACEX::Launches do
       expect(subject.first.launch_date_utc).to eq '2006-03-24T22:30:00.000Z'
       expect(subject.first.launch_date_local).to eq '2006-03-25T10:30:00+12:00'
       expect(subject.first.launch_success).to eq false
-
       expect(subject.first.rocket.rocket_id).to eq 'falcon1'
       expect(subject.first.rocket.rocket_name).to eq 'Falcon 1'
       expect(subject.first.rocket.rocket_type).to eq 'Merlin A'
-
       expect(subject.first.rocket.first_stage.cores.first.core_serial).to eq 'Merlin1A'
       expect(subject.first.rocket.first_stage.cores.first.flight).to eq 1
       expect(subject.first.rocket.first_stage.cores.first.block).to eq nil
@@ -129,9 +105,7 @@ describe SPACEX::Launches do
       expect(subject.first.rocket.first_stage.cores.first.land_success).to eq nil
       expect(subject.first.rocket.first_stage.cores.first.landing_type).to eq nil
       expect(subject.first.rocket.first_stage.cores.first.landing_vehicle).to eq nil
-
       expect(subject.first.rocket.second_stage.block).to eq 1
-
       expect(subject.first.rocket.second_stage.payloads.first.payload_id).to eq 'FalconSAT-2'
       expect(subject.first.rocket.second_stage.payloads.first.norad_id.first).to eq nil
       expect(subject.first.rocket.second_stage.payloads.first.reused).to eq false
@@ -142,7 +116,6 @@ describe SPACEX::Launches do
       expect(subject.first.rocket.second_stage.payloads.first.payload_mass_kg).to eq 20
       expect(subject.first.rocket.second_stage.payloads.first.payload_mass_lbs).to eq 43
       expect(subject.first.rocket.second_stage.payloads.first.orbit).to eq 'LEO'
-
       expect(subject.first.rocket.second_stage.payloads.first.orbit_params.reference_system).to eq 'geocentric'
       expect(subject.first.rocket.second_stage.payloads.first.orbit_params.regime).to eq 'low-earth'
       expect(subject.first.rocket.second_stage.payloads.first.orbit_params.longitude).to eq nil
@@ -156,17 +129,12 @@ describe SPACEX::Launches do
       expect(subject.first.rocket.second_stage.payloads.first.orbit_params.epoch).to eq nil
       expect(subject.first.rocket.second_stage.payloads.first.orbit_params.mean_motion).to eq nil
       expect(subject.first.rocket.second_stage.payloads.first.orbit_params.raan).to eq nil
-
       expect(subject.first.telemetry.flight_club).to eq nil
-
       expect(subject.first.reuse).to be_nil
-
       expect(subject.first.launch_site.site_id).to eq 'kwajalein_atoll'
       expect(subject.first.launch_site.site_name).to eq 'Kwajalein Atoll'
       expect(subject.first.launch_site.site_name_long).to eq 'Kwajalein Atoll Omelek Island'
-
       expect(subject.first.launch_success).to eq false
-
       expect(subject.first.links.mission_patch).to eq 'https://images2.imgbox.com/40/e3/GypSkayF_o.png'
       expect(subject.first.links.mision_patch_small).to eq nil
       expect(subject.first.links.reddit_campaign).to eq nil
@@ -177,18 +145,9 @@ describe SPACEX::Launches do
       expect(subject.first.links.article_link).to eq 'https://www.space.com/2196-spacex-inaugural-falcon-1-rocket-lost-launch.html'
       expect(subject.first.links.wikipedia).to eq 'https://en.wikipedia.org/wiki/DemoSat'
       expect(subject.first.links.video_link).to eq 'https://www.youtube.com/watch?v=0a_00nJ_Y88'
-
       expect(subject.first.details).to eq 'Engine failure at 33 seconds and loss of vehicle'
       expect(subject.first.upcoming).to eq false
       expect(subject.first.static_fire_date_utc).to eq '2006-03-17T00:00:00.000Z'
-    end
-  end
-end
-
-describe SPACEX::Launches do
-  context '#all', vcr: { cassette_name: 'launches/all' } do
-    subject do
-      SPACEX::Launches.all
     end
 
     it 'returns the subject.last scheduled launch' do
@@ -199,15 +158,11 @@ describe SPACEX::Launches do
       expect(subject.last.launch_date_utc).to eq '2019-10-01T00:00:00.000Z'
       expect(subject.last.launch_date_local).to eq '2019-09-30T20:00:00-04:00'
       expect(subject.last.launch_success).to eq nil
-
       expect(subject.last.rocket.rocket_id).to eq 'falcon9'
       expect(subject.last.rocket.rocket_name).to eq 'Falcon 9'
       expect(subject.last.rocket.rocket_type).to eq 'FT'
-
       expect(subject.last.rocket.last_stage).to be_nil
-
       expect(subject.last.rocket.second_stage.block).to eq nil
-
       expect(subject.last.rocket.second_stage.payloads.last.payload_id).to eq 'GPS IIIA-3'
       expect(subject.last.rocket.second_stage.payloads.last.norad_id.last).to eq nil
       expect(subject.last.rocket.second_stage.payloads.last.reused).to eq false
@@ -218,7 +173,6 @@ describe SPACEX::Launches do
       expect(subject.last.rocket.second_stage.payloads.last.payload_mass_kg).to eq 3880
       expect(subject.last.rocket.second_stage.payloads.last.payload_mass_lbs).to eq 8553.94
       expect(subject.last.rocket.second_stage.payloads.last.orbit).to eq 'MEO'
-
       expect(subject.last.rocket.second_stage.payloads.last.orbit_params.reference_system).to eq nil
       expect(subject.last.rocket.second_stage.payloads.last.orbit_params.regime).to eq nil
       expect(subject.last.rocket.second_stage.payloads.last.orbit_params.longitude).to eq nil
@@ -232,17 +186,12 @@ describe SPACEX::Launches do
       expect(subject.last.rocket.second_stage.payloads.last.orbit_params.epoch).to eq nil
       expect(subject.last.rocket.second_stage.payloads.last.orbit_params.mean_motion).to eq nil
       expect(subject.last.rocket.second_stage.payloads.last.orbit_params.raan).to eq nil
-
       expect(subject.last.telemetry.flight_club).to eq nil
-
       expect(subject.last.reuse).to be_nil
-
       expect(subject.last.launch_site.site_id).to eq 'ccafs_slc_40'
       expect(subject.last.launch_site.site_name).to eq 'CCAFS SLC 40'
       expect(subject.last.launch_site.site_name_long).to eq 'Cape Canaveral Air Force Station Space Launch Complex 40'
-
       expect(subject.last.launch_success).to eq nil
-
       expect(subject.last.links.mission_patch).to eq nil
       expect(subject.last.links.mision_patch_small).to eq nil
       expect(subject.last.links.reddit_campaign).to eq nil
@@ -253,7 +202,6 @@ describe SPACEX::Launches do
       expect(subject.last.links.article_link).to eq nil
       expect(subject.last.links.wikipedia).to eq nil
       expect(subject.last.links.video_link).to eq nil
-
       expect(subject.last.details).to eq nil
       expect(subject.last.upcoming).to eq true
       expect(subject.last.static_fire_date_utc).to eq nil
