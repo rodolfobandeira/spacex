@@ -2,8 +2,8 @@
 
 require 'spec_helper'
 
-describe SPACEX do
-  context 'Roadster Information', vcr: { cassette_name: 'roadster/info' } do
+describe SPACEX::Roadster do
+  context '#info', vcr: { cassette_name: 'roadster/info' } do
     subject do
       SPACEX::Roadster.info
     end
@@ -30,7 +30,7 @@ describe SPACEX do
       expect(subject.mars_distance_km).to eq 191_564_175.5833636
       expect(subject.mars_distance_mi).to eq 119_032_423.34641021
       expect(subject.wikipedia).to eq 'https://en.wikipedia.org/wiki/Elon_Musk%27s_Tesla_Roadster'
-      expect(subject.details).to eq "Elon Musk's Tesla Roadster is an electric sports car that served as the dummy payload for the February 2018 Falcon Heavy test flight and is now an artificial satellite of the Sun. Starman, a mannequin dressed in a spacesuit, occupies the driver's seat. The car and rocket are products of Tesla and SpaceX, both companies founded by Elon Musk. This 2008-model Roadster was previously used by Musk for commuting, and is the only consumer car sent into space."
+      expect(subject.details).to start_with "Elon Musk's Tesla Roadster is an electric sports"
     end
   end
 end

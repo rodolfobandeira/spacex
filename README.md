@@ -12,7 +12,9 @@ Ruby library that consumes SpaceX API
 
 - [Installation](#installation)
 - [Usage](#usage)
-  - [Latest Launch](#latest-launch) - `SPACEX::Launches.latest`
+  - [Launches](#launches)
+    - `SPACEX::Launches.latest`
+    - `SPACEX::Launches.info`
   - [Company Info](#company-info) - `SPACEX::CompanyInfo.info`
   - [Roadster](#roadster) - `SPACEX::Roadster.info`
   - [Dragon Capsules](#dragon-capsules)
@@ -42,7 +44,10 @@ Run `bundle install`.
 
 ## Usage
 
-### Latest Launch
+### Launches
+
+- `SPACEX::Launches.info` Retrieve all Launches
+- `SPACEX::Launches.latest` Retrieve latest launch
 
 ```ruby
 require 'spacex'

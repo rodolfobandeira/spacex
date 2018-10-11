@@ -7,5 +7,9 @@ module SPACEX
     def self.all
       SPACEX::BaseRequest.get('launches')
     end
+
+    def self.info
+      all
+    end
   end
 end
