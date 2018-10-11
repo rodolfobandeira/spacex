@@ -1,5 +1,3 @@
-require 'byebug'
-
 module SPACEX
   class Response < Hashie::Mash
     disable_warnings
@@ -8,12 +6,13 @@ module SPACEX
   module BaseRequest
     def self.get(path)
       data = call_api(path)
-      SPACEX::Response.new(data.get.body)
-    end
+      response_body = data.get.body
 
-    def self.retrieve_all(path)
-      data = call_api(path)
-      data.get.body.map { |k| [k] }
+      if response_body.is_a? Array
+        response_body.map { |element| SPACEX::Response.new(element) }
+      else
+        SPACEX::Response.new(data.get.body)
+      end
     end
 
     def self.call_api(path)

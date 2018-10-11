@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe SPACEX do
-  context 'Ships', vcr: { cassette_name: 'ships/info' } do
+describe SPACEX::Ships do
+  context '#info', vcr: { cassette_name: 'ships/info' } do
     subject do
       SPACEX::Ships.info
     end
@@ -32,7 +32,7 @@ describe SPACEX do
     end
   end
 
-  context 'Get specific Ship', vcr: { cassette_name: 'ships/info/AMERICANCHAMPION' } do
+  context "#info('AMERICANCHAMPION')", vcr: { cassette_name: 'ships/info/AMERICANCHAMPION' } do
     subject do
       SPACEX::Ships.info('AMERICANCHAMPION')
     end
@@ -54,7 +54,7 @@ describe SPACEX do
       expect(subject.status).to eq 'Stopped'
       expect(subject.speed_kn).to eq 0
       expect(subject.course_deg).to eq nil
-      expect(subject.position).to eq ({ 'latitude' => 30.52852, 'longitude' => -88.09869 })
+      expect(subject.position).to eq ({ 'latitude' => 30.52758, 'longitude' => -88.10258 })
       expect(subject.successful_landings).to eq nil
       expect(subject.attempted_landings).to eq nil
       expect(subject.missions).to eq [{ 'flight' => 7, 'name' => 'COTS 1' }, { 'flight' => 8, 'name' => 'COTS 2' }]

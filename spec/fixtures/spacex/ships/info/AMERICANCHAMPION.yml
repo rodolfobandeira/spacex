@@ -61,4 +61,65 @@ http_interactions:
         1","flight":7},{"name":"COTS 2","flight":8}],"url":"https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/vessel:AMERICAN%20CHAMPION","image":"https://i.imgur.com/woCxpkj.jpg"}'
     http_version: 
   recorded_at: Fri, 05 Oct 2018 19:00:12 GMT
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/ships/AMERICANCHAMPION
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 11 Oct 2018 03:02:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d437fef05110b7e6103aa3da28aa498611539226964; expires=Fri, 11-Oct-19
+        03:02:44 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Response-Time:
+      - 48ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 467e16ede8d55a8c-BOS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ship_id":"AMERICANCHAMPION","ship_name":"American Champion","ship_model":null,"ship_type":"Tug","roles":["Support
+        Ship","Barge Tug"],"active":false,"imo":7434016,"mmsi":367020820,"abs":571252,"class":7604342,"weight_lbs":588000,"weight_kg":266712,"year_built":1976,"home_port":"Port
+        of Los Angeles","status":"Stopped","speed_kn":0,"course_deg":null,"position":{"latitude":30.52758,"longitude":-88.10258},"successful_landings":null,"attempted_landings":null,"missions":[{"name":"COTS
+        1","flight":7},{"name":"COTS 2","flight":8}],"url":"https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/vessel:AMERICAN%20CHAMPION","image":"https://i.imgur.com/woCxpkj.jpg"}'
+    http_version:
+  recorded_at: Thu, 11 Oct 2018 03:02:44 GMT
 recorded_with: VCR 4.0.0
