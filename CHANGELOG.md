@@ -1,6 +1,8 @@
 ### 0.0.8 (next)
 
 * Your contribution here.
+* [#26](https://github.com/rodolfobandeira/spacex/pull/26): Fix dependencies - [@harman28](https://github.com/harman28).
+* [#25](https://github.com/rodolfobandeira/spacex/pull/25): Add code coverage tools - [@harman28](https://github.com/harman28).
 
 ### 0.0.7 (2018/10/07)
 
