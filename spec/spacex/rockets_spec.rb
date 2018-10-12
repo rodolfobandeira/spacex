@@ -124,18 +124,9 @@ describe SPACEX do
       expect(subject.first_flight).to eq '2006-03-24'
       expect(subject.country).to eq 'Republic of the Marshall Islands'
       expect(subject.company).to eq 'SpaceX'
-      expect(subject.height).to eq(
-        'meters' => 22.25,
-        'feet' => 73
-      )
-      expect(subject.diameter).to eq(
-        'meters' => 1.68,
-        'feet' => 5.5
-      )
-      expect(subject.mass).to eq(
-        'kg' => 30_146,
-        'lb' => 66_460
-      )
+      expect(subject.height).to eq('meters' => 22.25, 'feet' => 73)
+      expect(subject.diameter).to eq('meters' => 1.68, 'feet' => 5.5)
+      expect(subject.mass).to eq('kg' => 30_146, 'lb' => 66_460)
       expect(subject.payload_weights).to eq [{
         'id' => 'leo',
         'name' => 'Low Earth Orbit',
@@ -196,13 +187,8 @@ describe SPACEX do
         },
         'thrust_to_weight' => 96
       )
-      expect(subject.landing_legs).to eq(
-        'number' => 0,
-        'material' => nil
-      )
-      expect(subject.wikipedia).to eq(
-        'https://en.wikipedia.org/wiki/Falcon_1'
-      )
+      expect(subject.landing_legs).to eq('number' => 0, 'material' => nil)
+      expect(subject.wikipedia).to eq 'https://en.wikipedia.org/wiki/Falcon_1'
       expect(subject.description).to eq(
         'The Falcon 1 was an expendable launch system '\
         'privately developed and manufactured by SpaceX during 2006-2009. '\
