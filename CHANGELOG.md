@@ -1,8 +1,17 @@
-### 0.0.8 (next)
+### 0.0.9 (next)
 
-* [#28](https://github.com/rodolfobandeira/spacex/pull/28): Add ability to query all launches - [@ludamillion](https://github.com/ludamillion)
-* [#26](https://github.com/rodolfobandeira/spacex/pull/26): Fix dependencies - [@harman28](https://github.com/harman28).
-* [#25](https://github.com/rodolfobandeira/spacex/pull/25): Add code coverage tools - [@harman28](https://github.com/harman28).
+* Your contribution here.
+
+### 0.0.8 (2018/10/11)
+
+* Add ability to retrieve Capsules information via `Capsules.info` -
+[@efl7a](https://github.com/efl7a)
+* Add ability to retrieve specific Capsule information via `Capsules.info('capsule_serial')` -
+[@efl7a](https://github.com/efl7a)
+* Add ability to retrieve Cores information via `Cores.info` -
+[@efl7a](https://github.com/efl7a)
+* Add ability to retrieve specific Core information via `Cores.info('core_serial')` -
+[@efl7a](https://github.com/efl7a)
 
 ### 0.0.7 (2018/10/07)
 
@@ -24,4 +33,3 @@
 ### 0.0.4 (2018/08/21)
 
 * Initial public release - [@rodolfobandeira](https://github.com/rodolfobandeira).
-

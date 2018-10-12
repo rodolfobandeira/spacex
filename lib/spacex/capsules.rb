@@ -13,6 +13,12 @@ module SPACEX
     property 'details'
 
     class << self
+      def info(capsule_serial = nil)
+        get(capsule_serial)
+      end
+
+      private
+
       def retrieve_all
         data = SPACEX::BaseRequest.call_api('capsules')
         data.get.body.map { |k| SPACEX::Capsules.new(k) }
@@ -23,10 +29,6 @@ module SPACEX
 
         data = SPACEX::BaseRequest.get("capsules/#{capsule_serial}")
         SPACEX::Capsules.new(data)
-      end
-
-      def info(capsule_serial = nil)
-        get(capsule_serial)
       end
     end
   end

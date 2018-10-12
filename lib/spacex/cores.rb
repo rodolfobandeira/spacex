@@ -16,6 +16,12 @@ module SPACEX
     property 'details'
 
     class << self
+      def info(core_serial = nil)
+        get(core_serial)
+      end
+
+      private
+
       def retrieve_all
         data = SPACEX::BaseRequest.call_api('cores')
         data.get.body.map { |k| SPACEX::Cores.new(k) }
@@ -26,10 +32,6 @@ module SPACEX
 
         data = SPACEX::BaseRequest.get("cores/#{core_serial}")
         SPACEX::Cores.new(data)
-      end
-
-      def info(core_serial = nil)
-        get(core_serial)
       end
     end
   end
