@@ -26,8 +26,10 @@ Ruby library that consumes SpaceX API
   - [Missions](#missions)
     - `SPACEX::Missions.info`
     - `SPACEX::Missions.info('mission_id')`
+  - [Rockets](#rockets)
+    - `SPACEX::Rockets.info`
+    - `SPACEX::Rockets.info('falcon1')`
 - [Contributing](#contributing)
-  - [Contributors / Changelog](#contributors)
 - [Copyright](#copyright)
 
 
@@ -286,9 +288,7 @@ missions.first.description # "In 2017, Iridium began launching Iridium NEXT, a s
 
 See [CONTRIBUTING](CONTRIBUTING.md).
 
-## Contributors
-
-[Awesome people that already helped this project](CHANGELOG.md).
+[List of awesome people that already helped this project](CHANGELOG.md).
 
 
 ## Copyright
