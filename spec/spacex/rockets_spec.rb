@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe SPACEX do
-  context 'Rockets', vcr: { cassette_name: 'rockets/info' } do
+describe SPACEX::Rockets do
+  context '#info', vcr: { cassette_name: 'rockets/info' } do
     subject do
       SPACEX::Rockets.info
     end
@@ -109,7 +109,7 @@ describe SPACEX do
     end
   end
 
-  context 'Get specific Rocket', vcr: { cassette_name: 'rockets/info/falcon1' } do
+  context "#info('falcon1')", vcr: { cassette_name: 'rockets/info/falcon1' } do
     subject do
       SPACEX::Rockets.info('falcon1')
     end
