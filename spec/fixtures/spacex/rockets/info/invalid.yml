@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/rockets/invalid
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Fri, 12 Oct 2018 02:59:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d64b40402217803e462c3cd3b6aad69261539313190; expires=Sat, 12-Oct-19
+        02:59:50 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Response-Time:
+      - 42ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 46865010ac54c181-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":"Not Found"}'
+    http_version: 
+  recorded_at: Fri, 12 Oct 2018 02:59:50 GMT
+recorded_with: VCR 4.0.0

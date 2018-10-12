@@ -1,0 +1,139 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/rockets/falcon1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 Oct 2018 03:32:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d41185f13de8dc3fd36ee65d1a88d9ad81539315133; expires=Sat, 12-Oct-19
+        03:32:13 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Koa-Redis-Cache:
+      - 'true'
+      X-Response-Time:
+      - 5ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 46867f8358945717-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":1,"active":false,"stages":2,"boosters":0,"cost_per_launch":6700000,"success_rate_pct":40,"first_flight":"2006-03-24","country":"Republic
+        of the Marshall Islands","company":"SpaceX","height":{"meters":22.25,"feet":73},"diameter":{"meters":1.68,"feet":5.5},"mass":{"kg":30146,"lb":66460},"payload_weights":[{"id":"leo","name":"Low
+        Earth Orbit","kg":450,"lb":992}],"first_stage":{"reusable":false,"engines":1,"fuel_amount_tons":44.3,"burn_time_sec":169,"thrust_sea_level":{"kN":420,"lbf":94000},"thrust_vacuum":{"kN":480,"lbf":110000}},"second_stage":{"engines":1,"fuel_amount_tons":3.38,"burn_time_sec":378,"thrust":{"kN":31,"lbf":7000},"payloads":{"option_1":"composite
+        fairing","composite_fairing":{"height":{"meters":3.5,"feet":11.5},"diameter":{"meters":1.5,"feet":4.9}}}},"engines":{"number":1,"type":"merlin","version":"1C","layout":"single","engine_loss_max":0,"propellant_1":"liquid
+        oxygen","propellant_2":"RP-1 kerosene","thrust_sea_level":{"kN":420,"lbf":94000},"thrust_vacuum":{"kN":480,"lbf":110000},"thrust_to_weight":96},"landing_legs":{"number":0,"material":null},"flickr_images":["https://www.spacex.com/sites/spacex/files/styles/media_gallery_large/public/2009_-_01_liftoff_south_full_wide_ro8a1280_edit.jpg?itok=8loiSGt1","https://www.spacex.com/sites/spacex/files/styles/media_gallery_large/public/2009_-_02_default_liftoff_west_full_wide_nn6p2062_xl.jpg?itok=p776nHsM"],"wikipedia":"https://en.wikipedia.org/wiki/Falcon_1","description":"The
+        Falcon 1 was an expendable launch system privately developed and manufactured
+        by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first
+        privately-developed liquid-fuel launch vehicle to go into orbit around the
+        Earth.","rocket_id":"falcon1","rocket_name":"Falcon 1","rocket_type":"rocket"}'
+    http_version: 
+  recorded_at: Fri, 12 Oct 2018 03:32:14 GMT
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/rockets/falcon1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 Oct 2018 03:32:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d6999e3f035d1724a0d856b2bc6bb33d91539315134; expires=Sat, 12-Oct-19
+        03:32:14 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Koa-Redis-Cache:
+      - 'true'
+      X-Response-Time:
+      - 1ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 46867f843e60572f-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":1,"active":false,"stages":2,"boosters":0,"cost_per_launch":6700000,"success_rate_pct":40,"first_flight":"2006-03-24","country":"Republic
+        of the Marshall Islands","company":"SpaceX","height":{"meters":22.25,"feet":73},"diameter":{"meters":1.68,"feet":5.5},"mass":{"kg":30146,"lb":66460},"payload_weights":[{"id":"leo","name":"Low
+        Earth Orbit","kg":450,"lb":992}],"first_stage":{"reusable":false,"engines":1,"fuel_amount_tons":44.3,"burn_time_sec":169,"thrust_sea_level":{"kN":420,"lbf":94000},"thrust_vacuum":{"kN":480,"lbf":110000}},"second_stage":{"engines":1,"fuel_amount_tons":3.38,"burn_time_sec":378,"thrust":{"kN":31,"lbf":7000},"payloads":{"option_1":"composite
+        fairing","composite_fairing":{"height":{"meters":3.5,"feet":11.5},"diameter":{"meters":1.5,"feet":4.9}}}},"engines":{"number":1,"type":"merlin","version":"1C","layout":"single","engine_loss_max":0,"propellant_1":"liquid
+        oxygen","propellant_2":"RP-1 kerosene","thrust_sea_level":{"kN":420,"lbf":94000},"thrust_vacuum":{"kN":480,"lbf":110000},"thrust_to_weight":96},"landing_legs":{"number":0,"material":null},"flickr_images":["https://www.spacex.com/sites/spacex/files/styles/media_gallery_large/public/2009_-_01_liftoff_south_full_wide_ro8a1280_edit.jpg?itok=8loiSGt1","https://www.spacex.com/sites/spacex/files/styles/media_gallery_large/public/2009_-_02_default_liftoff_west_full_wide_nn6p2062_xl.jpg?itok=p776nHsM"],"wikipedia":"https://en.wikipedia.org/wiki/Falcon_1","description":"The
+        Falcon 1 was an expendable launch system privately developed and manufactured
+        by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first
+        privately-developed liquid-fuel launch vehicle to go into orbit around the
+        Earth.","rocket_id":"falcon1","rocket_name":"Falcon 1","rocket_type":"rocket"}'
+    http_version: 
+  recorded_at: Fri, 12 Oct 2018 03:32:14 GMT
+recorded_with: VCR 4.0.0
