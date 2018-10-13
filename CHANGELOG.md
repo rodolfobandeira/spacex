@@ -7,6 +7,7 @@
 * [#28](https://github.com/rodolfobandeira/spacex/pull/28): Add ability to query all launches - [@ludamillion](https://github.com/ludamillion).
 * [#26](https://github.com/rodolfobandeira/spacex/pull/26): Fix dependencies - [@harman28](https://github.com/harman28).
 * [#25](https://github.com/rodolfobandeira/spacex/pull/25): Add code coverage tools - [@harman28](https://github.com/harman28).
+* [#27](https://github.com/rodolfobandeira/spacex/pull/27): Add ability to query next launch - [@Andrey-Raspopov](https://github.com/Andrey-Raspopov)
 
 ### 0.0.7 (2018/10/07)
 

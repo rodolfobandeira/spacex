@@ -27,6 +27,12 @@ module SPACEX
     property 'image'
 
     class << self
+      def info(ship_id = nil)
+        get(ship_id)
+      end
+
+      private
+
       def retrieve_all
         data = SPACEX::BaseRequest.call_api('ships')
         data.get.body.map { |k| SPACEX::Ships.new(k) }
@@ -37,10 +43,6 @@ module SPACEX
 
         data = SPACEX::BaseRequest.get("ships/#{ship_id}")
         SPACEX::Ships.new(data)
-      end
-
-      def info(ship_id = nil)
-        get(ship_id)
       end
     end
   end

@@ -207,4 +207,71 @@ describe SPACEX::Launches do
       expect(subject.last.static_fire_date_utc).to eq nil
     end
   end
+
+  context '#next', vcr: { cassette_name: 'launches/next' } do
+    subject do
+      SPACEX::Launches.next
+    end
+
+    it 'returns next launch' do
+      expect(subject.flight_number).to eq 70
+      expect(subject.mission_name).to eq 'Es’hail 2'
+      expect(subject.launch_year).to eq '2018'
+      expect(subject.launch_date_unix).to eq 1_541_030_400
+      expect(subject.launch_date_utc).to eq '2018-11-01T00:00:00.000Z'
+      expect(subject.launch_date_local).to eq '2018-10-31T20:00:00-04:00'
+      expect(subject.launch_success).to eq nil
+      expect(subject.rocket.rocket_id).to eq 'falcon9'
+      expect(subject.rocket.rocket_name).to eq 'Falcon 9'
+      expect(subject.rocket.rocket_type).to eq 'FT'
+      expect(subject.rocket.first_stage.cores.first.core_serial).to eq nil
+      expect(subject.rocket.first_stage.cores.first.flight).to eq nil
+      expect(subject.rocket.first_stage.cores.first.block).to eq 5
+      expect(subject.rocket.first_stage.cores.first.reused).to eq false
+      expect(subject.rocket.first_stage.cores.first.land_success).to eq nil
+      expect(subject.rocket.first_stage.cores.first.landing_type).to eq nil
+      expect(subject.rocket.first_stage.cores.first.landing_vehicle).to eq nil
+      expect(subject.rocket.second_stage.block).to eq 5
+      expect(subject.rocket.second_stage.payloads.first.payload_id).to eq 'Es’hail 2'
+      expect(subject.rocket.second_stage.payloads.first.norad_id.first).to eq nil
+      expect(subject.rocket.second_stage.payloads.first.reused).to eq false
+      expect(subject.rocket.second_stage.payloads.first.customers.first).to eq 'Es’hailSat'
+      expect(subject.rocket.second_stage.payloads.first.nationality).to eq 'Qatar'
+      expect(subject.rocket.second_stage.payloads.first.manufacturer).to eq 'Mitsubishi Electric'
+      expect(subject.rocket.second_stage.payloads.first.payload_type).to eq 'Satellite'
+      expect(subject.rocket.second_stage.payloads.first.payload_mass_kg).to eq 3000
+      expect(subject.rocket.second_stage.payloads.first.payload_mass_lbs).to eq 6_613.868
+      expect(subject.rocket.second_stage.payloads.first.orbit).to eq 'GTO'
+      expect(subject.rocket.second_stage.payloads.first.orbit_params.regime).to eq 'geostationary'
+      expect(subject.rocket.second_stage.payloads.first.orbit_params.longitude).to eq 25.5
+      expect(subject.rocket.second_stage.payloads.first.orbit_params.semi_major_axis_km).to eq nil
+      expect(subject.rocket.second_stage.payloads.first.orbit_params.eccentricity).to eq nil
+      expect(subject.rocket.second_stage.payloads.first.orbit_params.periapsis_km).to eq nil
+      expect(subject.rocket.second_stage.payloads.first.orbit_params.apoapsis_km).to eq nil
+      expect(subject.rocket.second_stage.payloads.first.orbit_params.inclination_deg).to eq nil
+      expect(subject.rocket.second_stage.payloads.first.orbit_params.period_min).to eq nil
+      expect(subject.rocket.second_stage.payloads.first.orbit_params.lifespan_years).to eq 15
+      expect(subject.rocket.second_stage.payloads.first.orbit_params.epoch).to eq nil
+      expect(subject.rocket.second_stage.payloads.first.orbit_params.mean_motion).to eq nil
+      expect(subject.rocket.second_stage.payloads.first.orbit_params.raan).to eq nil
+      expect(subject.telemetry.flight_club).to eq nil
+      expect(subject.launch_site.site_id).to eq 'ccafs_slc_40'
+      expect(subject.launch_site.site_name).to eq 'CCAFS SLC 40'
+      expect(subject.launch_site.site_name_long).to eq 'Cape Canaveral Air Force Station Space Launch Complex 40'
+      expect(subject.launch_success).to eq nil
+      expect(subject.links.mission_patch).to eq nil
+      expect(subject.links.mision_patch_small).to eq nil
+      expect(subject.links.reddit_campaign).to eq nil
+      expect(subject.links.reddit_launch).to eq nil
+      expect(subject.links.reddit_recovery).to eq nil
+      expect(subject.links.reddit_media).to eq nil
+      expect(subject.links.presskit).to eq nil
+      expect(subject.links.article_link).to eq nil
+      expect(subject.links.wikipedia).to eq nil
+      expect(subject.links.video_link).to eq nil
+      expect(subject.details).to eq nil
+      expect(subject.upcoming).to eq true
+      expect(subject.static_fire_date_utc).to eq nil
+    end
+  end
 end
