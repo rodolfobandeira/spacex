@@ -11,7 +11,10 @@ Ruby library that consumes SpaceX API
 
 - [Installation](#installation)
 - [Usage](#usage)
-  - [Latest Launch](#latest-launch) - `SPACEX::Launches.latest`
+  - [Launches](#launches)
+    - `SPACEX::Launches.info`
+    - `SPACEX::Launches.latest`
+    - `SPACEX::Launches.next`
   - [Company Info](#company-info) - `SPACEX::CompanyInfo.info`
   - [Roadster](#roadster) - `SPACEX::Roadster.info`
   - [Dragon Capsules](#dragon-capsules)
@@ -23,6 +26,9 @@ Ruby library that consumes SpaceX API
   - [Missions](#missions)
     - `SPACEX::Missions.info`
     - `SPACEX::Missions.info('mission_id')`
+  - [Rockets](#rockets)
+    - `SPACEX::Rockets.info`
+    - `SPACEX::Rockets.info('falcon1')`
   - [Capsules](#capsules)
     - `SPACEX::Capsules.info`
     - `SPACEX::Capsules.info('capsule_serial')`
@@ -30,7 +36,6 @@ Ruby library that consumes SpaceX API
     - `SPACEX::Cores.info`
     - `SPACEX::Cores.info('core_serial')`
 - [Contributing](#contributing)
-  - [Contributors / Changelog](#contributors)
 - [Copyright](#copyright)
 
 
@@ -47,7 +52,11 @@ Run `bundle install`.
 
 ## Usage
 
-### Latest Launch
+### Launches
+
+- `SPACEX::Launches.info` Retrieve all Launches
+- `SPACEX::launches.next` Retrieve next launch info;
+- `SPACEX::launches.latest` Retrieve latest launch info;
 
 ```ruby
 require 'spacex'
@@ -276,13 +285,55 @@ missions.first.twitter # "https://twitter.com/IridiumBoss?lang=en"
 missions.first.description # "In 2017, Iridium began launching Iridium NEXT, a second-generation worldwide network of telecommunications satellites, consisting of 66 active satellites, with another nine in-orbit spares and six on-ground spares. These satellites will incorporate features such as data transmission that were not emphasized in the original design. The constellation will provide L-band data speeds of up to 128 kbit/s to mobile terminals, up to 1.5 Mbit/s to Iridium Pilot marine terminals, and high-speed Ka-band service of up to 8 Mbit/s to fixed/transportable terminals. The next-generation terminals and service are expected to be commercially available by the end of 2018. However, Iridium's proposed use of its next-generation satellites has raised concerns the service will harmfully interfere with GPS devices. The satellites will incorporate a secondary payload for Aireon, a space-qualified ADS-B data receiver. This is for use by air traffic control and, via FlightAware, for use by airlines. A tertiary payload on 58 satellites is a marine AIS ship-tracker receiver, for Canadian company exactEarth Ltd. Iridium can also be used to provide a data link to other satellites in space, enabling command and control of other space assets regardless of the position of ground stations and gateways."
 ```
 
+### Rockets
+
+- `SPACEX::Rockets.info` Retrieve all Rockets;
+- `SPACEX::Rockets.info('falcon1')` Retrieve a specific rocket. Ex: `falcon1`
+```
+rockets = SPACEX::Rockets.info
+first_rocket = rockets.first
+
+first_rocket.id # 1
+first_rocket.active # false
+first_rocket.stages # 2
+first_rocket.boosters # 0
+first_rocket.cost_per_launch # 6700000
+first_rocket.success_rate_pct # 40
+first_rocket.first_flight # "2006-03-24"
+first_rocket.country # "Republic of the Marshall Islands"
+first_rocket.company # "SpaceX"
+first_rocket.height # {"meters"=>22.25, "feet"=>73}
+first_rocket.diameter # {"meters"=>1.68, "feet"=>5.5}
+first_rocket.mass # {"kg"=>30146, "lb"=>66460}
+first_rocket.payload_weights # [{"id"=>"leo", "name"=>"Low Earth Orbit", "kg"=>450, "lb"=>992}]
+first_rocket.first_stage # {"reusable"=>false, "engines"=>1, "fuel_amount_tons"=>44.3, "burn_time_sec"=>169, "thrust_sea_level"=>{"kN"=>420, "lbf"=>94000}, "thrust_vacuum"=>{"kN"=>480, "lbf"=>110000}}
+first_rocket.second_stage # {"engines"=>1, "fuel_amount_tons"=>3.38, "burn_time_sec"=>378, "thrust"=>{"kN"=>31, "lbf"=>7000}, "payloads"=>{"option_1"=>"composite fairing", "composite_fairing"=>{"height"=>{"meters"=>3.5, "feet"=>11.5}, "diameter"=>{"meters"=>1.5, "feet"=>4.9}}}}
+first_rocket.engines # {"number"=>1, "type"=>"merlin", "version"=>"1C", "layout"=>"single", "engine_loss_max"=>0, "propellant_1"=>"liquid oxygen", "propellant_2"=>"RP-1 kerosene", "thrust_sea_level"=>{"kN"=>420, "lbf"=>94000}, "thrust_vacuum"=>{"kN"=>480, "lbf"=>110000}, "thrust_to_weight"=>96}
+first_rocket.landing_legs # {"number"=>0, "material"=>nil}
+first_rocket.wikipedia # "https://en.wikipedia.org/wiki/Falcon_1"
+first_rocket.description # "The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth."
+first_rocket.rocket_id # "falcon1"
+first_rocket.rocket_name # "Falcon 1"
+first_rocket.rocket_type # "rocket"
+```
+
+### Capsules
+
+- `SPACEX::Capsules.info` Retrieve all Capsules
+- `SPACEX::Capsules.info('capsule_serial')` Retrieve a specific capsule
+
+
+### Cores
+
+- `SPACEX::Cores.info` Retrieve all Cores
+- `SPACEX::Cores.info('core_serial')` Retrieve a specific core
+
+
 ## Contributing
 
 See [CONTRIBUTING](CONTRIBUTING.md).
 
-## Contributors
-
-[Awesome people that already helped this project](CHANGELOG.md).
+[List of awesome people that already helped this project](CHANGELOG.md).
 
 
 ## Copyright

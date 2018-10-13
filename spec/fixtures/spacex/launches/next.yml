@@ -1,0 +1,123 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/launches/next
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 11 Oct 2018 11:37:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d1a7384ce4e074f1c912ce3414120e6741539257834; expires=Fri, 11-Oct-19
+        11:37:14 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Response-Time:
+      - 37ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4681089a5ae78b64-KBP
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJmbGlnaHRfbnVtYmVyIjo3MCwibWlzc2lvbl9uYW1lIjoiRXPigJloYWlsIDIiLCJtaXNzaW9uX2lkIjpbXSwibGF1bmNoX3llYXIiOiIyMDE4IiwibGF1bmNoX2RhdGVfdW5peCI6MTU0MTAzMDQwMCwibGF1bmNoX2RhdGVfdXRjIjoiMjAxOC0xMS0wMVQwMDowMDowMC4wMDBaIiwibGF1bmNoX2RhdGVfbG9jYWwiOiIyMDE4LTEwLTMxVDIwOjAwOjAwLTA0OjAwIiwiaXNfdGVudGF0aXZlIjp0cnVlLCJ0ZW50YXRpdmVfbWF4X3ByZWNpc2lvbiI6Im1vbnRoIiwicm9ja2V0Ijp7InJvY2tldF9pZCI6ImZhbGNvbjkiLCJyb2NrZXRfbmFtZSI6IkZhbGNvbiA5Iiwicm9ja2V0X3R5cGUiOiJGVCIsImZpcnN0X3N0YWdlIjp7ImNvcmVzIjpbeyJjb3JlX3NlcmlhbCI6bnVsbCwiZmxpZ2h0IjpudWxsLCJibG9jayI6NSwicmV1c2VkIjpmYWxzZSwibGFuZF9zdWNjZXNzIjpudWxsLCJsYW5kaW5nX2ludGVudCI6bnVsbCwibGFuZGluZ190eXBlIjpudWxsLCJsYW5kaW5nX3ZlaGljbGUiOm51bGx9XX0sInNlY29uZF9zdGFnZSI6eyJibG9jayI6NSwicGF5bG9hZHMiOlt7InBheWxvYWRfaWQiOiJFc+KAmWhhaWwgMiIsIm5vcmFkX2lkIjpbXSwicmV1c2VkIjpmYWxzZSwiY3VzdG9tZXJzIjpbIkVz4oCZaGFpbFNhdCJdLCJuYXRpb25hbGl0eSI6IlFhdGFyIiwibWFudWZhY3R1cmVyIjoiTWl0c3ViaXNoaSBFbGVjdHJpYyIsInBheWxvYWRfdHlwZSI6IlNhdGVsbGl0ZSIsInBheWxvYWRfbWFzc19rZyI6MzAwMCwicGF5bG9hZF9tYXNzX2xicyI6NjYxMy44NjgsIm9yYml0IjoiR1RPIiwib3JiaXRfcGFyYW1zIjp7InJlZmVyZW5jZV9zeXN0ZW0iOiJnZW9jZW50cmljIiwicmVnaW1lIjoiZ2Vvc3RhdGlvbmFyeSIsImxvbmdpdHVkZSI6MjUuNSwic2VtaV9tYWpvcl9heGlzX2ttIjpudWxsLCJlY2NlbnRyaWNpdHkiOm51bGwsInBlcmlhcHNpc19rbSI6bnVsbCwiYXBvYXBzaXNfa20iOm51bGwsImluY2xpbmF0aW9uX2RlZyI6bnVsbCwicGVyaW9kX21pbiI6bnVsbCwibGlmZXNwYW5feWVhcnMiOjE1LCJlcG9jaCI6bnVsbCwibWVhbl9tb3Rpb24iOm51bGwsInJhYW4iOm51bGwsImFyZ19vZl9wZXJpY2VudGVyIjpudWxsLCJtZWFuX2Fub21hbHkiOm51bGx9fV19LCJmYWlyaW5ncyI6eyJyZXVzZWQiOmZhbHNlLCJyZWNvdmVyeV9hdHRlbXB0IjpmYWxzZSwicmVjb3ZlcmVkIjpmYWxzZSwic2hpcCI6bnVsbH19LCJzaGlwcyI6W10sInRlbGVtZXRyeSI6eyJmbGlnaHRfY2x1YiI6bnVsbH0sImxhdW5jaF9zaXRlIjp7InNpdGVfaWQiOiJjY2Fmc19zbGNfNDAiLCJzaXRlX25hbWUiOiJDQ0FGUyBTTEMgNDAiLCJzaXRlX25hbWVfbG9uZyI6IkNhcGUgQ2FuYXZlcmFsIEFpciBGb3JjZSBTdGF0aW9uIFNwYWNlIExhdW5jaCBDb21wbGV4IDQwIn0sImxhdW5jaF9zdWNjZXNzIjpudWxsLCJsaW5rcyI6eyJtaXNzaW9uX3BhdGNoIjpudWxsLCJtaXNzaW9uX3BhdGNoX3NtYWxsIjpudWxsLCJyZWRkaXRfY2FtcGFpZ24iOm51bGwsInJlZGRpdF9sYXVuY2giOm51bGwsInJlZGRpdF9yZWNvdmVyeSI6bnVsbCwicmVkZGl0X21lZGlhIjpudWxsLCJwcmVzc2tpdCI6bnVsbCwiYXJ0aWNsZV9saW5rIjpudWxsLCJ3aWtpcGVkaWEiOm51bGwsInZpZGVvX2xpbmsiOm51bGwsImZsaWNrcl9pbWFnZXMiOltdfSwiZGV0YWlscyI6bnVsbCwidXBjb21pbmciOnRydWUsInN0YXRpY19maXJlX2RhdGVfdXRjIjpudWxsLCJzdGF0aWNfZmlyZV9kYXRlX3VuaXgiOm51bGx9
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 11:37:14 GMT
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/launches/next
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 11 Oct 2018 11:37:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d97669d5320ca0d69f055b4c35ccf332d1539257835; expires=Fri, 11-Oct-19
+        11:37:15 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Koa-Redis-Cache:
+      - 'true'
+      X-Response-Time:
+      - 1ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4681089d0abb83f4-KBP
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJmbGlnaHRfbnVtYmVyIjo3MCwibWlzc2lvbl9uYW1lIjoiRXPigJloYWlsIDIiLCJtaXNzaW9uX2lkIjpbXSwibGF1bmNoX3llYXIiOiIyMDE4IiwibGF1bmNoX2RhdGVfdW5peCI6MTU0MTAzMDQwMCwibGF1bmNoX2RhdGVfdXRjIjoiMjAxOC0xMS0wMVQwMDowMDowMC4wMDBaIiwibGF1bmNoX2RhdGVfbG9jYWwiOiIyMDE4LTEwLTMxVDIwOjAwOjAwLTA0OjAwIiwiaXNfdGVudGF0aXZlIjp0cnVlLCJ0ZW50YXRpdmVfbWF4X3ByZWNpc2lvbiI6Im1vbnRoIiwicm9ja2V0Ijp7InJvY2tldF9pZCI6ImZhbGNvbjkiLCJyb2NrZXRfbmFtZSI6IkZhbGNvbiA5Iiwicm9ja2V0X3R5cGUiOiJGVCIsImZpcnN0X3N0YWdlIjp7ImNvcmVzIjpbeyJjb3JlX3NlcmlhbCI6bnVsbCwiZmxpZ2h0IjpudWxsLCJibG9jayI6NSwicmV1c2VkIjpmYWxzZSwibGFuZF9zdWNjZXNzIjpudWxsLCJsYW5kaW5nX2ludGVudCI6bnVsbCwibGFuZGluZ190eXBlIjpudWxsLCJsYW5kaW5nX3ZlaGljbGUiOm51bGx9XX0sInNlY29uZF9zdGFnZSI6eyJibG9jayI6NSwicGF5bG9hZHMiOlt7InBheWxvYWRfaWQiOiJFc+KAmWhhaWwgMiIsIm5vcmFkX2lkIjpbXSwicmV1c2VkIjpmYWxzZSwiY3VzdG9tZXJzIjpbIkVz4oCZaGFpbFNhdCJdLCJuYXRpb25hbGl0eSI6IlFhdGFyIiwibWFudWZhY3R1cmVyIjoiTWl0c3ViaXNoaSBFbGVjdHJpYyIsInBheWxvYWRfdHlwZSI6IlNhdGVsbGl0ZSIsInBheWxvYWRfbWFzc19rZyI6MzAwMCwicGF5bG9hZF9tYXNzX2xicyI6NjYxMy44NjgsIm9yYml0IjoiR1RPIiwib3JiaXRfcGFyYW1zIjp7InJlZmVyZW5jZV9zeXN0ZW0iOiJnZW9jZW50cmljIiwicmVnaW1lIjoiZ2Vvc3RhdGlvbmFyeSIsImxvbmdpdHVkZSI6MjUuNSwic2VtaV9tYWpvcl9heGlzX2ttIjpudWxsLCJlY2NlbnRyaWNpdHkiOm51bGwsInBlcmlhcHNpc19rbSI6bnVsbCwiYXBvYXBzaXNfa20iOm51bGwsImluY2xpbmF0aW9uX2RlZyI6bnVsbCwicGVyaW9kX21pbiI6bnVsbCwibGlmZXNwYW5feWVhcnMiOjE1LCJlcG9jaCI6bnVsbCwibWVhbl9tb3Rpb24iOm51bGwsInJhYW4iOm51bGwsImFyZ19vZl9wZXJpY2VudGVyIjpudWxsLCJtZWFuX2Fub21hbHkiOm51bGx9fV19LCJmYWlyaW5ncyI6eyJyZXVzZWQiOmZhbHNlLCJyZWNvdmVyeV9hdHRlbXB0IjpmYWxzZSwicmVjb3ZlcmVkIjpmYWxzZSwic2hpcCI6bnVsbH19LCJzaGlwcyI6W10sInRlbGVtZXRyeSI6eyJmbGlnaHRfY2x1YiI6bnVsbH0sImxhdW5jaF9zaXRlIjp7InNpdGVfaWQiOiJjY2Fmc19zbGNfNDAiLCJzaXRlX25hbWUiOiJDQ0FGUyBTTEMgNDAiLCJzaXRlX25hbWVfbG9uZyI6IkNhcGUgQ2FuYXZlcmFsIEFpciBGb3JjZSBTdGF0aW9uIFNwYWNlIExhdW5jaCBDb21wbGV4IDQwIn0sImxhdW5jaF9zdWNjZXNzIjpudWxsLCJsaW5rcyI6eyJtaXNzaW9uX3BhdGNoIjpudWxsLCJtaXNzaW9uX3BhdGNoX3NtYWxsIjpudWxsLCJyZWRkaXRfY2FtcGFpZ24iOm51bGwsInJlZGRpdF9sYXVuY2giOm51bGwsInJlZGRpdF9yZWNvdmVyeSI6bnVsbCwicmVkZGl0X21lZGlhIjpudWxsLCJwcmVzc2tpdCI6bnVsbCwiYXJ0aWNsZV9saW5rIjpudWxsLCJ3aWtpcGVkaWEiOm51bGwsInZpZGVvX2xpbmsiOm51bGwsImZsaWNrcl9pbWFnZXMiOltdfSwiZGV0YWlscyI6bnVsbCwidXBjb21pbmciOnRydWUsInN0YXRpY19maXJlX2RhdGVfdXRjIjpudWxsLCJzdGF0aWNfZmlyZV9kYXRlX3VuaXgiOm51bGx9
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 11:37:15 GMT
+recorded_with: VCR 4.0.0

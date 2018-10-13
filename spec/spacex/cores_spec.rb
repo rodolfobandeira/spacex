@@ -1,9 +1,7 @@
-# frozen_string_literal: true
-
 require 'spec_helper'
 
-describe SPACEX do
-  context 'Cores', vcr: { cassette_name: 'cores' } do
+describe SPACEX::Cores do
+  context '#info', vcr: { cassette_name: 'cores' } do
     subject do
       SPACEX::Cores.info
     end
@@ -24,7 +22,7 @@ describe SPACEX do
     end
   end
 
-  context 'Cores', vcr: { cassette_name: 'cores/B1041' } do
+  context "#info('B1041')", vcr: { cassette_name: 'cores/B1041' } do
     subject do
       SPACEX::Cores.info('B1041')
     end
