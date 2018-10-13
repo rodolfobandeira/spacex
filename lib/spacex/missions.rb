@@ -12,6 +12,12 @@ module SPACEX
     property 'description'
 
     class << self
+      def info(mission_id = nil)
+        get(mission_id)
+      end
+
+      private
+
       def retrieve_all
         data = SPACEX::BaseRequest.call_api('missions')
         data.get.body.map { |k| SPACEX::Missions.new(k) }
@@ -22,10 +28,6 @@ module SPACEX
 
         data = SPACEX::BaseRequest.get("missions/#{mission_id}")
         SPACEX::Missions.new(data)
-      end
-
-      def info(mission_id = nil)
-        get(mission_id)
       end
     end
   end
