@@ -49,7 +49,8 @@ Run `bundle install`.
 ### Launches
 
 - `SPACEX::Launches.info` Retrieve all Launches
-- `SPACEX::Launches.latest` Retrieve latest launch
+- `SPACEX::launches.next` Retrieve next launch info;
+- `SPACEX::launches.latest` Retrieve latest launch info;
 
 ```ruby
 require 'spacex'
