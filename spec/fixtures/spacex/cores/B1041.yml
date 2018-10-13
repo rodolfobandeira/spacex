@@ -1,0 +1,123 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/cores/B1041
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 Oct 2018 12:39:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d4666bdda295ec945aa4dabd70dc57c751539347962; expires=Sat, 12-Oct-19
+        12:39:22 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Response-Time:
+      - 45ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4689a0fb98c1244a-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"core_serial":"B1041","block":4,"status":"expended","original_launch":"2017-10-09T12:37:00.000Z","original_launch_unix":1507552620,"missions":[{"name":"Iridium
+        NEXT Mission 3","flight":48},{"name":"Iridium NEXT Mission 5","flight":58}],"reuse_count":1,"rtls_attempts":0,"rtls_landings":0,"asds_attempts":1,"asds_landings":1,"water_landing":false,"details":"Will
+        fly expendable on Iridium NEXT Mission 5"}'
+    http_version: 
+  recorded_at: Fri, 12 Oct 2018 12:39:22 GMT
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/cores/B1041
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 Oct 2018 12:39:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d1300a444a565908a78292ab22858a2271539347962; expires=Sat, 12-Oct-19
+        12:39:22 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Response-Time:
+      - 41ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4689a0fd287a247a-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"core_serial":"B1041","block":4,"status":"expended","original_launch":"2017-10-09T12:37:00.000Z","original_launch_unix":1507552620,"missions":[{"name":"Iridium
+        NEXT Mission 3","flight":48},{"name":"Iridium NEXT Mission 5","flight":58}],"reuse_count":1,"rtls_attempts":0,"rtls_landings":0,"asds_attempts":1,"asds_landings":1,"water_landing":false,"details":"Will
+        fly expendable on Iridium NEXT Mission 5"}'
+    http_version: 
+  recorded_at: Fri, 12 Oct 2018 12:39:22 GMT
+recorded_with: VCR 4.0.0
