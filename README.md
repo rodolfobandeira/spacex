@@ -3,7 +3,6 @@ SpaceX Ruby Client
 
 [![Gem Version](https://badge.fury.io/rb/spacex.svg)](https://badge.fury.io/rb/spacex)
 [![Build Status](https://travis-ci.com/rodolfobandeira/spacex.svg?branch=master)](https://travis-ci.org/rodolfobandeira/spacex)
-[![Coverage Status](https://coveralls.io/repos/github/rodolfobandeira/spacex/badge.svg?branch=master)](https://coveralls.io/github/rodolfobandeira/spacex?branch=master)
 
 Ruby library that consumes SpaceX API
 
@@ -12,9 +11,7 @@ Ruby library that consumes SpaceX API
 
 - [Installation](#installation)
 - [Usage](#usage)
-  - [Launches](#launches)
-    - `SPACEX::Launches.latest`
-    - `SPACEX::Launches.info`
+  - [Latest Launch](#latest-launch) - `SPACEX::Launches.latest`
   - [Company Info](#company-info) - `SPACEX::CompanyInfo.info`
   - [Roadster](#roadster) - `SPACEX::Roadster.info`
   - [Dragon Capsules](#dragon-capsules)
@@ -29,6 +26,12 @@ Ruby library that consumes SpaceX API
   - [Rockets](#rockets)
     - `SPACEX::Rockets.info`
     - `SPACEX::Rockets.info('falcon1')`
+  - [Capsules](#capsules)
+    - `SPACEX::Capsules.info`
+    - `SPACEX::Capsules.info('capsule_serial')`
+  - [Cores](#cores)
+    - `SPACEX::Cores.info`
+    - `SPACEX::Cores.info('core_serial')`
 - [Contributing](#contributing)
 - [Copyright](#copyright)
 
@@ -46,10 +49,7 @@ Run `bundle install`.
 
 ## Usage
 
-### Launches
-
-- `SPACEX::Launches.info` Retrieve all Launches
-- `SPACEX::Launches.latest` Retrieve latest launch
+### Latest Launch
 
 ```ruby
 require 'spacex'
@@ -282,6 +282,18 @@ missions.first.description # "In 2017, Iridium began launching Iridium NEXT, a s
 
 - `SPACEX::Rockets.info` Retrieve all Rockets;
 - `SPACEX::Rockets.info('falcon1')` Retrieve a specific rocket. Ex: `falcon1`
+
+
+### Capsules
+
+- `SPACEX::Capsules.info` Retrieve all Capsules
+- `SPACEX::Capsules.info('capsule_serial')` Retrieve a specific capsule
+
+
+### Cores
+
+- `SPACEX::Cores.info` Retrieve all Cores
+- `SPACEX::Cores.info('core_serial')` Retrieve a specific core
 
 
 ## Contributing

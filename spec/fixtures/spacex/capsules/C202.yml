@@ -1,0 +1,123 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/capsules/C202
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 11 Oct 2018 16:56:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dde4b2f1d71fa0b62f41b29183867cebd1539277017; expires=Fri, 11-Oct-19
+        16:56:57 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Response-Time:
+      - 35ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4682dcee4d542474-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"capsule_serial":"C202","capsule_id":"dragon2","status":"active","original_launch":null,"original_launch_unix":null,"missions":[],"landings":0,"type":"Dragon
+        2.0","details":"Capsule used to qualify Dragon 2''s environmental control
+        and life support systems.","reuse_count":0}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 16:56:57 GMT
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/capsules/C202
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 11 Oct 2018 16:56:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d39640f3b8c92ab574c8c50a302d44b5b1539277017; expires=Fri, 11-Oct-19
+        16:56:57 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Response-Time:
+      - 38ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4682dcefa91a5729-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"capsule_serial":"C202","capsule_id":"dragon2","status":"active","original_launch":null,"original_launch_unix":null,"missions":[],"landings":0,"type":"Dragon
+        2.0","details":"Capsule used to qualify Dragon 2''s environmental control
+        and life support systems.","reuse_count":0}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 16:56:57 GMT
+recorded_with: VCR 4.0.0

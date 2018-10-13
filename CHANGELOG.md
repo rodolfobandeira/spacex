@@ -1,7 +1,10 @@
 ### 0.0.8 (next)
 
-* [#35](https://github.com/rodolfobandeira/spacex/pull/35): Implement Rockets endpoint - [@invacuo](https://github.com/invacuo)
-* [#28](https://github.com/rodolfobandeira/spacex/pull/28): Add ability to query all launches - [@ludamillion](https://github.com/ludamillion)
+* Your contribution here.
+* [#34](https://github.com/rodolfobandeira/spacex/pull/34): Implement Capsules endpoint - [@efl7a](https://github.com/efl7a).
+* [#34](https://github.com/rodolfobandeira/spacex/pull/34): Implement Cores endpoint - [@efl7a](https://github.com/efl7a).
+* [#35](https://github.com/rodolfobandeira/spacex/pull/35): Implement Rockets endpoint - [@invacuo](https://github.com/invacuo).
+* [#28](https://github.com/rodolfobandeira/spacex/pull/28): Add ability to query all launches - [@ludamillion](https://github.com/ludamillion).
 * [#26](https://github.com/rodolfobandeira/spacex/pull/26): Fix dependencies - [@harman28](https://github.com/harman28).
 * [#25](https://github.com/rodolfobandeira/spacex/pull/25): Add code coverage tools - [@harman28](https://github.com/harman28).
 
@@ -25,4 +28,3 @@
 ### 0.0.4 (2018/08/21)
 
 * Initial public release - [@rodolfobandeira](https://github.com/rodolfobandeira).
-
