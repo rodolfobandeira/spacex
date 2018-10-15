@@ -1,15 +1,15 @@
 module SPACEX
   module Launches
     def self.latest
-      SPACEX::BaseRequest.get('launches/latest')
+      SPACEX::BaseRequest.info('launches/latest')
     end
 
     def self.next
-      SPACEX::BaseRequest.get('launches/next')
+      SPACEX::BaseRequest.info('launches/next')
     end
 
     def self.all
-      SPACEX::BaseRequest.get('launches')
+      SPACEX::BaseRequest.info('launches')
     end
 
     def self.info

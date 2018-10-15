@@ -1,7 +1,7 @@
 module SPACEX
   module Roadster
     def self.info
-      SPACEX::BaseRequest.get('roadster')
+      SPACEX::BaseRequest.info('roadster')
     end
   end
 end

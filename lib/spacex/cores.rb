@@ -15,24 +15,8 @@ module SPACEX
     property 'water_landing'
     property 'details'
 
-    class << self
-      def info(core_serial = nil)
-        get(core_serial)
-      end
-
-      private
-
-      def retrieve_all
-        data = SPACEX::BaseRequest.call_api('cores')
-        data.get.body.map { |k| SPACEX::Cores.new(k) }
-      end
-
-      def get(core_serial = nil)
-        return retrieve_all if core_serial.nil?
-
-        data = SPACEX::BaseRequest.get("cores/#{core_serial}")
-        SPACEX::Cores.new(data)
-      end
+    def self.info(core_serial = nil)
+      SPACEX::BaseRequest.info("cores/#{core_serial}", SPACEX::Cores)
     end
   end
 end

@@ -23,7 +23,7 @@ describe SPACEX::Ships do
       expect(subject.first.status).to eq 'Stopped'
       expect(subject.first.speed_kn).to eq 0
       expect(subject.first.course_deg).to eq nil
-      expect(subject.first.position).to eq ({ 'latitude' => 30.52852, 'longitude' => -88.09869 })
+      expect(subject.first.position).to eq ({ 'latitude' => 30.5276, 'longitude' => -88.10261 })
       expect(subject.first.successful_landings).to eq nil
       expect(subject.first.attempted_landings).to eq nil
       expect(subject.first.missions).to eq [{ 'flight' => 7, 'name' => 'COTS 1' }, { 'flight' => 8, 'name' => 'COTS 2' }]
@@ -54,7 +54,7 @@ describe SPACEX::Ships do
       expect(subject.status).to eq 'Stopped'
       expect(subject.speed_kn).to eq 0
       expect(subject.course_deg).to eq nil
-      expect(subject.position).to eq ({ 'latitude' => 30.52758, 'longitude' => -88.10258 })
+      expect(subject.position).to eq ({ 'latitude' => 30.52852, 'longitude' => -88.09869 })
       expect(subject.successful_landings).to eq nil
       expect(subject.attempted_landings).to eq nil
       expect(subject.missions).to eq [{ 'flight' => 7, 'name' => 'COTS 1' }, { 'flight' => 8, 'name' => 'COTS 2' }]

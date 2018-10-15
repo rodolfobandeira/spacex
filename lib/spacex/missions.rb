@@ -11,24 +11,8 @@ module SPACEX
     property 'twitter'
     property 'description'
 
-    class << self
-      def info(mission_id = nil)
-        get(mission_id)
-      end
-
-      private
-
-      def retrieve_all
-        data = SPACEX::BaseRequest.call_api('missions')
-        data.get.body.map { |k| SPACEX::Missions.new(k) }
-      end
-
-      def get(mission_id = nil)
-        return retrieve_all if mission_id.nil?
-
-        data = SPACEX::BaseRequest.get("missions/#{mission_id}")
-        SPACEX::Missions.new(data)
-      end
+    def self.info(mission_id = nil)
+      SPACEX::BaseRequest.info("missions/#{mission_id}", SPACEX::Missions)
     end
   end
 end

@@ -4,27 +4,53 @@ module SPACEX
   end
 
   module BaseRequest
-    def self.get(path)
-      data = call_api(path)
-      response_body = data.get.body
-
-      if response_body.is_a? Array
-        response_body.map { |element| SPACEX::Response.new(element) }
-      else
-        SPACEX::Response.new(data.get.body)
+    class << self
+      def info(path, klass = nil, params = {})
+        response_body = get(path, params).body
+        process(response_body, klass)
       end
-    end
 
-    def self.call_api(path)
-      Faraday.new(
-        url: "#{SPACEX::ROOT_URI}/#{path}",
-        request: {
-          params_encoder: Faraday::FlatParamsEncoder
-        }
-      ) do |c|
-        c.use ::FaradayMiddleware::ParseJson
-        c.use Faraday::Response::RaiseError
-        c.use Faraday::Adapter::NetHttp
+      private
+
+      def get(path, params)
+        conn(path).get do |req|
+          req.params = params
+        end
+      end
+
+      def process(response_body, klass)
+        if response_body.is_a? Array
+          response_body.map do |element|
+            processed_response(element, klass)
+          end
+        else
+          processed_response(response_body, klass)
+        end
+      end
+
+      def processed_response(response, klass)
+        if klass.nil?
+          spacex_response(response)
+        else
+          klass.new(spacex_response(response))
+        end
+      end
+
+      def spacex_response(response)
+        SPACEX::Response.new(response)
+      end
+
+      def conn(path)
+        Faraday.new(
+          url: "#{SPACEX::ROOT_URI}/#{path}",
+          request: {
+            params_encoder: Faraday::FlatParamsEncoder
+          }
+        ) do |c|
+          c.use ::FaradayMiddleware::ParseJson
+          c.use Faraday::Response::RaiseError
+          c.use Faraday::Adapter::NetHttp
+        end
       end
     end
   end
