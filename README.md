@@ -4,60 +4,186 @@ SpaceX Ruby Client
 [![Gem Version](https://badge.fury.io/rb/spacex.svg)](https://badge.fury.io/rb/spacex)
 [![Build Status](https://travis-ci.com/rodolfobandeira/spacex.svg?branch=master)](https://travis-ci.org/rodolfobandeira/spacex)
 
-Ruby library that consumes SpaceX API
+A Ruby library that consumes the [SpaceX API](https://github.com/r-spacex/SpaceX-API).
 
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
+  - [Capsules](#capsules)
+    - `SPACEX::Capsules.info`
+    - `SPACEX::Capsules.info('capsule_serial')`
+  - [Company Info](#company-info) - `SPACEX::CompanyInfo.info`
+  - [Cores](#cores)
+    - `SPACEX::Cores.info`
+    - `SPACEX::Cores.info('core_serial')`
+  - [Dragon Capsules](#dragon-capsules)
+    - `SPACEX::DragonCapsules.info`
+    - `SPACEX::DragonCapsules.info('dragon_id')`
   - [Launches](#launches)
     - `SPACEX::Launches.info`
     - `SPACEX::Launches.latest`
     - `SPACEX::Launches.next`
-  - [Company Info](#company-info) - `SPACEX::CompanyInfo.info`
-  - [Roadster](#roadster) - `SPACEX::Roadster.info`
-  - [Dragon Capsules](#dragon-capsules)
-    - `SPACEX::DragonCapsules.info`
-    - `SPACEX::DragonCapsules.info('dragon_id')`
-  - [Ships](#ships)
-    - `SPACEX::Ships.info`
-    - `SPACEX::Ships.info('ship_id')`
   - [Missions](#missions)
     - `SPACEX::Missions.info`
     - `SPACEX::Missions.info('mission_id')`
+  - [Roadster](#roadster) - `SPACEX::Roadster.info`
   - [Rockets](#rockets)
     - `SPACEX::Rockets.info`
     - `SPACEX::Rockets.info('falcon1')`
-  - [Capsules](#capsules)
-    - `SPACEX::Capsules.info`
-    - `SPACEX::Capsules.info('capsule_serial')`
-  - [Cores](#cores)
-    - `SPACEX::Cores.info`
-    - `SPACEX::Cores.info('core_serial')`
+  - [Ships](#ships)
+    - `SPACEX::Ships.info`
+    - `SPACEX::Ships.info('ship_id')`
 - [Contributing](#contributing)
 - [Copyright](#copyright)
 
 
 ## Installation
 
-Add to Gemfile.
+Add the gem to your Gemfile:
 
 ```
 gem 'spacex'
 ```
 
-Run `bundle install`.
+Then run `bundle install`.
 
 
 ## Usage
 
+### Capsules
+
+- Get information for all capsules: `SPACEX::Capsules.info`
+- Get information about a specific capsule: `SPACEX::Capsules.info('capsule_serial')`
+
+This example shows how to get capsule information and what the data fields are for that object:
+
+```ruby
+capsules_info = SPACEX::Capsules.info
+
+capsules_info.first.capsule_id # 'dragon2'
+capsules_info.first.capsule_serial # 'C201'
+capsules_info.first.details # 'Pressure vessel used for Dragon 2 structural testing. Rumored to be repurposed for first Red Dragon Mission'
+capsules_info.first.landings # 0
+capsules_info.first.missions # []
+capsules_info.first.original_launch # nil capsules_info.first.original_launch_unix # nil
+capsules_info.first.status # 'active'
+capsules_info.first.type # 'Dragon 2.0'
+```
+
+### Company Info
+
+- Get information about the company: `SPACEX::CompanyInfo.info`
+
+Here is an example of the company information:
+
+```ruby
+company_info = SPACEX::CompanyInfo.info
+
+company_info.name # 'SpaceX'
+company_info.founder # 'Elon Musk'
+company_info.founded # 2002
+company_info.employees # 7000
+company_info.vehicles # 3
+company_info.launche_sites # nil
+company_info.test_sites # 1
+company_info.ceo # 'Elon Musk'
+company_info.cto # 'Elon Musk'
+company_info.coo # 'Gwynne Shotwell'
+company_info.cto_propulsion # 'Tom Mueller'
+company_info.valuation # 15_000_000_000
+company_info.headquarters.address # 'Rocket Road'
+company_info.headquarters.city # 'Hawthorne'
+company_info.headquarters.state # 'California'
+company_info.summary # 'SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.'
+```
+
+### Cores
+
+- Get information for all cores: `SPACEX::Cores.info`
+- Get information about a specific core: `SPACEX::Cores.info('core_serial')`
+
+The following code snippet shows how to get the cores information and what the data fields are for a single core:
+
+```ruby
+cores_info = SPACEX::Cores.info
+
+cores_info.first.asds_attempts # 0
+cores_info.first.asds_landings # 0
+cores_info.first.block # 5
+cores_info.first.core_serial # 'B1052'
+cores_info.first.details # 'On test stand at McGregor'
+cores_info.first.missions # []
+cores_info.first.original_launch # nil
+cores_info.first.original_launch_unix # nil
+cores_info.first.rtls_attempts # 0
+cores_info.first.rtls_landings # 0
+cores_info.first.status # 'active'
+cores_info.first.water_landing # false
+```
+
+### Dragon Capsules
+
+- Get all dragon capsules: `SPACEX::DragonCapsules.info`
+- Get a specific dragon capsule (e.g., `dragon1`) by including the id in the call: `SPACEX::DragonCapsules.info('dragon_id')`
+
+This code snippet shows the `dragon1` dragon capsule information:
+
+```ruby
+dragon_capsules = SPACEX::DragonCapsules.info
+
+dragon_capsules.first.capsule_id # "dragon1"
+dragon_capsules.first.name # "Dragon 1"
+dragon_capsules.first.type # "capsule"
+dragon_capsules.first.active # true
+dragon_capsules.first.crew_capacity # 0
+dragon_capsules.first.sidewall_angle_deg # 15
+dragon_capsules.first.orbit_duration_yr # 2
+dragon_capsules.first.dry_mass_kg # 4200
+dragon_capsules.first.dry_mass_lb # 9300
+dragon_capsules.first.first_flight # "2010-12-08"
+dragon_capsules.first.heat_shield['material'] # "PICA-X"
+dragon_capsules.first.heat_shield['size_meters'] # 3.6
+dragon_capsules.first.heat_shield['temp_degrees'] # 3000
+dragon_capsules.first.heat_shield['dev_partner'] # "NASA"
+dragon_capsules.first.thrusters[0]['type'] # "Draco"
+dragon_capsules.first.thrusters[0]['amount'] # 18
+dragon_capsules.first.thrusters[0]['pods'] # 4
+dragon_capsules.first.thrusters[0]['fuel_1'] # "nitrogen tetroxide"
+dragon_capsules.first.thrusters[0]['fuel_2'] # "monomethylhydrazine"
+dragon_capsules.first.thrusters[0]['thrust']['kN'] # 0.4
+dragon_capsules.first.thrusters[0]['thrust']['lbf'] # 90
+dragon_capsules.first.launch_payload_mass['kg'] # 6000
+dragon_capsules.first.launch_payload_mass['lb'] # 13228
+dragon_capsules.first.launch_payload_vol['cubic_meters'] # 25
+dragon_capsules.first.launch_payload_vol['cubic_feet'] # 883
+dragon_capsules.first.return_payload_mass['kg'] # 3000
+dragon_capsules.first.return_payload_mass['lb'] # 6614
+dragon_capsules.first.return_payload_vol['cubic_meters'] # 11
+dragon_capsules.first.return_payload_vol['cubic_feet'] # 388
+dragon_capsules.first.pressurized_capsule['payload_volume']['cubic_meters']) # 11
+dragon_capsules.first.pressurized_capsule['payload_volume']['cubic_feet'] # 388
+dragon_capsules.first.trunk['trunk_volume['cubic_meters'] # 14
+dragon_capsules.first.trunk['trunk_volume['cubic_feet'] # 494
+dragon_capsules.first.trunk['cargo']['solar_array'] # 2
+dragon_capsules.first.trunk['cargo']['unpressurized_cargo'] # true
+dragon_capsules.first.height_w_trunk['meters'] # 7.2
+dragon_capsules.first.height_w_trunk['feet'] # 23.6
+dragon_capsules.first.diameter['meters'] # 3.7
+dragon_capsules.first.diameter['feet'] # 12
+dragon_capsules.first.wikipedia # "https://en.wikipedia.org/wiki/SpaceX_Dragon"
+dragon_capsules.first.description # "Dragon is a reusable spacecraft developed by SpaceX, an American private space transportation company based in Hawthorne, California. Dragon is launched into space by the SpaceX Falcon 9 two-stage-to-orbit launch vehicle. The Dragon spacecraft was originally designed for human travel, but so far has only been used to deliver cargo to the International Space Station (ISS)."
+```
+
 ### Launches
 
-- `SPACEX::Launches.info` Retrieve all Launches
-- `SPACEX::launches.next` Retrieve next launch info;
-- `SPACEX::launches.latest` Retrieve latest launch info;
+- Get information on all launches: `SPACEX::Launches.info`
+- Get information on the next launch: `SPACEX::Launches.next`
+- Get the latest launch information: `SPACEX::Launches.latest`
 
+The following code snippet shows the latest launch information and the data fields available on the Launch object:
+ 
 ```ruby
 require 'spacex'
 latest_launch = SPACEX::Launches.latest
@@ -128,31 +254,31 @@ latest_launch.upcoming # false
 latest_launch.static_fire_date_utc # '2018-08-02T15:53:00.000Z'
 ```
 
+### Missions
 
-### Company Info
+- Get all mission information: `SPACEX::Missions.info`
+- Get information about a specific mission (e.g., `F3364BF`): `SPACEX::Missions.info('mission_id')`
+
+This code shows how to get the first mission information and lists the fields:
 
 ```ruby
-company_info = SPACEX::CompanyInfo.info
+missions = SPACEX::Missions.info
 
-company_info.name # 'SpaceX'
-company_info.founder # 'Elon Musk'
-company_info.founded # 2002
-company_info.employees # 7000
-company_info.vehicles # 3
-company_info.launche_sites # nil
-company_info.test_sites # 1
-company_info.ceo # 'Elon Musk'
-company_info.cto # 'Elon Musk'
-company_info.coo # 'Gwynne Shotwell'
-company_info.cto_propulsion # 'Tom Mueller'
-company_info.valuation # 15_000_000_000
-company_info.headquarters.address # 'Rocket Road'
-company_info.headquarters.city # 'Hawthorne'
-company_info.headquarters.state # 'California'
-company_info.summary # 'SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.'
+missions.first.mission_id # "F3364BF"
+missions.first.mission_name # "Iridium NEXT"
+missions.first.manufacturers # ["Orbital ATK"]
+missions.first.payload_ids # ["Iridium NEXT 1", "Iridium NEXT 2", "Iridium NEXT 3", "Iridium NEXT 4", "Iridium NEXT 5", "Iridium NEXT 6", "Iridium NEXT 7"]
+missions.first.wikipedia # "https://en.wikipedia.org/wiki/Iridium_satellite_constellation"
+missions.first.website # "https://www.iridiumnext.com/"
+missions.first.twitter # "https://twitter.com/IridiumBoss?lang=en"
+missions.first.description # "In 2017, Iridium began launching Iridium NEXT, a second-generation worldwide network of telecommunications satellites, consisting of 66 active satellites, with another nine in-orbit spares and six on-ground spares. These satellites will incorporate features such as data transmission that were not emphasized in the original design. The constellation will provide L-band data speeds of up to 128 kbit/s to mobile terminals, up to 1.5 Mbit/s to Iridium Pilot marine terminals, and high-speed Ka-band service of up to 8 Mbit/s to fixed/transportable terminals. The next-generation terminals and service are expected to be commercially available by the end of 2018. However, Iridium's proposed use of its next-generation satellites has raised concerns the service will harmfully interfere with GPS devices. The satellites will incorporate a secondary payload for Aireon, a space-qualified ADS-B data receiver. This is for use by air traffic control and, via FlightAware, for use by airlines. A tertiary payload on 58 satellites is a marine AIS ship-tracker receiver, for Canadian company exactEarth Ltd. Iridium can also be used to provide a data link to other satellites in space, enabling command and control of other space assets regardless of the position of ground stations and gateways."
 ```
 
 ### Roadster
+
+- Get roadster orbital data: `SPACEX::Roadster.info`
+
+The following code shows how to get information about the Roadster:
 
 ```ruby
 roadster = SPACEX::Roadster.info
@@ -182,113 +308,13 @@ roadster.wikipedia # 'https://en.wikipedia.org/wiki/Elon_Musk%27s_Tesla_Roadster
 roadster.details # "Elon Musk's Tesla Roadster is an electric sports car that served as the dummy payload for the February 2018 Falcon Heavy test flight and is now an artificial satellite of the Sun. Starman, a mannequin dressed in a spacesuit, occupies the driver's seat. The car and rocket are products of Tesla and SpaceX, both companies founded by Elon Musk. This 2008-model Roadster was previously used by Musk for commuting, and is the only consumer car sent into space."
 ```
 
-### Dragon Capsules
-
-- `SPACEX::DragonCapsules.info` Retrieve all Dragon Capsules;
-- `SPACEX::DragonCapsules.info('dragon_id')` Retrieve a specific dragon capsule. Ex: `dragon1`
-
-
-```ruby
-dragon_capsules = SPACEX::DragonCapsules.info
-
-dragon_capsules.first.capsule_id # "dragon1"
-dragon_capsules.first.name # "Dragon 1"
-dragon_capsules.first.type # "capsule"
-dragon_capsules.first.active # true
-dragon_capsules.first.crew_capacity # 0
-dragon_capsules.first.sidewall_angle_deg # 15
-dragon_capsules.first.orbit_duration_yr # 2
-dragon_capsules.first.dry_mass_kg # 4200
-dragon_capsules.first.dry_mass_lb # 9300
-dragon_capsules.first.first_flight # "2010-12-08"
-dragon_capsules.first.heat_shield['material'] # "PICA-X"
-dragon_capsules.first.heat_shield['size_meters'] # 3.6
-dragon_capsules.first.heat_shield['temp_degrees'] # 3000
-dragon_capsules.first.heat_shield['dev_partner'] # "NASA"
-dragon_capsules.first.thrusters[0]['type'] # "Draco"
-dragon_capsules.first.thrusters[0]['amount'] # 18
-dragon_capsules.first.thrusters[0]['pods'] # 4
-dragon_capsules.first.thrusters[0]['fuel_1'] # "nitrogen tetroxide"
-dragon_capsules.first.thrusters[0]['fuel_2'] # "monomethylhydrazine"
-dragon_capsules.first.thrusters[0]['thrust']['kN'] # 0.4
-dragon_capsules.first.thrusters[0]['thrust']['lbf'] # 90
-dragon_capsules.first.launch_payload_mass['kg'] # 6000
-dragon_capsules.first.launch_payload_mass['lb'] # 13228
-dragon_capsules.first.launch_payload_vol['cubic_meters'] # 25
-dragon_capsules.first.launch_payload_vol['cubic_feet'] # 883
-dragon_capsules.first.return_payload_mass['kg'] # 3000
-dragon_capsules.first.return_payload_mass['lb'] # 6614
-dragon_capsules.first.return_payload_vol['cubic_meters'] # 11
-dragon_capsules.first.return_payload_vol['cubic_feet'] # 388
-dragon_capsules.first.pressurized_capsule['payload_volume']['cubic_meters']) # 11
-dragon_capsules.first.pressurized_capsule['payload_volume']['cubic_feet'] # 388
-dragon_capsules.first.trunk['trunk_volume['cubic_meters'] # 14
-dragon_capsules.first.trunk['trunk_volume['cubic_feet'] # 494
-dragon_capsules.first.trunk['cargo']['solar_array'] # 2
-dragon_capsules.first.trunk['cargo']['unpressurized_cargo'] # true
-dragon_capsules.first.height_w_trunk['meters'] # 7.2
-dragon_capsules.first.height_w_trunk['feet'] # 23.6
-dragon_capsules.first.diameter['meters'] # 3.7
-dragon_capsules.first.diameter['feet'] # 12
-dragon_capsules.first.wikipedia # "https://en.wikipedia.org/wiki/SpaceX_Dragon"
-dragon_capsules.first.description # "Dragon is a reusable spacecraft developed by SpaceX, an American private space transportation company based in Hawthorne, California. Dragon is launched into space by the SpaceX Falcon 9 two-stage-to-orbit launch vehicle. The Dragon spacecraft was originally designed for human travel, but so far has only been used to deliver cargo to the International Space Station (ISS)."
-```
-
-### Ships
-
-- `SPACEX::Ships.info` Retrieve all Ships;
-- `SPACEX::Ships.info('ship_id')` Retrieve a specific ship. Ex: `AMERICANCHAMPION`
-
-```ruby
-ship = SPACEX::Ships.info('AMERICANCHAMPION')
-
-ship.ship_id # 'AMERICANCHAMPION'
-ship.ship_name # 'American Champion'
-ship.ship_model # nil
-ship.ship_type # 'Tug'
-ship.roles # ['Support Ship', 'Barge Tug']
-ship.active # false
-ship.imo # 7_434_016
-ship.mmsi # 367_020_820
-ship.abs # 571_252
-ship.ship_class # 7_604_342 # Call as array since "class" is a method in Ruby
-ship.weight_lbs # 588_000
-ship.weight_kg # 266_712
-ship.year_built # 1976
-ship.home_port # 'Port of Los Angeles'
-ship.status # 'Stopped'
-ship.speed_kn # 0
-ship.course_deg # nil
-ship.position # ({ 'latitude' => 30.52852, 'longitude' => -88.09869 })
-ship.successful_landings # nil
-ship.attempted_landings # nil
-ship.missions # [{ 'flight' => 7, 'name' => 'COTS 1' }, { 'flight' => 8, 'name' => 'COTS 2' }]
-ship.url # 'https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/vessel:AMERICAN%20CHAMPION'
-ship.image # 'https://i.imgur.com/woCxpkj.jpg'
-```
-
-### Missions
-
-- `SPACEX::Missions.info` Retrieve all Missions;
-- `SPACEX::Missions.info('mission_id')` Retrieve a specific mission. Ex: `F3364BF`
-
-```ruby
-missions = SPACEX::Missions.info
-
-missions.first.mission_id # "F3364BF"
-missions.first.mission_name # "Iridium NEXT"
-missions.first.manufacturers # ["Orbital ATK"]
-missions.first.payload_ids # ["Iridium NEXT 1", "Iridium NEXT 2", "Iridium NEXT 3", "Iridium NEXT 4", "Iridium NEXT 5", "Iridium NEXT 6", "Iridium NEXT 7"]
-missions.first.wikipedia # "https://en.wikipedia.org/wiki/Iridium_satellite_constellation"
-missions.first.website # "https://www.iridiumnext.com/"
-missions.first.twitter # "https://twitter.com/IridiumBoss?lang=en"
-missions.first.description # "In 2017, Iridium began launching Iridium NEXT, a second-generation worldwide network of telecommunications satellites, consisting of 66 active satellites, with another nine in-orbit spares and six on-ground spares. These satellites will incorporate features such as data transmission that were not emphasized in the original design. The constellation will provide L-band data speeds of up to 128 kbit/s to mobile terminals, up to 1.5 Mbit/s to Iridium Pilot marine terminals, and high-speed Ka-band service of up to 8 Mbit/s to fixed/transportable terminals. The next-generation terminals and service are expected to be commercially available by the end of 2018. However, Iridium's proposed use of its next-generation satellites has raised concerns the service will harmfully interfere with GPS devices. The satellites will incorporate a secondary payload for Aireon, a space-qualified ADS-B data receiver. This is for use by air traffic control and, via FlightAware, for use by airlines. A tertiary payload on 58 satellites is a marine AIS ship-tracker receiver, for Canadian company exactEarth Ltd. Iridium can also be used to provide a data link to other satellites in space, enabling command and control of other space assets regardless of the position of ground stations and gateways."
-```
-
 ### Rockets
 
-- `SPACEX::Rockets.info` Retrieve all Rockets;
-- `SPACEX::Rockets.info('falcon1')` Retrieve a specific rocket. Ex: `falcon1`
+- Get information for all rockets: `SPACEX::Rockets.info`
+- Get information about a specific rocket (e.g., `falcon1`: `SPACEX::Rockets.info('falcon1')`
+
+This example shows a single rocket and its data fields:
+
 ```
 rockets = SPACEX::Rockets.info
 first_rocket = rockets.first
@@ -317,16 +343,40 @@ first_rocket.rocket_name # "Falcon 1"
 first_rocket.rocket_type # "rocket"
 ```
 
-### Capsules
+### Ships
 
-- `SPACEX::Capsules.info` Retrieve all Capsules
-- `SPACEX::Capsules.info('capsule_serial')` Retrieve a specific capsule
+- Get all ship information: `SPACEX::Ships.info`
+- Get information about a specific ship (e.g., `AMERICANCHAMPION`): `SPACEX::Ships.info('ship_id')`
 
+The following code shows how to get information about a specific ship and lists the ship data fields:
 
-### Cores
+```ruby
+ship = SPACEX::Ships.info('AMERICANCHAMPION')
 
-- `SPACEX::Cores.info` Retrieve all Cores
-- `SPACEX::Cores.info('core_serial')` Retrieve a specific core
+ship.ship_id # 'AMERICANCHAMPION'
+ship.ship_name # 'American Champion'
+ship.ship_model # nil
+ship.ship_type # 'Tug'
+ship.roles # ['Support Ship', 'Barge Tug']
+ship.active # false
+ship.imo # 7_434_016
+ship.mmsi # 367_020_820
+ship.abs # 571_252
+ship.ship_class # 7_604_342 # Call as array since "class" is a method in Ruby
+ship.weight_lbs # 588_000
+ship.weight_kg # 266_712
+ship.year_built # 1976
+ship.home_port # 'Port of Los Angeles'
+ship.status # 'Stopped'
+ship.speed_kn # 0
+ship.course_deg # nil
+ship.position # ({ 'latitude' => 30.52852, 'longitude' => -88.09869 })
+ship.successful_landings # nil
+ship.attempted_landings # nil
+ship.missions # [{ 'flight' => 7, 'name' => 'COTS 1' }, { 'flight' => 8, 'name' => 'COTS 2' }]
+ship.url # 'https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/vessel:AMERICAN%20CHAMPION'
+ship.image # 'https://i.imgur.com/woCxpkj.jpg'
+```
 
 
 ## Contributing
