@@ -1,7 +1,7 @@
 ### 0.0.8 (next)
 
 * Your contribution here.
-* [](): Update and clarify information in README -
+* [#40](https://github.com/rodolfobandeira/spacex/pull/40): Update and clarify information in README -
   [@annawinkler](https://github.com/annawinkler).
 * [#34](https://github.com/rodolfobandeira/spacex/pull/34): Implement Capsules endpoint - [@efl7a](https://github.com/efl7a).
 * [#34](https://github.com/rodolfobandeira/spacex/pull/34): Implement Cores endpoint - [@efl7a](https://github.com/efl7a).
