@@ -342,6 +342,7 @@ first_rocket.description # "The Falcon 1 was an expendable launch system private
 first_rocket.rocket_id # "falcon1"
 first_rocket.rocket_name # "Falcon 1"
 first_rocket.rocket_type # "rocket"
+first_rocket.flickr_images # ["https://www.spacex.com/sites/spacex/files/styles/media_gallery_large/public/2009_-_01_liftoff_south_full_wide_ro8a1280_edit.jpg?itok=8loiSGt1", "https://www.spacex.com/sites/spacex/files/styles/media_gallery_large/public/2009_-_02_default_liftoff_west_full_wide_nn6p2062_xl.jpg?itok=p776nHsM"]
 ```
 
 ### Ships
