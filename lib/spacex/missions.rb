@@ -15,17 +15,12 @@ module SPACEX
 
     class << self
       include ResourceService
-      
+
       def info(mission_id = nil)
         get(mission_id)
       end
 
       private
-
-      # def retrieve_all
-      #   data = SPACEX::BaseRequest.call_api('missions')
-      #   data.get.body.map { |k| SPACEX::Missions.new(k) }
-      # end
 
       def get(mission_id = nil)
         return retrieve_all('missions') if mission_id.nil?
