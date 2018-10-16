@@ -1,3 +1,5 @@
+require_relative '../resource_service'
+
 module SPACEX
   class Rockets < Hashie::Trash
     include Hashie::Extensions::IgnoreUndeclared
@@ -26,19 +28,16 @@ module SPACEX
     property 'rocket_type'
 
     class << self
+      include ResourceService
+
       def info(rocket_id = nil)
         get(rocket_id)
       end
 
       private
 
-      def retrieve_all
-        data = SPACEX::BaseRequest.call_api('rockets')
-        data.get.body.map { |k| SPACEX::Rockets.new(k) }
-      end
-
       def get(rocket_id = nil)
-        return retrieve_all if rocket_id.nil?
+        return retrieve_all('rockets') if rocket_id.nil?
 
         data = SPACEX::BaseRequest.get("rockets/#{rocket_id}")
         SPACEX::Rockets.new(data)
