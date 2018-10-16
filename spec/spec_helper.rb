@@ -6,6 +6,7 @@ if ENV['CI']
   require 'coveralls'
   Coveralls.wear!
 else
+  require 'pry'
   require 'simplecov'
   SimpleCov.start
 end
