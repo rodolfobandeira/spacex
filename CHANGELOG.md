@@ -1,8 +1,13 @@
-### 0.0.8 (next)
+### 1.0.1 (next)
 
 * Your contribution here.
-* [#40](https://github.com/rodolfobandeira/spacex/pull/40): Update and clarify information in README -
-  [@annawinkler](https://github.com/annawinkler).
+
+### 1.0.0 (2018/10/15)
+
+* [#41](https://github.com/rodolfobandeira/spacex/pull/41): General Refactor cleaning endpoint classes [@invacuo](http://github.com/invacuo).
+* [#44](https://github.com/rodolfobandeira/spacex/pull/44): Add flickr_images key into rockets endpoint [@Dfenniak](https://github.com/Dfenniak).
+* [#42](https://github.com/rodolfobandeira/spacex/pull/42): Add pry gem to debug - [@Dfenniak](https://github.com/Dfenniak).
+* [#40](https://github.com/rodolfobandeira/spacex/pull/40): Update and clarify information in README - [@annawinkler](https://github.com/annawinkler).
 * [#34](https://github.com/rodolfobandeira/spacex/pull/34): Implement Capsules endpoint - [@efl7a](https://github.com/efl7a).
 * [#34](https://github.com/rodolfobandeira/spacex/pull/34): Implement Cores endpoint - [@efl7a](https://github.com/efl7a).
 * [#35](https://github.com/rodolfobandeira/spacex/pull/35): Implement Rockets endpoint - [@invacuo](https://github.com/invacuo).
