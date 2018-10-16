@@ -1,6 +1,6 @@
 ### 0.0.8 (next)
 
-* Your contribution here.
+* [#43](https://github.com/rodolfobandeira/spacex/pull/43): Abstracts `retrieve_all` method in capsules, cores, dragon_capsules, missions, rockets, and ships resources. Adds in ResourceService module to house the abstracted `retrieve_all` method and potential future abstractions.
 * [#40](https://github.com/rodolfobandeira/spacex/pull/40): Update and clarify information in README -
   [@annawinkler](https://github.com/annawinkler).
 * [#34](https://github.com/rodolfobandeira/spacex/pull/34): Implement Capsules endpoint - [@efl7a](https://github.com/efl7a).

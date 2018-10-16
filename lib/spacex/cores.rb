@@ -1,3 +1,5 @@
+require_relative '../resource_service'
+
 module SPACEX
   class Cores < Hashie::Trash
     include Hashie::Extensions::IgnoreUndeclared
@@ -16,19 +18,16 @@ module SPACEX
     property 'details'
 
     class << self
+      include ResourceService
+
       def info(core_serial = nil)
         get(core_serial)
       end
 
       private
 
-      def retrieve_all
-        data = SPACEX::BaseRequest.call_api('cores')
-        data.get.body.map { |k| SPACEX::Cores.new(k) }
-      end
-
       def get(core_serial = nil)
-        return retrieve_all if core_serial.nil?
+        return retrieve_all('cores') if core_serial.nil?
 
         data = SPACEX::BaseRequest.get("cores/#{core_serial}")
         SPACEX::Cores.new(data)
