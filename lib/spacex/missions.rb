@@ -1,3 +1,5 @@
+require_relative '../resource_service'
+
 module SPACEX
   class Missions < Hashie::Trash
     include Hashie::Extensions::IgnoreUndeclared
@@ -12,19 +14,21 @@ module SPACEX
     property 'description'
 
     class << self
+      include ResourceService
+      
       def info(mission_id = nil)
         get(mission_id)
       end
 
       private
 
-      def retrieve_all
-        data = SPACEX::BaseRequest.call_api('missions')
-        data.get.body.map { |k| SPACEX::Missions.new(k) }
-      end
+      # def retrieve_all
+      #   data = SPACEX::BaseRequest.call_api('missions')
+      #   data.get.body.map { |k| SPACEX::Missions.new(k) }
+      # end
 
       def get(mission_id = nil)
-        return retrieve_all if mission_id.nil?
+        return retrieve_all('missions') if mission_id.nil?
 
         data = SPACEX::BaseRequest.get("missions/#{mission_id}")
         SPACEX::Missions.new(data)
