@@ -24,6 +24,7 @@ module SPACEX
     property 'rocket_id'
     property 'rocket_name'
     property 'rocket_type'
+    property 'flickr_images'
 
     class << self
       def info(rocket_id = nil)

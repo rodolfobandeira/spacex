@@ -106,6 +106,12 @@ describe SPACEX::Rockets do
       expect(first_subject.rocket_id).to eq 'falcon1'
       expect(first_subject.rocket_name).to eq 'Falcon 1'
       expect(first_subject.rocket_type).to eq 'rocket'
+      expect(first_subject.flickr_images).to eq(
+        [
+          'https://www.spacex.com/sites/spacex/files/styles/media_gallery_large/public/2009_-_01_liftoff_south_full_wide_ro8a1280_edit.jpg?itok=8loiSGt1',
+          'https://www.spacex.com/sites/spacex/files/styles/media_gallery_large/public/2009_-_02_default_liftoff_west_full_wide_nn6p2062_xl.jpg?itok=p776nHsM'
+        ]
+      )
     end
   end
 
