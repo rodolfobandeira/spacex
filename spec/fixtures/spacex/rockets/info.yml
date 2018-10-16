@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 12 Oct 2018 02:10:27 GMT
+      - Tue, 16 Oct 2018 00:44:23 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -27,8 +27,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d30c9e8194b786bd40a0a7204f2bf02e01539310227; expires=Sat, 12-Oct-19
-        02:10:27 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      - __cfduid=d25e9ab72a16396eecb95d8b035fe00691539650662; expires=Wed, 16-Oct-19
+        00:44:22 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
       Vary:
       - Accept-Encoding, Origin
       X-Dns-Prefetch-Control:
@@ -48,13 +48,13 @@ http_interactions:
       X-Koa-Redis-Cache:
       - 'true'
       X-Response-Time:
-      - 2ms
+      - 1ms
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 468607b7aea75735-IAD
+      - 46a67f22bb86bc8c-SEA
     body:
       encoding: ASCII-8BIT
       string: '[{"id":1,"active":false,"stages":2,"boosters":0,"cost_per_launch":6700000,"success_rate_pct":40,"first_flight":"2006-03-24","country":"Republic
@@ -103,5 +103,5 @@ http_interactions:
         to Earth orbit of up to 150,000 kg (330,000 lb) makes BFR a super heavy-lift
         launch vehicle.","rocket_id":"bfr","rocket_name":"Big Falcon Rocket","rocket_type":"rocket"}]'
     http_version: 
-  recorded_at: Fri, 12 Oct 2018 02:10:27 GMT
+  recorded_at: Tue, 16 Oct 2018 00:44:23 GMT
 recorded_with: VCR 4.0.0
