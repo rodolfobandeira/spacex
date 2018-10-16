@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.spacexdata.com/v3/capsules
+    uri: https://api.spacexdata.com/v3/capsules/
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 11 Oct 2018 16:56:57 GMT
+      - Mon, 15 Oct 2018 04:13:37 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -27,8 +27,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=dd43085368b35d1c6fa60bfe66fe3300b1539277017; expires=Fri, 11-Oct-19
-        16:56:57 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      - __cfduid=dd8346f9a0220b57866735728f74ebd191539576817; expires=Tue, 15-Oct-19
+        04:13:37 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
       Vary:
       - Accept-Encoding, Origin
       X-Dns-Prefetch-Control:
@@ -46,13 +46,13 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Response-Time:
-      - 36ms
+      - 49ms
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 4682dcecbc0e241a-IAD
+      - 469f74439912572f-IAD
     body:
       encoding: ASCII-8BIT
       string: '[{"capsule_serial":"C201","capsule_id":"dragon2","status":"active","original_launch":null,"original_launch_unix":null,"missions":[],"landings":0,"type":"Dragon
@@ -79,5 +79,5 @@ http_interactions:
         1.1","details":null,"reuse_count":0},{"capsule_serial":"C113","capsule_id":"dragon1","status":"active","original_launch":"2017-08-14T16:31:00.000Z","original_launch_unix":1502728260,"missions":[{"name":"CRS-12","flight":45}],"landings":1,"type":"Dragon
         1.1","details":"The last newly manufactured Dragon 1","reuse_count":0}]'
     http_version: 
-  recorded_at: Thu, 11 Oct 2018 16:56:57 GMT
+  recorded_at: Mon, 15 Oct 2018 04:13:37 GMT
 recorded_with: VCR 4.0.0

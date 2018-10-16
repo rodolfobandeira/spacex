@@ -26,24 +26,8 @@ module SPACEX
     property 'url'
     property 'image'
 
-    class << self
-      def info(ship_id = nil)
-        get(ship_id)
-      end
-
-      private
-
-      def retrieve_all
-        data = SPACEX::BaseRequest.call_api('ships')
-        data.get.body.map { |k| SPACEX::Ships.new(k) }
-      end
-
-      def get(ship_id = nil)
-        return retrieve_all if ship_id.nil?
-
-        data = SPACEX::BaseRequest.get("ships/#{ship_id}")
-        SPACEX::Ships.new(data)
-      end
+    def self.info(ship_id = nil)
+      SPACEX::BaseRequest.info("ships/#{ship_id}", SPACEX::Ships)
     end
   end
 end

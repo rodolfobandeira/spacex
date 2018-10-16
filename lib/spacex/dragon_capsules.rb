@@ -26,24 +26,8 @@ module SPACEX
     property 'wikipedia'
     property 'description'
 
-    class << self
-      def info(dragon_id = nil)
-        get(dragon_id)
-      end
-
-      private
-
-      def retrieve_all
-        data = SPACEX::BaseRequest.call_api('dragons')
-        data.get.body.map { |k| SPACEX::DragonCapsules.new(k) }
-      end
-
-      def get(dragon_id = nil)
-        return retrieve_all if dragon_id.nil?
-
-        data = SPACEX::BaseRequest.get("dragons/#{dragon_id}")
-        SPACEX::DragonCapsules.new(data)
-      end
+    def self.info(dragon_id = nil)
+      SPACEX::BaseRequest.info("dragons/#{dragon_id}", SPACEX::DragonCapsules)
     end
   end
 end
