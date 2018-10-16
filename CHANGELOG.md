@@ -1,9 +1,9 @@
 ### 1.0.1 (next)
+* [#45](https://github.com/rodolfobandeira/spacex/pull/45): Implement History endpoint [@invacuo](http://github.com/invacuo).
 
 * Your contribution here.
 
 ### 1.0.0 (2018/10/15)
-
 * [#41](https://github.com/rodolfobandeira/spacex/pull/41): General Refactor cleaning endpoint classes [@invacuo](http://github.com/invacuo).
 * [#44](https://github.com/rodolfobandeira/spacex/pull/44): Add flickr_images key into rockets endpoint [@Dfenniak](https://github.com/Dfenniak).
 * [#42](https://github.com/rodolfobandeira/spacex/pull/42): Add pry gem to debug - [@Dfenniak](https://github.com/Dfenniak).

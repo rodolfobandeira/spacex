@@ -177,6 +177,27 @@ dragon_capsules.first.wikipedia # "https://en.wikipedia.org/wiki/SpaceX_Dragon"
 dragon_capsules.first.description # "Dragon is a reusable spacecraft developed by SpaceX, an American private space transportation company based in Hawthorne, California. Dragon is launched into space by the SpaceX Falcon 9 two-stage-to-orbit launch vehicle. The Dragon spacecraft was originally designed for human travel, but so far has only been used to deliver cargo to the International Space Station (ISS)."
 ```
 
+### History
+
+- Get information for all historical events: `SPACEX::History.info`
+- Get information about a specific historical event: (e.g., `4`: `SPACEX::History.info('4')`
+
+```ruby
+require 'spacex'
+historical_events = SPACEX::History.info
+
+first_event = historical_events.first
+first_event.id # 1
+first_event.title # Falcon 1 Makes History
+first_event.event_date_utc # 2008-09-28T23:15:00Z
+first_event.event_date_unix # 1222643700
+first_event.flight_number # 4
+first_event.details # Falcon 1 becomes the first privately developed liquid fuel rocket to reach Earth orbit.
+first_event.links['reddit'] # nil
+first_event.links['article'] # http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0
+first_event.links['wikipedia'] # https://en.wikipedia.org/wiki/Falcon_1
+```
+
 ### Launches
 
 - Get information on all launches: `SPACEX::Launches.info`
@@ -184,7 +205,7 @@ dragon_capsules.first.description # "Dragon is a reusable spacecraft developed b
 - Get the latest launch information: `SPACEX::Launches.latest`
 
 The following code snippet shows the latest launch information and the data fields available on the Launch object:
- 
+
 ```ruby
 require 'spacex'
 latest_launch = SPACEX::Launches.latest
