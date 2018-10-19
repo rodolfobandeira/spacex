@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/history/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Oct 2018 02:43:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d54727cd9ad91c46626c14f99de479f611539657830; expires=Wed, 16-Oct-19
+        02:43:50 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Response-Time:
+      - 37ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 46a72e1da893241a-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":4,"title":"Falcon 9 First Flight","event_date_utc":"2010-06-04T18:45:00Z","event_date_unix":1275677100,"flight_number":6,"details":"Met
+        100% of mission objectives on the first flight!","links":{"reddit":null,"article":"http://www.bbc.com/news/10209704","wikipedia":"https://en.wikipedia.org/wiki/Dragon_Spacecraft_Qualification_Unit"}}'
+    http_version: 
+  recorded_at: Tue, 16 Oct 2018 02:43:50 GMT
+recorded_with: VCR 4.0.0
