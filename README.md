@@ -22,6 +22,9 @@ A Ruby library that consumes the [SpaceX API](https://github.com/r-spacex/SpaceX
   - [Dragon Capsules](#dragon-capsules)
     - `SPACEX::DragonCapsules.info`
     - `SPACEX::DragonCapsules.info('dragon_id')`
+  - [History](#history)
+    - `SPACEX::History.info`
+    - `SPACEX::History.info(4)`
   - [Launches](#launches)
     - `SPACEX::Launches.info`
     - `SPACEX::Launches.latest`
