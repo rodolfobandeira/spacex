@@ -214,6 +214,11 @@ describe SPACEX::Launches do
     end
 
     it 'returns info for flight number 68' do
+      expect(subject.flight_number).to eq(68)
+      expect(subject.rocket.rocket_name).to eq('Falcon 9')
+      expect(subject.rocket.first_stage.cores.first.core_serial).to eq('B1049')
+      expect(subject.rocket.second_stage.payloads.orbit_params.regime).to eq('geostationary')
+
       expect(subject).to eq(
         'flight_number' => 68,
         'mission_name' => 'Telstar 18V',
