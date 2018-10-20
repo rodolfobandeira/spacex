@@ -28,7 +28,7 @@ A Ruby library that consumes the [SpaceX API](https://github.com/r-spacex/SpaceX
   - [Launches](#launches)
     - `SPACEX::Launches.all`
     - `SPACEX::Launches.info`
-    - `SPACEX::Launches.info('68')`
+    - `SPACEX::Launches.info(68)`
     - `SPACEX::Launches.latest`
     - `SPACEX::Launches.next`
   - [Missions](#missions)
@@ -206,7 +206,7 @@ first_event.links['wikipedia'] # https://en.wikipedia.org/wiki/Falcon_1
 ### Launches
 
 - Get information on all launches: `SPACEX::Launches.all` or `SPACEX::Launches.info`
-- Get information on a specific launch (by flight number): `SPACEX::Launches.info('68')`
+- Get information for a specific launch (by flight number): `SPACEX::Launches.info(68)`
 - Get information on the next launch: `SPACEX::Launches.next`
 - Get the latest launch information: `SPACEX::Launches.latest`
 
