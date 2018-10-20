@@ -208,7 +208,7 @@ describe SPACEX::Launches do
     end
   end
 
-  context "#info(68)", vcr: { cassette_name: 'launches/68' } do
+  context '#info(68)', vcr: { cassette_name: 'launches/68' } do
     subject do
       SPACEX::Launches.info(68)
     end
