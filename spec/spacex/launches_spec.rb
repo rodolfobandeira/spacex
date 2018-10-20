@@ -213,83 +213,111 @@ describe SPACEX::Launches do
       SPACEX::Launches.info('68')
     end
 
-    it 'returns a specific launch' do
-      expect(subject.flight_number).to eq 68
-      expect(subject.mission_name).to eq 'Telstar 18V'
-      expect(subject.mission_id.first).to eq 'F4F83DE'
-      expect(subject.launch_year).to eq '2018'
-      expect(subject.launch_date_unix).to eq 1_536_554_700
-      expect(subject.launch_date_utc).to eq '2018-09-10T04:45:00.000Z'
-      expect(subject.launch_date_local).to eq '2018-09-10T00:45:00-04:00'
-      expect(subject.is_tentative).to eq false
-      expect(subject.tentative_max_precision).to eq 'hour'
-      expect(subject.rocket.rocket_id).to eq 'falcon9'
-      expect(subject.rocket.rocket_name).to eq 'Falcon 9'
-      expect(subject.rocket.rocket_type).to eq 'FT'
-      expect(subject.rocket.first_stage.cores.first.core_serial).to eq 'B1049'
-      expect(subject.rocket.first_stage.cores.first.flight).to eq 1
-      expect(subject.rocket.first_stage.cores.first.block).to eq 5
-      expect(subject.rocket.first_stage.cores.first.reused).to eq false
-      expect(subject.rocket.first_stage.cores.first.land_success).to eq true
-      expect(subject.rocket.first_stage.cores.first.landing_type).to eq 'ASDS'
-      expect(subject.rocket.first_stage.cores.first.landing_vehicle).to eq 'OCISLY'
-      expect(subject.rocket.second_stage.block).to eq 5
-      expect(subject.rocket.second_stage.payloads.first.payload_id).to eq 'Telstar 18V'
-      expect(subject.rocket.second_stage.payloads.first.norad_id.first).to eq 43_611
-      expect(subject.rocket.second_stage.payloads.first.reused).to eq false
-      expect(subject.rocket.second_stage.payloads.first.customers.first).to eq 'Telesat'
-      expect(subject.rocket.second_stage.payloads.first.nationality).to eq 'Canada'
-      expect(subject.rocket.second_stage.payloads.first.manufacturer).to eq 'SSL'
-      expect(subject.rocket.second_stage.payloads.first.payload_type).to eq 'Satellite'
-      expect(subject.rocket.second_stage.payloads.first.payload_mass_kg).to eq 7060
-      expect(subject.rocket.second_stage.payloads.first.payload_mass_lbs).to eq 15_564.64
-      expect(subject.rocket.second_stage.payloads.first.orbit).to eq 'GTO'
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.reference_system).to eq 'geocentric'
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.regime).to eq 'geostationary'
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.longitude).to eq 138
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.semi_major_axis_km).to eq 7226.647
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.eccentricity).to eq 0.0013608
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.periapsis_km).to eq 838.677
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.apoapsis_km).to eq 858.346
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.inclination_deg).to eq 98.8086
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.period_min).to eq 101.897
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.lifespan_years).to eq 15
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.epoch).to eq '2018-09-07T06:29:40.000Z'
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.mean_motion).to eq 14.13180055
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.raan).to eq 322.194
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.arg_of_pericenter).to eq 130.3173
-      expect(subject.rocket.second_stage.payloads.first.orbit_params.mean_anomaly).to eq 328.1487
-      expect(subject.rocket.fairings.reused).to eq false
-      expect(subject.rocket.fairings.recovery_attempt).to eq false
-      expect(subject.rocket.fairings.recovered).to eq false
-      expect(subject.rocket.fairings.ship).to eq nil
-      expect(subject.ships).to eq %w[OCISLY HAWK GOQUEST]
-      expect(subject.telemetry.flight_club).to eq 'https://www.flightclub.io/result/2d?code=T18V'
-      expect(subject.launch_site.site_id).to eq 'ccafs_slc_40'
-      expect(subject.launch_site.site_name).to eq 'CCAFS SLC 40'
-      expect(subject.launch_site.site_name_long).to eq 'Cape Canaveral Air Force Station Space Launch Complex 40'
-      expect(subject.launch_success).to eq true
-      expect(subject.links.mission_patch).to eq 'https://images2.imgbox.com/ba/db/3plcm5IB_o.png'
-      expect(subject.links.mission_patch_small).to eq 'https://images2.imgbox.com/2d/d2/jStsqeLC_o.png'
-      expect(subject.links.reddit_campaign).to eq 'https://www.reddit.com/r/spacex/comments/95cte4/telstar_18v_apstar_5c_launch_campaign_thread/'
-      expect(subject.links.reddit_launch).to eq 'https://www.reddit.com/r/spacex/comments/9e7bmq/rspacex_telstar_18v_official_launch_discussion/'
-      expect(subject.links.reddit_recovery).to eq 'https://www.reddit.com/r/spacex/comments/9erxlh/telstar_18_vantage_recovery_thread/'
-      expect(subject.links.reddit_media).to eq 'https://www.reddit.com/r/spacex/comments/9ebkqw/rspacex_telstar_18v_media_thread_videos_images/'
-      expect(subject.links.presskit).to eq 'https://www.spacex.com/sites/spacex/files/telstar18vantagepresskit.pdf'
-      expect(subject.links.article_link).to eq 'https://spaceflightnow.com/2018/09/10/spacex-telesat-achieve-repeat-success-with-midnight-hour-launch/'
-      expect(subject.links.wikipedia).to eq 'https://en.wikipedia.org/wiki/Telstar_18V'
-      expect(subject.links.video_link).to eq 'https://www.youtube.com/watch?v=Apw3xqwsG1U'
-      expect(subject.links.flickr_images).to eq [
-        'https://farm2.staticflickr.com/1878/43690848045_492ef182dd_o.jpg',
-        'https://farm2.staticflickr.com/1856/43881229604_6d42e838b6_o.jpg',
-        'https://farm2.staticflickr.com/1852/43881223704_93777e34af_o.jpg',
-        'https://farm2.staticflickr.com/1841/43881217094_558b7b214e_o.jpg',
-        'https://farm2.staticflickr.com/1869/43881193934_423eff8c86_o.jpg'
-      ]
-      expect(subject.details).to include "SpaceX's sixteenth flight of 2018 launched the Telstar 18v GEO communication satellite for Telesat, the second launch for the canadian company in a few months. The first stage was a new Falcon 9 V1.2 Block 5"
-      expect(subject.upcoming).to eq false
-      expect(subject.static_fire_date_utc).to eq '2018-09-05T07:21:00.000Z'
-      expect(subject.static_fire_date_unix).to eq 1_536_132_060
+    it 'returns info for flight number 68' do
+      expect(subject).to eq(
+        'flight_number' => 68,
+        'mission_name' => 'Telstar 18V',
+        'mission_id' => [
+          'F4F83DE'
+        ],
+        'launch_year' => '2018',
+        'launch_date_unix' => 1_536_554_700,
+        'launch_date_utc' => '2018-09-10T04:45:00.000Z',
+        'launch_date_local' => '2018-09-10T00:45:00-04:00',
+        'is_tentative' => false,
+        'tentative_max_precision' => 'hour',
+        'rocket' => {
+          'rocket_id' => 'falcon9',
+          'rocket_name' => 'Falcon 9',
+          'rocket_type' => 'FT',
+          'first_stage' => {
+            'cores' => [{
+              'core_serial' => 'B1049',
+              'flight' => 1,
+              'block' => 5,
+              'reused' => false,
+              'land_success' => true,
+              'landing_intent' => true,
+              'landing_type' => 'ASDS',
+              'landing_vehicle' => 'OCISLY'
+            }]
+          },
+          'second_stage' => {
+            'block' => 5,
+            'payloads' => [{
+              'payload_id' => 'Telstar 18V',
+              'norad_id' => [43_611],
+              'reused' => false,
+              'customers' => ['Telesat'],
+              'nationality' => 'Canada',
+              'manufacturer' => 'SSL',
+              'payload_type' => 'Satellite',
+              'payload_mass_kg' => 7060,
+              'payload_mass_lbs' => 15_564.64,
+              'orbit' => 'GTO',
+              'orbit_params' => {
+                'reference_system' => 'geocentric',
+                'regime' => 'geostationary',
+                'longitude' => 138,
+                'semi_major_axis_km' => 7226.647,
+                'eccentricity' => 0.0013608,
+                'periapsis_km' => 838.677,
+                'apoapsis_km' => 858.346,
+                'inclination_deg' => 98.8086,
+                'period_min' => 101.897,
+                'lifespan_years' => 15,
+                'epoch' => '2018-09-07T06:29:40.000Z',
+                'mean_motion' => 14.13180055,
+                'raan' => 322.194,
+                'arg_of_pericenter' => 130.3173,
+                'mean_anomaly' => 328.1487
+              }
+            }]
+          },
+          'fairings' => {
+            'reused' => false,
+            'recovery_attempt' => false,
+            'recovered' => false,
+            'ship' => nil
+          }
+        },
+        'ships' => %w[OCISLY HAWK GOQUEST],
+        'telemetry' => {
+          'flight_club' => 'https://www.flightclub.io/result/2d?code=T18V'
+        },
+        'launch_site' => {
+          'site_id' => 'ccafs_slc_40',
+          'site_name' => 'CCAFS SLC 40',
+          'site_name_long' => 'Cape Canaveral Air Force Station Space Launch Complex 40'
+        },
+        'launch_success' => true,
+        'links' => {
+          'mission_patch' => 'https://images2.imgbox.com/ba/db/3plcm5IB_o.png',
+          'mission_patch_small' => 'https://images2.imgbox.com/2d/d2/jStsqeLC_o.png',
+          'reddit_campaign' => 'https://www.reddit.com/r/spacex/comments/95cte4/telstar_18v_apstar_5c_launch_campaign_thread/',
+          'reddit_launch' => 'https://www.reddit.com/r/spacex/comments/9e7bmq/rspacex_telstar_18v_official_launch_discussion/',
+          'reddit_recovery' => 'https://www.reddit.com/r/spacex/comments/9erxlh/telstar_18_vantage_recovery_thread/',
+          'reddit_media' => 'https://www.reddit.com/r/spacex/comments/9ebkqw/rspacex_telstar_18v_media_thread_videos_images/',
+          'presskit' => 'https://www.spacex.com/sites/spacex/files/telstar18vantagepresskit.pdf',
+          'article_link' => 'https://spaceflightnow.com/2018/09/10/spacex-telesat-achieve-repeat-success-with-midnight-hour-launch/',
+          'wikipedia' => 'https://en.wikipedia.org/wiki/Telstar_18V',
+          'video_link' => 'https://www.youtube.com/watch?v=Apw3xqwsG1U',
+          'flickr_images' => [
+            'https://farm2.staticflickr.com/1878/43690848045_492ef182dd_o.jpg',
+            'https://farm2.staticflickr.com/1856/43881229604_6d42e838b6_o.jpg',
+            'https://farm2.staticflickr.com/1852/43881223704_93777e34af_o.jpg',
+            'https://farm2.staticflickr.com/1841/43881217094_558b7b214e_o.jpg',
+            'https://farm2.staticflickr.com/1869/43881193934_423eff8c86_o.jpg'
+          ]
+        },
+        'details' => 'SpaceX\'s sixteenth flight of 2018 launched the Telstar '\
+          '18v GEO communication satellite for Telesat, the second launch for '\
+          'the canadian company in a few months. The first stage was a new '\
+          'Falcon 9 V1.2 Block 5 which was successfully recovered on OCISLY.',
+        'upcoming' => false,
+        'static_fire_date_utc' => '2018-09-05T07:21:00.000Z',
+        'static_fire_date_unix' => 1_536_132_060
+      )
     end
   end
 
