@@ -1,7 +1,6 @@
 ### 1.0.1 (next)
 * [#45](https://github.com/rodolfobandeira/spacex/pull/45): Implement History endpoint [@invacuo](http://github.com/invacuo).
-
-* Your contribution here.
+* Add ability to query specific Launch via `.info('flight_number')` - [@mtking2](http://github.com/mtking2).
 
 ### 1.0.0 (2018/10/15)
 * [#41](https://github.com/rodolfobandeira/spacex/pull/41): General Refactor cleaning endpoint classes [@invacuo](http://github.com/invacuo).
