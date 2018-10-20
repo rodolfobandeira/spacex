@@ -12,8 +12,8 @@ module SPACEX
       SPACEX::BaseRequest.info('launches')
     end
 
-    def self.info
-      all
+    def self.info(flight_number = nil)
+      SPACEX::BaseRequest.info("launches/#{flight_number}")
     end
   end
 end
