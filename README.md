@@ -282,7 +282,7 @@ latest_launch.upcoming # false
 latest_launch.static_fire_date_utc # '2018-08-02T15:53:00.000Z'
 ```
 
-This code snippet show how to get information for a specific launch by flight number and list the fields:
+This code snippet shows how to get information for a specific launch by flight number and list the fields:
 ```ruby
 require 'spacex'
 launch_68 = SPACEX::Launches.info(68)
