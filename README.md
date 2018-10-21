@@ -282,6 +282,17 @@ latest_launch.upcoming # false
 latest_launch.static_fire_date_utc # '2018-08-02T15:53:00.000Z'
 ```
 
+This code snippet show how to get information for a specific launch by flight number and list the fields:
+```ruby
+require 'spacex'
+launch_68 = SPACEX::Launches.info(68)
+
+launch_68.flight_number # 68
+launch_68.mission_name # 'Telstar 18V'
+launch_68.rocket.rocket_name # 'Falcon 9'
+launch_68.rocket.first_stage.cores.first.land_success # true
+```
+
 ### Missions
 
 - Get all mission information: `SPACEX::Missions.info`
