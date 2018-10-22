@@ -73,7 +73,7 @@ describe SPACEX::Launches do
     end
   end
 
-  context '#info', vcr: { cassette_name: 'launches' } do
+  context '#info', vcr: { cassette_name: 'launches/info' } do
     subject do
       SPACEX::Launches.info
     end
@@ -151,7 +151,7 @@ describe SPACEX::Launches do
     end
 
     it 'returns the subject.last scheduled launch' do
-      expect(subject.last.flight_number).to eq 90
+      expect(subject.last.flight_number).to eq 91
       expect(subject.last.mission_name).to eq 'GPS IIIA-3'
       expect(subject.last.launch_year).to eq '2019'
       expect(subject.last.launch_date_unix).to eq 1_569_888_000
