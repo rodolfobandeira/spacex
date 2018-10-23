@@ -31,6 +31,7 @@ A Ruby library that consumes the [SpaceX API](https://github.com/r-spacex/SpaceX
     - `SPACEX::Launches.info(68)`
     - `SPACEX::Launches.latest`
     - `SPACEX::Launches.next`
+    - `SPACEX::Launches.past`
   - [Missions](#missions)
     - `SPACEX::Missions.info`
     - `SPACEX::Missions.info('mission_id')`
@@ -209,6 +210,7 @@ first_event.links['wikipedia'] # https://en.wikipedia.org/wiki/Falcon_1
 - Get information for a specific launch (by flight number): `SPACEX::Launches.info(68)`
 - Get information on the next launch: `SPACEX::Launches.next`
 - Get the latest launch information: `SPACEX::Launches.latest`
+- Get information on past launches: `SPACEX::Launches.past`
 
 The following code snippet shows the latest launch information and the data fields available on the Launch object:
 
@@ -291,6 +293,22 @@ launch_68.flight_number # 68
 launch_68.mission_name # 'Telstar 18V'
 launch_68.rocket.rocket_name # 'Falcon 9'
 launch_68.rocket.first_stage.cores.first.land_success # true
+```
+
+This code snippet shows how to get information on past launches:
+```ruby
+past_launches = SPACEX::Launches.past
+
+past_launches.first.flight_number # 1
+past_launches.first.mission_name # 'FalconSat'
+past_launches.first.rocket.rocket_name # 'Falcon 1'
+past_launches.first.launch_success # false
+
+past_launches.last.flight_number # 69
+past_launches.last.mission_name # 'SAOCOM 1A'
+past_launches.last.rocket.rocket_name # 'Falcon 9'
+past_launches.last.rocket.first_stage.cores.first.land_success # true
+past_launches.last.launch_success # true
 ```
 
 ### Missions
