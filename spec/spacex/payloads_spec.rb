@@ -41,21 +41,21 @@ describe SPACEX::Payloads do
       expect(subject.payload_type).to eq 'Satellite'
       expect(subject.payload_mass_kg).to eq 165
       expect(subject.payload_mass_lbs).to eq 363
-      expect(subject.orbit).to eq 'LEO'      
+      expect(subject.orbit).to eq 'LEO'
       expect(subject.orbit_params.apoapsis_km).to eq 638.145
       expect(subject.orbit_params.arg_of_pericenter).to eq 262.0542
       expect(subject.orbit_params.eccentricity).to eq 0.0009194
-      expect(subject.orbit_params.epoch).to eq "2008-09-28T22:51:02.000Z"
-      expect(subject.orbit_params.inclination_deg).to eq 9.3329 
-      expect(subject.orbit_params.lifespan_years).to eq nil 
-      expect(subject.orbit_params.longitude).to eq nil 
-      expect(subject.orbit_params.mean_anomaly).to eq 98.2248 
-      expect(subject.orbit_params.mean_motion).to eq 14.79249332 
-      expect(subject.orbit_params.periapsis_km).to eq 625.256 
-      expect(subject.orbit_params.period_min).to eq 97.346 
-      expect(subject.orbit_params.raan).to eq 63.3956 
-      expect(subject.orbit_params.reference_system).to eq "geocentric" 
-      expect(subject.orbit_params.regime).to eq "low-earth" 
+      expect(subject.orbit_params.epoch).to eq '2008-09-28T22:51:02.000Z'
+      expect(subject.orbit_params.inclination_deg).to eq 9.3329
+      expect(subject.orbit_params.lifespan_years).to eq nil
+      expect(subject.orbit_params.longitude).to eq nil
+      expect(subject.orbit_params.mean_anomaly).to eq 98.2248
+      expect(subject.orbit_params.mean_motion).to eq 14.79249332
+      expect(subject.orbit_params.periapsis_km).to eq 625.256
+      expect(subject.orbit_params.period_min).to eq 97.346
+      expect(subject.orbit_params.raan).to eq 63.3956
+      expect(subject.orbit_params.reference_system).to eq 'geocentric'
+      expect(subject.orbit_params.regime).to eq 'low-earth'
       expect(subject.orbit_params.semi_major_axis_km).to eq 7009.836
     end
   end
