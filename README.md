@@ -26,7 +26,9 @@ A Ruby library that consumes the [SpaceX API](https://github.com/r-spacex/SpaceX
     - `SPACEX::History.info`
     - `SPACEX::History.info(4)`
   - [Launches](#launches)
+    - `SPACEX::Launches.all`
     - `SPACEX::Launches.info`
+    - `SPACEX::Launches.info(68)`
     - `SPACEX::Launches.latest`
     - `SPACEX::Launches.next`
   - [Missions](#missions)
@@ -203,7 +205,8 @@ first_event.links['wikipedia'] # https://en.wikipedia.org/wiki/Falcon_1
 
 ### Launches
 
-- Get information on all launches: `SPACEX::Launches.info`
+- Get information on all launches: `SPACEX::Launches.all` or `SPACEX::Launches.info`
+- Get information for a specific launch (by flight number): `SPACEX::Launches.info(68)`
 - Get information on the next launch: `SPACEX::Launches.next`
 - Get the latest launch information: `SPACEX::Launches.latest`
 
@@ -277,6 +280,17 @@ latest_launch.links.video_link # 'https://www.youtube.com/watch?v=FjfQNBYv2IY'
 latest_launch.details # 'Indonesian comsat intended to replace the aging Telkom 1 at 108° E. First reflight of a Block 5-version booster.'
 latest_launch.upcoming # false
 latest_launch.static_fire_date_utc # '2018-08-02T15:53:00.000Z'
+```
+
+This code snippet shows how to get information for a specific launch by flight number and list the fields:
+```ruby
+require 'spacex'
+launch_68 = SPACEX::Launches.info(68)
+
+launch_68.flight_number # 68
+launch_68.mission_name # 'Telstar 18V'
+launch_68.rocket.rocket_name # 'Falcon 9'
+launch_68.rocket.first_stage.cores.first.land_success # true
 ```
 
 ### Missions
