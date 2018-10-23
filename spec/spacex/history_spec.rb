@@ -25,7 +25,7 @@ describe SPACEX::History do
     end
   end
 
-  context "#info(4)", vcr: { cassette_name: 'history/info/4' } do
+  context '#info(4)', vcr: { cassette_name: 'history/info/4' } do
     subject do
       SPACEX::History.info(4)
     end
