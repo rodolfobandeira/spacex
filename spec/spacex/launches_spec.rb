@@ -392,4 +392,15 @@ describe SPACEX::Launches do
       expect(subject.static_fire_date_utc).to eq nil
     end
   end
+
+  context '#all', vcr: { cassette_name: 'launches/all' } do
+    subject do
+      SPACEX::Launches.all
+    end
+
+    it 'returns all launches' do
+      expect(subject.first.flight_number).to eq 1
+      expect(subject.first.mission_name).to eq 'FalconSat'
+    end
+  end
 end
