@@ -1,5 +1,6 @@
 ### 1.0.1 (next)
 * [#45](https://github.com/rodolfobandeira/spacex/pull/45): Implement History endpoint [@invacuo](http://github.com/invacuo).
+* [#51](https://github.com/rodolfobandeira/spacex/pull/51): Added payloads endpoint [@maiafernando](http://github.com/maiafernando).
 
 * Your contribution here.
 
