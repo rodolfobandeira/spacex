@@ -403,4 +403,43 @@ describe SPACEX::Launches do
       expect(subject.first.mission_name).to eq 'FalconSat'
     end
   end
+
+  context '#past', vcr: { cassette_name: 'launches/past' } do
+    subject do
+      SPACEX::Launches.past
+    end
+
+    it 'returns and array of launch hashes' do
+      expect(subject).to be_an Array
+      expect(subject.first).to be_a Hash
+    end
+
+    it 'returns the correct number of launches' do
+      expect(subject.count).to eq 69
+    end
+
+    context 'returns past launches' do
+      it 'returns the first launch' do
+        expect(subject.first.flight_number).to eq(1)
+        expect(subject.first.mission_name).to eq('FalconSat')
+        expect(subject.first.rocket.rocket_name).to eq('Falcon 1')
+        expect(subject.first.rocket.first_stage.cores.first.core_serial).to eq('Merlin1A')
+        expect(subject.first.rocket.second_stage.payloads.first.payload_id).to eq('FalconSAT-2')
+        expect(subject.first.rocket.second_stage.payloads.first.orbit_params.regime).to eq('low-earth')
+        expect(subject.first.launch_site.site_id).to eq('kwajalein_atoll')
+        expect(subject.first.launch_success).to eq(false)
+      end
+
+      it 'returns the last past launch' do
+        expect(subject.last.flight_number).to eq(69)
+        expect(subject.last.mission_name).to eq('SAOCOM 1A')
+        expect(subject.last.rocket.rocket_name).to eq('Falcon 9')
+        expect(subject.last.rocket.first_stage.cores.first.core_serial).to eq('B1048')
+        expect(subject.last.rocket.second_stage.payloads.first.payload_id).to eq('SAOCOM 1A')
+        expect(subject.last.rocket.second_stage.payloads.first.orbit_params.regime).to eq('sun-synchronous')
+        expect(subject.last.launch_site.site_id).to eq('vafb_slc_4e')
+        expect(subject.last.launch_success).to eq(true)
+      end
+    end
+  end
 end
