@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/payloads/RatSat
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 23 Oct 2018 11:21:18 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d5a45aa9873a0cb762a4db8f9f0a31cd41540293677; expires=Wed, 23-Oct-19
+        11:21:17 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding, Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Response-Time:
+      - 36ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 46e3d1bf6d854af7-GRU
+    body:
+      encoding: ASCII-8BIT
+      string: '{"payload_id":"RatSat","norad_id":[33393],"reused":false,"customers":["SpaceX"],"nationality":"United
+        States","manufacturer":"SpaceX","payload_type":"Satellite","payload_mass_kg":165,"payload_mass_lbs":363,"orbit":"LEO","orbit_params":{"reference_system":"geocentric","regime":"low-earth","longitude":null,"lifespan_years":null,"epoch":"2008-09-28T22:51:02.000Z","mean_motion":14.79249332,"raan":63.3956,"semi_major_axis_km":7009.836,"eccentricity":0.0009194,"periapsis_km":625.256,"apoapsis_km":638.145,"inclination_deg":9.3329,"period_min":97.346,"arg_of_pericenter":262.0542,"mean_anomaly":98.2248}}'
+    http_version: 
+  recorded_at: Tue, 23 Oct 2018 11:21:24 GMT
+recorded_with: VCR 4.0.0
