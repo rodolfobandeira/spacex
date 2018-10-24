@@ -34,6 +34,9 @@ A Ruby library that consumes the [SpaceX API](https://github.com/r-spacex/SpaceX
   - [Missions](#missions)
     - `SPACEX::Missions.info`
     - `SPACEX::Missions.info('mission_id')`
+  - [Payloads](#payloads)
+    - `SPACEX::Payloads.info`
+    - `SPACEX::Payloads.info('payload_id')`
   - [Roadster](#roadster) - `SPACEX::Roadster.info`
   - [Rockets](#rockets)
     - `SPACEX::Rockets.info`
