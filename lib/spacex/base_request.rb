@@ -42,7 +42,7 @@ module SPACEX
 
       def conn(path)
         Faraday.new(
-          url: "#{SPACEX::ROOT_URI}/#{path}",
+          url: "#{SPACEX::ENDPOINT_URI}/#{path}",
           request: {
             params_encoder: Faraday::FlatParamsEncoder
           }
