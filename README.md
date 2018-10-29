@@ -214,6 +214,7 @@ first_event.links['wikipedia'] # https://en.wikipedia.org/wiki/Falcon_1
 - Get information on the next launch: `SPACEX::Launches.next`
 - Get the latest launch information: `SPACEX::Launches.latest`
 - Get information on past launches: `SPACEX::Launches.past`
+- Get information on upcoming launches: `SPACEX::Launches.upcoming`
 
 The following code snippet shows the latest launch information and the data fields available on the Launch object:
 
@@ -312,6 +313,22 @@ past_launches.last.mission_name # 'SAOCOM 1A'
 past_launches.last.rocket.rocket_name # 'Falcon 9'
 past_launches.last.rocket.first_stage.cores.first.land_success # true
 past_launches.last.launch_success # true
+```
+
+This code snippet shows how to get information on upcoming launches:
+```ruby
+upcoming_launches = SPACEX::Launches.upcoming
+
+upcoming_launches.all?(&:upcoming) # true
+upcoming_launches.all? {|launch| Time.parse(launch.launch_date_utc) >= Time.now.utc} # true
+
+upcoming_launches.each do |launch|
+  puts "Flight #{launch.flight_number} (#{launch.mission_name}) is scheduled to launch at #{launch.launch_date_local} from #{launch.launch_site.site_name_long}"
+end
+# Flight 70 (Es’hail 2) is scheduled to launch at 2018-11-14T15:46:00-05:00 from Cape Canaveral Air Force Station Space Launch Complex 40
+# Flight 71 (SSO-A) is scheduled to launch at 2018-11-19T10:30:00-08:00 from Vandenberg Air Force Base Space Launch Complex 4E
+# Flight 72 (CRS-16) is scheduled to launch at 2018-11-30T19:00:00-05:00 from Cape Canaveral Air Force Station Space Launch Complex 40
+# ...
 ```
 
 ### Missions
