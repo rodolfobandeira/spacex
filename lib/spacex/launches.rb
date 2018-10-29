@@ -16,6 +16,10 @@ module SPACEX
       SPACEX::BaseRequest.info('launches/past')
     end
 
+    def self.upcoming
+      SPACEX::BaseRequest.info('launches/upcoming')
+    end
+
     def self.all
       info
     end
