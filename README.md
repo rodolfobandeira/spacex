@@ -137,8 +137,8 @@ cores_info.first.water_landing # false
 
 ### Dragon Capsules
 
-- Get all dragon capsules: `SPACEX::DragonCapsules.info`
-- Get a specific dragon capsule (e.g., `dragon1`) by including the id in the call: `SPACEX::DragonCapsules.info('dragon_id')`
+- Get information for all dragon capsules: `SPACEX::DragonCapsules.info`
+- Get information about a specific dragon capsule: `SPACEX::DragonCapsules.info('dragon_id')`
 
 This code snippet shows the `dragon1` dragon capsule information:
 
@@ -191,7 +191,7 @@ dragon_capsules.first.description # "Dragon is a reusable spacecraft developed b
 ### History
 
 - Get information for all historical events: `SPACEX::History.info`
-- Get information about a specific historical event: (e.g., `4`: `SPACEX::History.info('4')`
+- Get information about a specific historical event: `SPACEX::History.info('4')`
 
 ```ruby
 require 'spacex'
@@ -211,11 +211,40 @@ first_event.links['wikipedia'] # https://en.wikipedia.org/wiki/Falcon_1
 
 ### Launches
 
-- Get information on all launches: `SPACEX::Launches.all` or `SPACEX::Launches.info`
-- Get information for a specific launch (by flight number): `SPACEX::Launches.info(68)`
+- Get information for all launches: `SPACEX::Launches.all` or `SPACEX::Launches.info`
+- Get information about a specific launch: `SPACEX::Launches.info('flight_number')`
+
+This code snippet shows how to get information for a specific launch by flight number and list the fields:
+
+```ruby
+require 'spacex'
+launch_68 = SPACEX::Launches.info(68)
+
+launch_68.flight_number # 68
+launch_68.mission_name # 'Telstar 18V'
+launch_68.rocket.rocket_name # 'Falcon 9'
+launch_68.rocket.first_stage.cores.first.land_success # true
+```
+
+This code snippet shows how to get information on past launches:
+```ruby
+past_launches = SPACEX::Launches.past
+
+past_launches.first.flight_number # 1
+past_launches.first.mission_name # 'FalconSat'
+past_launches.first.rocket.rocket_name # 'Falcon 1'
+past_launches.first.launch_success # false
+
+past_launches.last.flight_number # 69
+past_launches.last.mission_name # 'SAOCOM 1A'
+past_launches.last.rocket.rocket_name # 'Falcon 9'
+past_launches.last.rocket.first_stage.cores.first.land_success # true
+past_launches.last.launch_success # true
+```
+
+- Get information on past launches: `SPACEX::Launches.past`
 - Get information on the next launch: `SPACEX::Launches.next`
 - Get the latest launch information: `SPACEX::Launches.latest`
-- Get information on past launches: `SPACEX::Launches.past`
 
 The following code snippet shows the latest launch information and the data fields available on the Launch object:
 
@@ -289,37 +318,10 @@ latest_launch.upcoming # false
 latest_launch.static_fire_date_utc # '2018-08-02T15:53:00.000Z'
 ```
 
-This code snippet shows how to get information for a specific launch by flight number and list the fields:
-```ruby
-require 'spacex'
-launch_68 = SPACEX::Launches.info(68)
-
-launch_68.flight_number # 68
-launch_68.mission_name # 'Telstar 18V'
-launch_68.rocket.rocket_name # 'Falcon 9'
-launch_68.rocket.first_stage.cores.first.land_success # true
-```
-
-This code snippet shows how to get information on past launches:
-```ruby
-past_launches = SPACEX::Launches.past
-
-past_launches.first.flight_number # 1
-past_launches.first.mission_name # 'FalconSat'
-past_launches.first.rocket.rocket_name # 'Falcon 1'
-past_launches.first.launch_success # false
-
-past_launches.last.flight_number # 69
-past_launches.last.mission_name # 'SAOCOM 1A'
-past_launches.last.rocket.rocket_name # 'Falcon 9'
-past_launches.last.rocket.first_stage.cores.first.land_success # true
-past_launches.last.launch_success # true
-```
-
 ### Missions
 
-- Get all mission information: `SPACEX::Missions.info`
-- Get information about a specific mission (e.g., `F3364BF`): `SPACEX::Missions.info('mission_id')`
+- Get information for all mission: `SPACEX::Missions.info`
+- Get information about a specific mission: `SPACEX::Missions.info('mission_id')`
 
 This code shows how to get the first mission information and lists the fields:
 
@@ -338,8 +340,8 @@ missions.first.description # "In 2017, Iridium began launching Iridium NEXT, a s
 
 ### Payloads
 
-- Get information on all payloads: `SPACEX::Payloads.info`
-- Get information about a specific payload (e.g., `FalconSAT-2`): `SPACEX::Payloads.info('payload_id')`
+- Get information for all payloads: `SPACEX::Payloads.info`
+- Get information about a specific payload: `SPACEX::Payloads.info('payload_id')`
 
 The following code shows how to get information about a specific payload and lists the payload data fields:
 
@@ -395,7 +397,7 @@ roadster.details # "Elon Musk's Tesla Roadster is an electric sports car that se
 ### Rockets
 
 - Get information for all rockets: `SPACEX::Rockets.info`
-- Get information about a specific rocket (e.g., `falcon1`: `SPACEX::Rockets.info('falcon1')`
+- Get information about a specific rocket: `SPACEX::Rockets.info('rocket_id')`
 
 This example shows a single rocket and its data fields:
 
@@ -430,8 +432,8 @@ first_rocket.flickr_images # ["https://www.spacex.com/sites/spacex/files/styles/
 
 ### Ships
 
-- Get all ship information: `SPACEX::Ships.info`
-- Get information about a specific ship (e.g., `AMERICANCHAMPION`): `SPACEX::Ships.info('ship_id')`
+- Get information for all ships: `SPACEX::Ships.info`
+- Get information about a specific ship: `SPACEX::Ships.info('ship_id')`
 
 The following code shows how to get information about a specific ship and lists the ship data fields:
 
