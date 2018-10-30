@@ -15,7 +15,8 @@ A Ruby library that consumes the [SpaceX API](https://github.com/r-spacex/SpaceX
   - [Capsules](#capsules)
     - `SPACEX::Capsules.info`
     - `SPACEX::Capsules.info('capsule_serial')`
-  - [Company Info](#company-info) - `SPACEX::CompanyInfo.info`
+  - [Company Info](#company-info)
+    - `SPACEX::CompanyInfo.info`
   - [Cores](#cores)
     - `SPACEX::Cores.info`
     - `SPACEX::Cores.info('core_serial')`
@@ -38,7 +39,8 @@ A Ruby library that consumes the [SpaceX API](https://github.com/r-spacex/SpaceX
   - [Payloads](#payloads)
     - `SPACEX::Payloads.info`
     - `SPACEX::Payloads.info('payload_id')`
-  - [Roadster](#roadster) - `SPACEX::Roadster.info`
+  - [Roadster](#roadster)
+    - `SPACEX::Roadster.info`
   - [Rockets](#rockets)
     - `SPACEX::Rockets.info`
     - `SPACEX::Rockets.info('falcon1')`
