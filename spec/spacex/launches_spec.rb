@@ -429,80 +429,80 @@ describe SPACEX::Launches do
         expect(subject.first.rocket.rocket_type).to eq 'FT'
         expect(subject.first.rocket.first_stage.cores).to be_an(Array)
         expect(subject.first.rocket.first_stage.cores.first).to eq(
-          "core_serial" => nil,
-          "flight" => nil,
-          "block" => 5,
-          "gridfins" => true,
-          "legs" => true,
-          "reused" => false,
-          "land_success" => nil,
-          "landing_intent" => true,
-          "landing_type" => "ASDS",
-          "landing_vehicle" => "OCISLY"
+          'core_serial' => nil,
+          'flight' => nil,
+          'block' => 5,
+          'gridfins' => true,
+          'legs' => true,
+          'reused' => false,
+          'land_success' => nil,
+          'landing_intent' => true,
+          'landing_type' => 'ASDS',
+          'landing_vehicle' => 'OCISLY'
         )
         expect(subject.first.rocket.second_stage.block).to eq 5
         expect(subject.first.rocket.second_stage.payloads).to be_an(Array)
         expect(subject.first.rocket.second_stage.payloads.first).to eq(
-          "payload_id" => "Es’hail 2",
-          "norad_id" => [],
-          "reused" => false,
-          "customers" => ["Es’hailSat"],
-          "nationality" => "Qatar",
-          "manufacturer" => "Mitsubishi Electric",
-          "payload_type" => "Satellite",
-          "payload_mass_kg" => 3000,
-          "payload_mass_lbs" => 6613.868,
-          "orbit" => "GTO",
-          "orbit_params" => {
-            "reference_system" => "geocentric",
-            "regime" => "geostationary",
-            "longitude" => 25.5,
-            "semi_major_axis_km" => nil,
-            "eccentricity" => nil,
-            "periapsis_km" => nil,
-            "apoapsis_km" => nil,
-            "inclination_deg" => nil,
-            "period_min" => nil,
-            "lifespan_years" => 15,
-            "epoch" => nil,
-            "mean_motion" => nil,
-            "raan" => nil,
-            "arg_of_pericenter" => nil,
-            "mean_anomaly" => nil
+          'payload_id' => 'Es’hail 2',
+          'norad_id' => [],
+          'reused' => false,
+          'customers' => ['Es’hailSat'],
+          'nationality' => 'Qatar',
+          'manufacturer' => 'Mitsubishi Electric',
+          'payload_type' => 'Satellite',
+          'payload_mass_kg' => 3000,
+          'payload_mass_lbs' => 6613.868,
+          'orbit' => 'GTO',
+          'orbit_params' => {
+            'reference_system' => 'geocentric',
+            'regime' => 'geostationary',
+            'longitude' => 25.5,
+            'semi_major_axis_km' => nil,
+            'eccentricity' => nil,
+            'periapsis_km' => nil,
+            'apoapsis_km' => nil,
+            'inclination_deg' => nil,
+            'period_min' => nil,
+            'lifespan_years' => 15,
+            'epoch' => nil,
+            'mean_motion' => nil,
+            'raan' => nil,
+            'arg_of_pericenter' => nil,
+            'mean_anomaly' => nil
           }
         )
         expect(subject.first.rocket.fairings).to eq(
-          "reused" => false,
-          "recovery_attempt" => false,
-          "recovered" => false,
-          "ship" => nil
+          'reused' => false,
+          'recovery_attempt' => false,
+          'recovered' => false,
+          'ship' => nil
         )
         expect(subject.first.ships).to eq []
         expect(subject.first.telemetry.flight_club).to eq nil
         expect(subject.first.launch_site).to eq(
-          "site_id" => "ccafs_slc_40",
-          "site_name" => "CCAFS SLC 40",
-          "site_name_long" => "Cape Canaveral Air Force Station Space Launch Complex 40"
+          'site_id' => 'ccafs_slc_40',
+          'site_name' => 'CCAFS SLC 40',
+          'site_name_long' => 'Cape Canaveral Air Force Station Space Launch Complex 40'
         )
         expect(subject.first.launch_success).to eq nil
         expect(subject.first.links).to eq(
-          "mission_patch" => nil,
-          "mission_patch_small" => nil,
-          "reddit_campaign" => "https://www.reddit.com/r/spacex/comments/9p82jt/eshail_2_launch_campaign_thread/",
-          "reddit_launch" => nil,
-          "reddit_recovery" => nil,
-          "reddit_media" => nil,
-          "presskit" => nil,
-          "article_link" => nil,
-          "wikipedia" => nil,
-          "video_link" => nil,
-          "flickr_images" => []
+          'mission_patch' => nil,
+          'mission_patch_small' => nil,
+          'reddit_campaign' => 'https://www.reddit.com/r/spacex/comments/9p82jt/eshail_2_launch_campaign_thread/',
+          'reddit_launch' => nil,
+          'reddit_recovery' => nil,
+          'reddit_media' => nil,
+          'presskit' => nil,
+          'article_link' => nil,
+          'wikipedia' => nil,
+          'video_link' => nil,
+          'flickr_images' => []
         )
-        expect(subject.first.details).to eq "SpaceX's eighteenth flight of 2018 will "\
-          "be its first for Es'hailSat. Es'hail-2 is a communications satellite "\
-          "that will deliver television and internet to Qatar and the surrounding "\
-          "region. It will be launched into a geostationary transfer orbit from "\
-          "LC-39A at Kennedy Space Center. The booster is expected to land on OCISLY."
+        expect(subject.first.details).to eq 'SpaceX\'s eighteenth flight of 2018 will '\
+          'be its first for Es\'hailSat. Es\'hail-2 is a communications satellite '\
+          'that will deliver television and internet to Qatar and the surrounding '\
+          'region. It will be launched into a geostationary transfer orbit from '\
+          'LC-39A at Kennedy Space Center. The booster is expected to land on OCISLY.'
         expect(subject.first.upcoming).to eq true
         expect(subject.first.static_fire_date_utc).to eq nil
         expect(subject.first.static_fire_date_unix).to eq nil
@@ -523,81 +523,80 @@ describe SPACEX::Launches do
         expect(subject.last.rocket.rocket_type).to eq 'FT'
         expect(subject.last.rocket.first_stage.cores).to be_an(Array)
         expect(subject.last.rocket.first_stage.cores.first).to eq(
-          "core_serial" => nil,
-          "flight" => nil,
-          "block" => nil,
-          "gridfins" => nil,
-          "legs" => nil,
-          "reused" => false,
-          "land_success" => nil,
-          "landing_intent" => nil,
-          "landing_type" => nil,
-          "landing_vehicle" => nil
+          'core_serial' => nil,
+          'flight' => nil,
+          'block' => nil,
+          'gridfins' => nil,
+          'legs' => nil,
+          'reused' => false,
+          'land_success' => nil,
+          'landing_intent' => nil,
+          'landing_type' => nil,
+          'landing_vehicle' => nil
         )
         expect(subject.last.rocket.second_stage.block).to eq nil
         expect(subject.last.rocket.second_stage.payloads).to be_an(Array)
         expect(subject.last.rocket.second_stage.payloads.first).to eq(
-          "payload_id" => "GPS IIIA-3",
-          "norad_id" => [],
-          "reused" => false,
-          "customers" => ["USAF"],
-          "nationality" => "United States",
-          "manufacturer" => "Lockheed Martin",
-          "payload_type" => "Satellite",
-          "payload_mass_kg" => 3880,
-          "payload_mass_lbs" => 8553.94,
-          "orbit" => "MEO",
-          "orbit_params" => {
-            "reference_system" => nil,
-            "regime" => nil,
-            "longitude" => nil,
-            "semi_major_axis_km" => nil,
-            "eccentricity" => nil,
-            "periapsis_km" => nil,
-            "apoapsis_km" => nil,
-            "inclination_deg" => nil,
-            "period_min" => nil,
-            "lifespan_years" => 15,
-            "epoch" => nil,
-            "mean_motion" => nil,
-            "raan" => nil,
-            "arg_of_pericenter" => nil,
-            "mean_anomaly" => nil
+          'payload_id' => 'GPS IIIA-3',
+          'norad_id' => [],
+          'reused' => false,
+          'customers' => ['USAF'],
+          'nationality' => 'United States',
+          'manufacturer' => 'Lockheed Martin',
+          'payload_type' => 'Satellite',
+          'payload_mass_kg' => 3880,
+          'payload_mass_lbs' => 8553.94,
+          'orbit' => 'MEO',
+          'orbit_params' => {
+            'reference_system' => nil,
+            'regime' => nil,
+            'longitude' => nil,
+            'semi_major_axis_km' => nil,
+            'eccentricity' => nil,
+            'periapsis_km' => nil,
+            'apoapsis_km' => nil,
+            'inclination_deg' => nil,
+            'period_min' => nil,
+            'lifespan_years' => 15,
+            'epoch' => nil,
+            'mean_motion' => nil,
+            'raan' => nil,
+            'arg_of_pericenter' => nil,
+            'mean_anomaly' => nil
           }
         )
         expect(subject.last.rocket.fairings).to eq(
-          "reused" => false,
-          "recovery_attempt" => nil,
-          "recovered" => nil,
-          "ship" => nil
+          'reused' => false,
+          'recovery_attempt' => nil,
+          'recovered' => nil,
+          'ship' => nil
         )
         expect(subject.last.ships).to eq []
         expect(subject.last.telemetry.flight_club).to eq nil
         expect(subject.last.launch_site).to eq(
-          "site_id" => "ccafs_slc_40",
-          "site_name" => "CCAFS SLC 40",
-          "site_name_long" => "Cape Canaveral Air Force Station Space Launch Complex 40"
+          'site_id' => 'ccafs_slc_40',
+          'site_name' => 'CCAFS SLC 40',
+          'site_name_long' => 'Cape Canaveral Air Force Station Space Launch Complex 40'
         )
         expect(subject.last.launch_success).to eq nil
         expect(subject.last.links).to eq(
-          "mission_patch" => nil,
-          "mission_patch_small" => nil,
-          "reddit_campaign" => nil,
-          "reddit_launch" => nil,
-          "reddit_recovery" => nil,
-          "reddit_media" => nil,
-          "presskit" => nil,
-          "article_link" => nil,
-          "wikipedia" => nil,
-          "video_link" => nil,
-          "flickr_images" => []
+          'mission_patch' => nil,
+          'mission_patch_small' => nil,
+          'reddit_campaign' => nil,
+          'reddit_launch' => nil,
+          'reddit_recovery' => nil,
+          'reddit_media' => nil,
+          'presskit' => nil,
+          'article_link' => nil,
+          'wikipedia' => nil,
+          'video_link' => nil,
+          'flickr_images' => []
         )
         expect(subject.last.details).to eq nil
         expect(subject.last.upcoming).to eq true
         expect(subject.last.static_fire_date_utc).to eq nil
         expect(subject.last.static_fire_date_unix).to eq nil
       end
-
     end
   end
 
