@@ -213,6 +213,10 @@ first_event.links['wikipedia'] # https://en.wikipedia.org/wiki/Falcon_1
 
 - Get information for all launches: `SPACEX::Launches.all` or `SPACEX::Launches.info`
 - Get information about a specific launch: `SPACEX::Launches.info('flight_number')`
+- Get information on past launches: `SPACEX::Launches.past`
+- Get information on the next launch: `SPACEX::Launches.next`
+- Get the latest launch information: `SPACEX::Launches.latest`
+- Get information on upcoming launches: `SPACEX::Launches.upcoming`
 
 This code snippet shows how to get information for a specific launch by flight number and list the fields:
 
@@ -242,11 +246,7 @@ past_launches.last.rocket.first_stage.cores.first.land_success # true
 past_launches.last.launch_success # true
 ```
 
-- Get information on past launches: `SPACEX::Launches.past`
-- Get information on the next launch: `SPACEX::Launches.next`
-- Get the latest launch information: `SPACEX::Launches.latest`
-- Get information on past launches: `SPACEX::Launches.past`
-- Get information on upcoming launches: `SPACEX::Launches.upcoming`
+
 
 The following code snippet shows the latest launch information and the data fields available on the Launch object:
 
@@ -318,33 +318,6 @@ latest_launch.links.video_link # 'https://www.youtube.com/watch?v=FjfQNBYv2IY'
 latest_launch.details # 'Indonesian comsat intended to replace the aging Telkom 1 at 108° E. First reflight of a Block 5-version booster.'
 latest_launch.upcoming # false
 latest_launch.static_fire_date_utc # '2018-08-02T15:53:00.000Z'
-```
-
-This code snippet shows how to get information for a specific launch by flight number and list the fields:
-```ruby
-require 'spacex'
-launch_68 = SPACEX::Launches.info(68)
-
-launch_68.flight_number # 68
-launch_68.mission_name # 'Telstar 18V'
-launch_68.rocket.rocket_name # 'Falcon 9'
-launch_68.rocket.first_stage.cores.first.land_success # true
-```
-
-This code snippet shows how to get information on past launches:
-```ruby
-past_launches = SPACEX::Launches.past
-
-past_launches.first.flight_number # 1
-past_launches.first.mission_name # 'FalconSat'
-past_launches.first.rocket.rocket_name # 'Falcon 1'
-past_launches.first.launch_success # false
-
-past_launches.last.flight_number # 69
-past_launches.last.mission_name # 'SAOCOM 1A'
-past_launches.last.rocket.rocket_name # 'Falcon 9'
-past_launches.last.rocket.first_stage.cores.first.land_success # true
-past_launches.last.launch_success # true
 ```
 
 This code snippet shows how to get information on upcoming launches:
