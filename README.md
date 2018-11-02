@@ -351,16 +351,13 @@ This code snippet shows how to get information on upcoming launches:
 ```ruby
 upcoming_launches = SPACEX::Launches.upcoming
 
-upcoming_launches.all?(&:upcoming) # true
-upcoming_launches.all? {|launch| Time.parse(launch.launch_date_utc) >= Time.now.utc} # true
+upcoming_launches.first.flight_number # 70
+upcoming_launches.first.mission_name # 'Es’hail 2'
+upcoming_launches.first.launch_date_utc # '2018-11-14T20:46:00.000Z'
 
-upcoming_launches.each do |launch|
-  puts "Flight #{launch.flight_number} (#{launch.mission_name}) is scheduled to launch at #{launch.launch_date_local} from #{launch.launch_site.site_name_long}"
-end
-# Flight 70 (Es’hail 2) is scheduled to launch at 2018-11-14T15:46:00-05:00 from Cape Canaveral Air Force Station Space Launch Complex 40
-# Flight 71 (SSO-A) is scheduled to launch at 2018-11-19T10:30:00-08:00 from Vandenberg Air Force Base Space Launch Complex 4E
-# Flight 72 (CRS-16) is scheduled to launch at 2018-11-30T19:00:00-05:00 from Cape Canaveral Air Force Station Space Launch Complex 40
-# ...
+upcoming_launches.last.flight_number # 91
+upcoming_launches.last.mission_name # 'GPS IIIA-3'
+upcoming_launches.last.launch_date_utc # '2019-10-01T00:00:00.000Z'
 ```
 
 ### Missions
