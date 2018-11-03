@@ -3,7 +3,8 @@
 * [#48](https://github.com/rodolfobandeira/spacex/pull/48): Add ability to query specific Launch via `.info('flight_number')` - [@mtking2](http://github.com/mtking2).
 * [#51](https://github.com/rodolfobandeira/spacex/pull/51): Added payloads endpoint [@maiafernando](http://github.com/maiafernando).
 * [#52](https://github.com/rodolfobandeira/spacex/pull/52): Add ability to query Past Launches - [@mtking2](http://github.com/mtking2).
-* [#52](https://github.com/rodolfobandeira/spacex/pull/54): Refactor ENDPOINT_URI - [@ludamillion](http://github.com/ludamillion).
+* [#54](https://github.com/rodolfobandeira/spacex/pull/54): Refactor ENDPOINT_URI - [@ludamillion](http://github.com/ludamillion).
+* [#56](https://github.com/rodolfobandeira/spacex/pull/56): Add ability to query upcoming launches - [@mtking2](http://github.com/mtking2).
 * Your contribution here.
 
 ### 1.0.0 (2018/10/15)

@@ -213,6 +213,10 @@ first_event.links['wikipedia'] # https://en.wikipedia.org/wiki/Falcon_1
 
 - Get information for all launches: `SPACEX::Launches.all` or `SPACEX::Launches.info`
 - Get information about a specific launch: `SPACEX::Launches.info('flight_number')`
+- Get information on past launches: `SPACEX::Launches.past`
+- Get information on the next launch: `SPACEX::Launches.next`
+- Get the latest launch information: `SPACEX::Launches.latest`
+- Get information on upcoming launches: `SPACEX::Launches.upcoming`
 
 This code snippet shows how to get information for a specific launch by flight number and list the fields:
 
@@ -242,9 +246,7 @@ past_launches.last.rocket.first_stage.cores.first.land_success # true
 past_launches.last.launch_success # true
 ```
 
-- Get information on past launches: `SPACEX::Launches.past`
-- Get information on the next launch: `SPACEX::Launches.next`
-- Get the latest launch information: `SPACEX::Launches.latest`
+
 
 The following code snippet shows the latest launch information and the data fields available on the Launch object:
 
@@ -316,6 +318,19 @@ latest_launch.links.video_link # 'https://www.youtube.com/watch?v=FjfQNBYv2IY'
 latest_launch.details # 'Indonesian comsat intended to replace the aging Telkom 1 at 108° E. First reflight of a Block 5-version booster.'
 latest_launch.upcoming # false
 latest_launch.static_fire_date_utc # '2018-08-02T15:53:00.000Z'
+```
+
+This code snippet shows how to get information on upcoming launches:
+```ruby
+upcoming_launches = SPACEX::Launches.upcoming
+
+upcoming_launches.first.flight_number # 70
+upcoming_launches.first.mission_name # 'Es’hail 2'
+upcoming_launches.first.launch_date_utc # '2018-11-14T20:46:00.000Z'
+
+upcoming_launches.last.flight_number # 91
+upcoming_launches.last.mission_name # 'GPS IIIA-3'
+upcoming_launches.last.launch_date_utc # '2019-10-01T00:00:00.000Z'
 ```
 
 ### Missions
