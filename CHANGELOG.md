@@ -3,7 +3,7 @@
 * Your contribution here.
 
 
-### 1.0.1
+### 1.0.1 (2018/11/04)
 
 * [#45](https://github.com/rodolfobandeira/spacex/pull/45): Implement History endpoint [@invacuo](http://github.com/invacuo).
 * [#48](https://github.com/rodolfobandeira/spacex/pull/48): Add ability to query specific Launch via `.info('flight_number')` - [@mtking2](http://github.com/mtking2).
