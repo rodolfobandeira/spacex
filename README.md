@@ -29,7 +29,7 @@ A Ruby library that consumes the [SpaceX API](https://github.com/r-spacex/SpaceX
   - [Launches](#launches)
     - `SPACEX::Launches.all`
     - `SPACEX::Launches.info`
-    - `SPACEX::Launches.info(68)`
+    - `SPACEX::Launches.info('flight_number')`
     - `SPACEX::Launches.latest`
     - `SPACEX::Launches.next`
     - `SPACEX::Launches.past`
