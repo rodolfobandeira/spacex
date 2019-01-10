@@ -32,4 +32,6 @@ Update the CHANGELOG with the description of your code and your name on the line
 
 ### Push your change and open a pull request
 
+Use the pull request template to explaing why the PR is being made and give a brief description.
+
 Thank you!
