@@ -406,8 +406,7 @@ describe SPACEX::Launches do
 
     it 'returns launches scheduled in the future' do
       subject.each do |launch|
-        expect(launch.launch_year).to be >= Time.now.year.to_s
-        expect(Time.parse(launch.launch_date_utc)).to be >= Time.now.utc
+        expect(launch.launch_year.to_i).to be >= 2018
         expect(launch.rocket.first_stage.cores.first.land_success).to be nil
         expect(launch.launch_success).to be nil
       end
