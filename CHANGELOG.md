@@ -1,6 +1,6 @@
 ### 1.0.2 (next)
 
-* [#64](https://github.com/rodolfobandeira/spacex/pull/46): Fix failing build on Travis-CI [@rodolfobandeira](http://github.com/rodolfobandeira).
+* [#64](https://github.com/rodolfobandeira/spacex/pull/64): Fix failing build on Travis-CI [@rodolfobandeira](http://github.com/rodolfobandeira).
 * Your contribution here.
 
 ### 1.0.1 (2018/11/04)
