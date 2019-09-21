@@ -1,6 +1,24 @@
 language: ruby
-
 cache: bundler
+sudo: required
 
 rvm:
-  - 2.4.1
+  - 2.4.2
+
+env:
+  global:
+    - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+script:
+  - bundle exec rspec
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+secure: "Ga4S6dC2EyXnJQfXnB19BjLwIwDeSqs+KUJ/mlli0YIuIPxXwYJTjwZCRCWIz1SeBH840Waa1y2PY75E7l6olXCyP4Dq8WgzeJmOkjrVEUv745Fb8MZPi8QFu9rAOtI3q6ejD2CxDs3kW9AcN+k0bnMAE2Ban8zKUJYojpIcJqvJozoMGsxiuV0f0XvJ+jRodJYtFbhPh/62m47BIE4mOWycJwY03K6BD2VwxVGsDWeNXVhoAB0Q8o01qvL0FbMi2gA60rjoVH1QCZK6bfz+sQH2jnCc7nxozCzdRjWTqpHkmIj7H4HPuZALLWlWHIkKsiGiiZg564W7vBOTW+MG0VkJpA2FST+wvPSTSzcf905wrBiDTltgcZqBZ748Vo5yx9z5bxHfiuQnbCKW8h5YsItAZ4NYggVVpuoKQhOtI/1ojV+SQHrJmub8BoUavLCibseoOmx08HM4zbWSCmQczgRsVLiki5eztCAy/n1Er80CY5ifMLcfBEA/b/ZNk1jNyZ5ThYHEeFxwQsMZnRJGbLfCwG3Hg2olzSEEdesYhhCLlwlixlViMVcG4CxqZDyvnIKiOEFL87nTsXsxewXuiFr59gurmHILegsmET0IZIWv0UcGSfDLvDi6LUfDr/R0fBe9D54M2XKbs/rX0ejeRkrrJRpFbzswRhTjqDJLpqw="
+
