@@ -1,6 +1,7 @@
 ### 1.0.2 (next)
 
 * Your contribution here.
+* [#69](https://github.com/rodolfobandeira/spacex/pull/69): Implement API Info endpoint [@fernandomaia](https://github.com/fernandomaia).
 * [#65](https://github.com/rodolfobandeira/spacex/pull/65): Add CodeClimate test coverage [@rodolfobandeira](http://github.com/rodolfobandeira).
 * [#64](https://github.com/rodolfobandeira/spacex/pull/64): Fix failing build on Travis-CI [@rodolfobandeira](http://github.com/rodolfobandeira).
 
