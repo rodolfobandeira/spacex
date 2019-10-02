@@ -14,6 +14,8 @@ A Ruby library that consumes the [SpaceX API](https://github.com/r-spacex/SpaceX
 
 - [Installation](#installation)
 - [Usage](#usage)
+  - [API Info](#api-info)
+    - `SPACEX::ApiInfo.info`
   - [Capsules](#capsules)
     - `SPACEX::Capsules.info`
     - `SPACEX::Capsules.info('capsule_serial')`
@@ -65,6 +67,23 @@ Then run `bundle install`.
 
 
 ## Usage
+
+### API Info
+
+- Get information about the API: `SPACEX::ApiInfo.info`
+
+Here's an example of the response:
+
+```ruby
+api_info = SPACEX::ApiInfo.info
+
+api_info.project_name # 'SpaceX-API'
+api_info.description = # 'Open Source REST API for rocket, core, capsule, pad, and launch data, created and maintained by the developers of the r/SpaceX organization'
+api_info.organization = # 'r/SpaceX'
+api_info.organization_link = # 'https://github.com/r-spacex'
+api_info.project_link = # 'https://github.com/r-spacex/SpaceX-API'
+api_info.version = # '3.1.0'
+```
 
 ### Capsules
 
