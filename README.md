@@ -28,6 +28,9 @@ A Ruby library that consumes the [SpaceX API](https://github.com/r-spacex/SpaceX
   - [History](#history)
     - `SPACEX::History.info`
     - `SPACEX::History.info(4)`
+  - [LaunchPads](#launch_pads)
+    - `SPACEX::LaunchPads.info`
+    - `SPACEX::LaunchPads.info('vafb_slc_4e')`
   - [Launches](#launches)
     - `SPACEX::Launches.all`
     - `SPACEX::Launches.info`
@@ -210,6 +213,34 @@ first_event.links['reddit'] # nil
 first_event.links['article'] # http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0
 first_event.links['wikipedia'] # https://en.wikipedia.org/wiki/Falcon_1
 ```
+
+
+### LaunchPads
+
+- Get information for all LaunchPads: `SPACEX::LaunchPads.info`
+- Get information about a specific LaunchPad: `SPACEX::LaunchPads.info('vafb_slc_4e')`
+
+This code shows how to get the information for a specific LaunchPad by site_id and lists the fields:
+
+```ruby
+launch_pad = SPACEX::LaunchPads.info('vafb_slc_4e')
+
+launch_pad.id # 6
+launch_pad.name # 'VAFB SLC 4E'
+launch_pad.status # 'active'
+launch_pad.location['name'] # 'Vandenberg Air Force Base',
+launch_pad.location['region'] # 'California',
+launch_pad.location['latitude'] # 34.632093,
+launch_pad.location['longitude'] # -120.610829
+launch_pad.vehicles_launched # ['Falcon 9']
+launch_pad.attempted_launches # 15
+launch_pad.successful_launches # 15
+launch_pad.wikipedia # 'https://en.wikipedia.org/wiki/Vandenberg_AFB_Space_Launch_Complex_4'
+launch_pad.details # 'SpaceX primary west coast launch pad for polar orbits and sun synchronous orbits, primarily used for Iridium. Also intended to be capable of launching Falcon Heavy.'
+launch_pad.site_id # 'vafb_slc_4e'
+launch_pad.site_name_long # 'Vandenberg Air Force Base Space Launch Complex 4E'
+```
+
 
 ### Launches
 

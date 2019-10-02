@@ -1,6 +1,7 @@
 ### 1.0.2 (next)
 
 * Your contribution here.
+* [#70](https://github.com/rodolfobandeira/spacex/pull/70): Implement Landing Pads endpoint [@invacuo](http://github.com/invacuo).
 * [#65](https://github.com/rodolfobandeira/spacex/pull/65): Add CodeClimate test coverage [@rodolfobandeira](http://github.com/rodolfobandeira).
 * [#64](https://github.com/rodolfobandeira/spacex/pull/64): Fix failing build on Travis-CI [@rodolfobandeira](http://github.com/rodolfobandeira).
 

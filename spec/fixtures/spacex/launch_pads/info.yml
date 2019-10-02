@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/launchpads/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.16.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Oct 2019 01:14:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=da830d2d8f160129e4ad12af7bfdb29561569978847; expires=Thu, 01-Oct-20
+        01:14:07 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-count,spacex-api-response-time
+      Spacex-Api-Cache:
+      - HIT
+      Spacex-Api-Count:
+      - '6'
+      Spacex-Api-Response-Time:
+      - 1ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 51f2d1570f89e0aa-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":5,"name":"VAFB SLC 3W","status":"retired","location":{"name":"Vandenberg
+        Air Force Base","region":"California","latitude":34.6440904,"longitude":-120.5931438},"vehicles_launched":["Falcon
+        1"],"attempted_launches":0,"successful_launches":0,"wikipedia":"https://en.wikipedia.org/wiki/Vandenberg_AFB_Space_Launch_Complex_3","details":"SpaceX
+        original west coast launch pad for Falcon 1. Performed a static fire but was
+        never used for a launch and abandoned due to scheduling conflicts.","site_id":"vafb_slc_3w","site_name_long":"Vandenberg
+        Air Force Base Space Launch Complex 3W"},{"id":2,"name":"CCAFS SLC 40","status":"active","location":{"name":"Cape
+        Canaveral","region":"Florida","latitude":28.5618571,"longitude":-80.577366},"vehicles_launched":["Falcon
+        9"],"attempted_launches":45,"successful_launches":43,"wikipedia":"https://en.wikipedia.org/wiki/Cape_Canaveral_Air_Force_Station_Space_Launch_Complex_40","details":"SpaceX
+        primary Falcon 9 launch pad, where all east coast Falcon 9s launched prior
+        to the AMOS-6 anomaly. Initially used to launch Titan rockets for Lockheed
+        Martin. Back online since CRS-13 on 2017-12-15.","site_id":"ccafs_slc_40","site_name_long":"Cape
+        Canaveral Air Force Station Space Launch Complex 40"},{"id":8,"name":"STLS","status":"under
+        construction","location":{"name":"Boca Chica Village","region":"Texas","latitude":25.9972641,"longitude":-97.1560845},"vehicles_launched":["Falcon
+        9"],"attempted_launches":0,"successful_launches":0,"wikipedia":"https://en.wikipedia.org/wiki/SpaceX_South_Texas_Launch_Site","details":"SpaceX
+        new launch site currently under construction to help keep up with the Falcon
+        9 and Heavy manifests. Expected to be completed in late 2018. Initially will
+        be limited to 12 flights per year, and only GTO launches.","site_id":"stls","site_name_long":"SpaceX
+        South Texas Launch Site"},{"id":1,"name":"Kwajalein Atoll","status":"retired","location":{"name":"Omelek
+        Island","region":"Marshall Islands","latitude":9.0477206,"longitude":167.7431292},"vehicles_launched":["Falcon
+        1"],"attempted_launches":5,"successful_launches":2,"wikipedia":"https://en.wikipedia.org/wiki/Omelek_Island","details":"SpaceX
+        original launch site, where all of the Falcon 1 launches occured. Abandoned
+        as SpaceX decided against upgrading the pad to support Falcon 9.","site_id":"kwajalein_atoll","site_name_long":"Kwajalein
+        Atoll Omelek Island"},{"id":6,"name":"VAFB SLC 4E","status":"active","location":{"name":"Vandenberg
+        Air Force Base","region":"California","latitude":34.632093,"longitude":-120.610829},"vehicles_launched":["Falcon
+        9"],"attempted_launches":15,"successful_launches":15,"wikipedia":"https://en.wikipedia.org/wiki/Vandenberg_AFB_Space_Launch_Complex_4","details":"SpaceX
+        primary west coast launch pad for polar orbits and sun synchronous orbits,
+        primarily used for Iridium. Also intended to be capable of launching Falcon
+        Heavy.","site_id":"vafb_slc_4e","site_name_long":"Vandenberg Air Force Base
+        Space Launch Complex 4E"},{"id":4,"name":"KSC LC 39A","status":"active","location":{"name":"Cape
+        Canaveral","region":"Florida","latitude":28.6080585,"longitude":-80.6039558},"vehicles_launched":["Falcon
+        9","Falcon Heavy"],"attempted_launches":18,"successful_launches":18,"wikipedia":"https://en.wikipedia.org/wiki/Kennedy_Space_Center_Launch_Complex_39#Launch_Pad_39A","details":"NASA
+        historic launch pad that launched most of the Saturn V and Space Shuttle missions.
+        Initially for Falcon Heavy launches, it is now launching all of SpaceX east
+        coast missions due to the damage from the AMOS-6 anomaly. After SLC-40 repairs
+        are complete, it will be upgraded to support Falcon Heavy, a process which
+        will take about two months. In the future it will launch commercial crew missions
+        and the Interplanetary Transport System.","site_id":"ksc_lc_39a","site_name_long":"Kennedy
+        Space Center Historic Launch Complex 39A"}]'
+    http_version: 
+  recorded_at: Wed, 02 Oct 2019 01:14:07 GMT
+recorded_with: VCR 4.0.0
