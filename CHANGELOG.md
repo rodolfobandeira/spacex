@@ -1,6 +1,7 @@
 ### 1.0.2 (next)
 
 * Your contribution here.
+* [#71](https://github.com/rodolfobandeira/spacex/pull/71): Implement Landing Pads endpoint [@invacuo](http://github.com/invacuo).
 * [#70](https://github.com/rodolfobandeira/spacex/pull/70): Implement Landing Pads endpoint [@invacuo](http://github.com/invacuo).
 * [#69](https://github.com/rodolfobandeira/spacex/pull/69): Implement API Info endpoint [@fernandomaia](https://github.com/fernandomaia).
 * [#65](https://github.com/rodolfobandeira/spacex/pull/65): Add CodeClimate test coverage [@rodolfobandeira](http://github.com/rodolfobandeira).

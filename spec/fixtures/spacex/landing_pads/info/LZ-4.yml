@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/landpads/LZ-4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.16.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Oct 2019 02:34:40 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd14821a25f560f88fe414ab6490ae7201569983680; expires=Thu, 01-Oct-20
+        02:34:40 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-count,spacex-api-response-time
+      Spacex-Api-Cache:
+      - HIT
+      Spacex-Api-Response-Time:
+      - 1ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 51f34753ee175727-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"LZ-4","full_name":"Landing Zone 4","status":"active","location":{"name":"Vandenberg
+        Air Force Base","region":"California","latitude":34.632989,"longitude":-120.615167},"landing_type":"RTLS","attempted_landings":2,"successful_landings":2,"wikipedia":"https://en.wikipedia.org/wiki/Vandenberg_AFB_Space_Launch_Complex_4#LZ-4_landing_history","details":"SpaceX''s
+        west coast landing pad. The pad is adjacent to SLC-4E, SpaceX''s west coast
+        launch site. The pad was under construction for about a year starting in 2016.
+        After concerns with seal mating season, this pad was first used for the SAOCOM
+        1A mission in October 2018. Officially referred to as LZ-4 in FCC filings."}'
+    http_version: 
+  recorded_at: Wed, 02 Oct 2019 02:34:40 GMT
+recorded_with: VCR 4.0.0
