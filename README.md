@@ -211,6 +211,29 @@ first_event.links['article'] # http://www.spacex.com/news/2013/02/11/flight-4-la
 first_event.links['wikipedia'] # https://en.wikipedia.org/wiki/Falcon_1
 ```
 
+### LandingPads
+
+- Get information for all LandingPads: `SPACEX::LandingPads.info`
+- Get information about a specific LandingPad: `SPACEX::LandingPads.info('LZ-4')`
+
+This code shows how to get the information for a specific LandingPad by id and lists the fields:
+
+```ruby
+landing_pad = SPACEX::LandingPads.info('LZ-4')
+landing_pad.id # 'LZ-4'
+landing_pad.full_name # 'Landing Zone 4'
+landing_pad.status # 'active'
+landing_pad.location['name'] # 'Vandenberg Air Force Base'
+landing_pad.location['region'] # 'California'
+landing_pad.location['latitude'] # 34.632989
+landing_pad.location['longitude'] # -120.615167
+landing_pad.landing_type # 'RTLS'
+landing_pad.attempted_landings # 2
+landing_pad.successful_landings # 2
+landing_pad.wikipedia # "https://en.wikipedia.org/wiki/Vandenberg_AFB_Space_Launch_Complex_4#LZ-4_landing_history"
+landing_pad.details # "SpaceX's west coast landing pad. The pad is adjacent to SLC-4E, SpaceX's west coast launch site. The pad was under construction for about a year starting in 2016. After concerns with seal mating season, this pad was first used for the SAOCOM 1A mission in October 2018. Officially referred to as LZ-4 in FCC filings."
+```
+
 ### Launches
 
 - Get information for all launches: `SPACEX::Launches.all` or `SPACEX::Launches.info`

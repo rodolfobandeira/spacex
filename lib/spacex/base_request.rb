@@ -49,7 +49,7 @@ module SPACEX
         ) do |c|
           c.use ::FaradayMiddleware::ParseJson
           c.use Faraday::Response::RaiseError
-          c.use Faraday::Adapter::NetHttp
+          c.adapter Faraday::Adapter::NetHttp
         end
       end
     end
