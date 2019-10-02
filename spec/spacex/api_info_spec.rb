@@ -5,6 +5,7 @@ describe SPACEX::ApiInfo do
     subject do
       SPACEX::ApiInfo.info
     end
+
     it 'returns API info' do
       expect(subject.project_name).to eq 'SpaceX-API'
       expect(subject.organization).to eq 'r/SpaceX'
