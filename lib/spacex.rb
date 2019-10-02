@@ -3,6 +3,7 @@ require 'faraday_middleware'
 require 'faraday_middleware/response_middleware'
 require 'hashie'
 
+require_relative 'spacex/api_info'
 require_relative 'spacex/base_request'
 require_relative 'spacex/capsules'
 require_relative 'spacex/company_info'
