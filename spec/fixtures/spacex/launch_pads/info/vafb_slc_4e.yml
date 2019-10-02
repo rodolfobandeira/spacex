@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/launchpads/vafb_slc_4e
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.16.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Oct 2019 01:26:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d77218edc77d1c7147daab312fe4c4eb51569979614; expires=Thu, 01-Oct-20
+        01:26:54 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-count,spacex-api-response-time
+      Spacex-Api-Cache:
+      - MISS
+      Spacex-Api-Response-Time:
+      - 32ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 51f2e40cebffcef0-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":6,"name":"VAFB SLC 4E","status":"active","location":{"name":"Vandenberg
+        Air Force Base","region":"California","latitude":34.632093,"longitude":-120.610829},"vehicles_launched":["Falcon
+        9"],"attempted_launches":15,"successful_launches":15,"wikipedia":"https://en.wikipedia.org/wiki/Vandenberg_AFB_Space_Launch_Complex_4","details":"SpaceX
+        primary west coast launch pad for polar orbits and sun synchronous orbits,
+        primarily used for Iridium. Also intended to be capable of launching Falcon
+        Heavy.","site_id":"vafb_slc_4e","site_name_long":"Vandenberg Air Force Base
+        Space Launch Complex 4E"}'
+    http_version: 
+  recorded_at: Wed, 02 Oct 2019 01:26:54 GMT
+recorded_with: VCR 4.0.0

@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v3/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.16.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Oct 2019 01:04:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd7abdb6b7f9c36b6bdc298c15ec390b81569978291; expires=Thu, 01-Oct-20
+        01:04:51 GMT; path=/; domain=.spacexdata.com; HttpOnly; Secure
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-count,spacex-api-response-time
+      Spacex-Api-Response-Time:
+      - 19ms
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 51f2c3c2ae854a4c-GRU
+    body:
+      encoding: ASCII-8BIT
+      string: '{"project_name":"SpaceX-API","version":"3.1.0","project_link":"https://github.com/r-spacex/SpaceX-API","docs":"https://documenter.getpostman.com/view/2025350/RWaEzAiG","organization":"r/SpaceX","organization_link":"https://github.com/r-spacex","description":"Open
+        Source REST API for rocket, core, capsule, pad, and launch data, created and
+        maintained by the developers of the r/SpaceX organization"}'
+    http_version: 
+  recorded_at: Wed, 02 Oct 2019 01:04:51 GMT
+recorded_with: VCR 4.0.0

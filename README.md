@@ -14,6 +14,8 @@ A Ruby library that consumes the [SpaceX API](https://github.com/r-spacex/SpaceX
 
 - [Installation](#installation)
 - [Usage](#usage)
+  - [API Info](#api-info)
+    - `SPACEX::ApiInfo.info`
   - [Capsules](#capsules)
     - `SPACEX::Capsules.info`
     - `SPACEX::Capsules.info('capsule_serial')`
@@ -28,6 +30,12 @@ A Ruby library that consumes the [SpaceX API](https://github.com/r-spacex/SpaceX
   - [History](#history)
     - `SPACEX::History.info`
     - `SPACEX::History.info(4)`
+  - [LandingPads](#landing_pads)
+    - `SPACEX::LandingPads.info`
+    - `SPACEX::LandingPads.info('LZ-4')`
+  - [LaunchPads](#launch_pads)
+    - `SPACEX::LaunchPads.info`
+    - `SPACEX::LaunchPads.info('vafb_slc_4e')`
   - [Launches](#launches)
     - `SPACEX::Launches.all`
     - `SPACEX::Launches.info`
@@ -65,6 +73,23 @@ Then run `bundle install`.
 
 
 ## Usage
+
+### API Info
+
+- Get information about the API: `SPACEX::ApiInfo.info`
+
+Here's an example of the response:
+
+```ruby
+api_info = SPACEX::ApiInfo.info
+
+api_info.project_name # 'SpaceX-API'
+api_info.description = # 'Open Source REST API for rocket, core, capsule, pad, and launch data, created and maintained by the developers of the r/SpaceX organization'
+api_info.organization = # 'r/SpaceX'
+api_info.organization_link = # 'https://github.com/r-spacex'
+api_info.project_link = # 'https://github.com/r-spacex/SpaceX-API'
+api_info.version = # '3.1.0'
+```
 
 ### Capsules
 
@@ -232,6 +257,32 @@ landing_pad.attempted_landings # 2
 landing_pad.successful_landings # 2
 landing_pad.wikipedia # "https://en.wikipedia.org/wiki/Vandenberg_AFB_Space_Launch_Complex_4#LZ-4_landing_history"
 landing_pad.details # "SpaceX's west coast landing pad. The pad is adjacent to SLC-4E, SpaceX's west coast launch site. The pad was under construction for about a year starting in 2016. After concerns with seal mating season, this pad was first used for the SAOCOM 1A mission in October 2018. Officially referred to as LZ-4 in FCC filings."
+```
+
+### LaunchPads
+
+- Get information for all LaunchPads: `SPACEX::LaunchPads.info`
+- Get information about a specific LaunchPad: `SPACEX::LaunchPads.info('vafb_slc_4e')`
+
+This code shows how to get the information for a specific LaunchPad by site_id and lists the fields:
+
+```ruby
+launch_pad = SPACEX::LaunchPads.info('vafb_slc_4e')
+
+launch_pad.id # 6
+launch_pad.name # 'VAFB SLC 4E'
+launch_pad.status # 'active'
+launch_pad.location['name'] # 'Vandenberg Air Force Base',
+launch_pad.location['region'] # 'California',
+launch_pad.location['latitude'] # 34.632093,
+launch_pad.location['longitude'] # -120.610829
+launch_pad.vehicles_launched # ['Falcon 9']
+launch_pad.attempted_launches # 15
+launch_pad.successful_launches # 15
+launch_pad.wikipedia # 'https://en.wikipedia.org/wiki/Vandenberg_AFB_Space_Launch_Complex_4'
+launch_pad.details # 'SpaceX primary west coast launch pad for polar orbits and sun synchronous orbits, primarily used for Iridium. Also intended to be capable of launching Falcon Heavy.'
+launch_pad.site_id # 'vafb_slc_4e'
+launch_pad.site_name_long # 'Vandenberg Air Force Base Space Launch Complex 4E'
 ```
 
 ### Launches
