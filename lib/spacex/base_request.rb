@@ -46,10 +46,10 @@ module SPACEX
           request: {
             params_encoder: Faraday::FlatParamsEncoder
           }
-        ) do |c|
-          c.use ::FaradayMiddleware::ParseJson
-          c.use Faraday::Response::RaiseError
-          c.adapter Faraday::Adapter::NetHttp
+        ) do |connection|
+          connection.use ::FaradayMiddleware::ParseJson
+          connection.use Faraday::Response::RaiseError
+          connection.adapter ::Faraday.default_adapter
         end
       end
     end

@@ -1,25 +1,26 @@
 ### 1.0.2 (next)
 
 * Your contribution here.
-* [#71](https://github.com/rodolfobandeira/spacex/pull/71): Implement Landing Pads endpoint [@invacuo](http://github.com/invacuo).
-* [#70](https://github.com/rodolfobandeira/spacex/pull/70): Implement Landing Pads endpoint [@invacuo](http://github.com/invacuo).
+* [#73](https://github.com/rodolfobandeira/spacex/pull/73): Fix Faraday adaptor failing rspec locally [@rodolfobandeira](https://github.com/rodolfobandeira).
+* [#71](https://github.com/rodolfobandeira/spacex/pull/71): Implement Landing Pads endpoint [@invacuo](https://github.com/invacuo).
+* [#70](https://github.com/rodolfobandeira/spacex/pull/70): Implement Landing Pads endpoint [@invacuo](https://github.com/invacuo).
 * [#69](https://github.com/rodolfobandeira/spacex/pull/69): Implement API Info endpoint [@fernandomaia](https://github.com/fernandomaia).
-* [#65](https://github.com/rodolfobandeira/spacex/pull/65): Add CodeClimate test coverage [@rodolfobandeira](http://github.com/rodolfobandeira).
-* [#64](https://github.com/rodolfobandeira/spacex/pull/64): Fix failing build on Travis-CI [@rodolfobandeira](http://github.com/rodolfobandeira).
+* [#65](https://github.com/rodolfobandeira/spacex/pull/65): Add CodeClimate test coverage [@rodolfobandeira](https://github.com/rodolfobandeira).
+* [#64](https://github.com/rodolfobandeira/spacex/pull/64): Fix failing build on Travis-CI [@rodolfobandeira](https://github.com/rodolfobandeira).
 
 ### 1.0.1 (2018/11/04)
 
-* [#45](https://github.com/rodolfobandeira/spacex/pull/45): Implement History endpoint [@invacuo](http://github.com/invacuo).
-* [#48](https://github.com/rodolfobandeira/spacex/pull/48): Add ability to query specific Launch via `.info('flight_number')` - [@mtking2](http://github.com/mtking2).
-* [#51](https://github.com/rodolfobandeira/spacex/pull/51): Added payloads endpoint [@maiafernando](http://github.com/maiafernando).
-* [#52](https://github.com/rodolfobandeira/spacex/pull/52): Add ability to query Past Launches - [@mtking2](http://github.com/mtking2).
-* [#54](https://github.com/rodolfobandeira/spacex/pull/54): Refactor ENDPOINT_URI - [@ludamillion](http://github.com/ludamillion).
-* [#56](https://github.com/rodolfobandeira/spacex/pull/56): Add ability to query upcoming launches - [@mtking2](http://github.com/mtking2).
+* [#45](https://github.com/rodolfobandeira/spacex/pull/45): Implement History endpoint [@invacuo](https://github.com/invacuo).
+* [#48](https://github.com/rodolfobandeira/spacex/pull/48): Add ability to query specific Launch via `.info('flight_number')` - [@mtking2](https://github.com/mtking2).
+* [#51](https://github.com/rodolfobandeira/spacex/pull/51): Added payloads endpoint [@maiafernando](https://github.com/maiafernando).
+* [#52](https://github.com/rodolfobandeira/spacex/pull/52): Add ability to query Past Launches - [@mtking2](https://github.com/mtking2).
+* [#54](https://github.com/rodolfobandeira/spacex/pull/54): Refactor ENDPOINT_URI - [@ludamillion](https://github.com/ludamillion).
+* [#56](https://github.com/rodolfobandeira/spacex/pull/56): Add ability to query upcoming launches - [@mtking2](https://github.com/mtking2).
 
 
 ### 1.0.0 (2018/10/15)
 
-* [#41](https://github.com/rodolfobandeira/spacex/pull/41): General Refactor cleaning endpoint classes [@invacuo](http://github.com/invacuo).
+* [#41](https://github.com/rodolfobandeira/spacex/pull/41): General Refactor cleaning endpoint classes [@invacuo](https://github.com/invacuo).
 * [#44](https://github.com/rodolfobandeira/spacex/pull/44): Add flickr_images key into rockets endpoint [@Dfenniak](https://github.com/Dfenniak).
 * [#42](https://github.com/rodolfobandeira/spacex/pull/42): Add pry gem to debug - [@Dfenniak](https://github.com/Dfenniak).
 * [#40](https://github.com/rodolfobandeira/spacex/pull/40): Update and clarify information in README - [@annawinkler](https://github.com/annawinkler).
