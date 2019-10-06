@@ -1,6 +1,9 @@
-### 1.0.2 (next)
+### 1.0.3 (next)
 
 * Your contribution here.
+
+### 1.0.2 (2019/10/06)
+
 * [#73](https://github.com/rodolfobandeira/spacex/pull/73): Fix Faraday adaptor failing rspec locally [@rodolfobandeira](https://github.com/rodolfobandeira).
 * [#71](https://github.com/rodolfobandeira/spacex/pull/71): Implement Landing Pads endpoint [@invacuo](https://github.com/invacuo).
 * [#70](https://github.com/rodolfobandeira/spacex/pull/70): Implement Landing Pads endpoint [@invacuo](https://github.com/invacuo).
