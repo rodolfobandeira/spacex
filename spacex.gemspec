@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'faraday_middleware', '~> 0.12'
   s.add_dependency 'hashie', '3.6.0'
   s.add_development_dependency 'coveralls'
-  s.add_development_dependency 'rake', '~> 10'
+  s.add_development_dependency 'rake', '>= 12.3.3'
   s.add_development_dependency 'rspec', '~> 3.8'
   s.add_development_dependency 'rubocop', '0.51.0'
   s.add_development_dependency 'vcr', '~> 4'
