@@ -1,6 +1,7 @@
 ### 1.0.3 (next)
 
 * Your contribution here.
+* [#74](https://github.com/rodolfobandeira/spacex/pull/74): Fix vulnerable dependency: Rake. Bump to version 12 [@rodolfobandeira](https://github.com/rodolfobandeira).
 
 ### 1.0.2 (2019/10/06)
 
