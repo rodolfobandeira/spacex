@@ -1,7 +1,10 @@
-### 1.0.3 (next)
+### 1.0.4 (next)
 
 * Your contribution here.
-* [#74](https://github.com/rodolfobandeira/spacex/pull/74): Fix vulnerable dependency: Rake. Bump to version 12 [@rodolfobandeira](https://github.com/rodolfobandeira).
+
+### 1.0.3 (2020/03/14)
+
+* [#74](https://github.com/rodolfobandeira/spacex/pull/74): Security fix: CVE-2020-8130. Bump rake to version 12 [@rodolfobandeira](https://github.com/rodolfobandeira).
 
 ### 1.0.2 (2019/10/06)
 
