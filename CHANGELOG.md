@@ -1,6 +1,7 @@
 ### 1.0.5 (next)
 
 * Your contribution here.
+* [#79](https://github.com/rodolfobandeira/spacex/pull/79): Enable Github Actions [@rodolfobandeira](https://github.com/rodolfobandeira).
 
 ### 1.0.4 (2020/03/14)
 
