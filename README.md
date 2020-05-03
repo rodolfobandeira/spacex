@@ -2,6 +2,7 @@ SpaceX Ruby Client
 ===============
 
 [![Gem Version](https://badge.fury.io/rb/spacex.svg)](https://badge.fury.io/rb/spacex)
+![Github Actions](https://github.com/rodolfobandeira/spacex/workflows/Ruby/badge.svg)
 [![Build Status](https://travis-ci.com/rodolfobandeira/spacex.svg?branch=master)](https://travis-ci.org/rodolfobandeira/spacex)
 [![Coverage Status - Coverall](https://coveralls.io/repos/github/rodolfobandeira/spacex/badge.svg?branch=master)](https://coveralls.io/github/rodolfobandeira/spacex?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d125a8ff6d902eb48c8f/maintainability)](https://codeclimate.com/github/rodolfobandeira/spacex/maintainability)
