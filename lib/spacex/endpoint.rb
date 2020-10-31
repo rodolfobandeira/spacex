@@ -1,3 +1,3 @@
 module SPACEX
-  ENDPOINT_URI = 'https://api.spacexdata.com/v3'.freeze
+  BASE_URI = 'https://api.spacexdata.com'.freeze
 end

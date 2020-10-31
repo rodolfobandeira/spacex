@@ -5,17 +5,15 @@ module SPACEX
 
   module BaseRequest
     class << self
-      def info(path, klass = nil, params = {})
-        response_body = get(path, params).body
+      def info(path, klass = nil, version = 'v3')
+        response_body = get(path, version).body
         process(response_body, klass)
       end
 
       private
 
-      def get(path, params)
-        conn(path).get do |req|
-          req.params = params
-        end
+      def get(path, version)
+        conn(path, version).get
       end
 
       def process(response_body, klass)
@@ -40,9 +38,9 @@ module SPACEX
         SPACEX::Response.new(response)
       end
 
-      def conn(path)
+      def conn(path, version)
         Faraday.new(
-          url: "#{SPACEX::ENDPOINT_URI}/#{path}",
+          url: "#{SPACEX::BASE_URI}/#{version}/#{path}",
           request: {
             params_encoder: Faraday::FlatParamsEncoder
           }
