@@ -1,5 +1,9 @@
 source 'http://rubygems.org'
 
+group :development, :test do
+  gem 'simplecov', require: false
+end
+
 group :development do
   gem 'rubocop', '~> 1.22', require: false
 end
