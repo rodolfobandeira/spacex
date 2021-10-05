@@ -2,7 +2,7 @@ $LOAD_PATH.push File.expand_path('lib', __dir__)
 require 'spacex/version'
 
 Gem::Specification.new do |s|
-  s.required_ruby_version = '>= 2.4'
+  s.required_ruby_version = '>= 2.5'
   s.name        = 'spacex'
   s.bindir      = 'bin'
   s.version     = SPACEX::VERSION
@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'coveralls'
   s.add_development_dependency 'rake', '>= 12.3.3'
   s.add_development_dependency 'rspec', '~> 3.8'
-  s.add_development_dependency 'rubocop', '0.51.0'
+  s.add_development_dependency 'rubocop', '1.22'
   s.add_development_dependency 'vcr', '~> 4'
   s.add_development_dependency 'webmock', '~> 3.4'
 end
