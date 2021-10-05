@@ -1,9 +1,8 @@
-# frozen_string_literal: true
-
 $LOAD_PATH.push File.expand_path('lib', __dir__)
 require 'spacex/version'
 
 Gem::Specification.new do |s|
+  s.required_ruby_version = '>= 2.4'
   s.name        = 'spacex'
   s.bindir      = 'bin'
   s.version     = SPACEX::VERSION
