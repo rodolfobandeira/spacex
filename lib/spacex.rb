@@ -21,4 +21,4 @@ require_relative 'spacex/rockets'
 require_relative 'spacex/ships'
 require_relative 'spacex/version'
 
-require 'spacex/models'
+require_relative 'spacex/models'
