@@ -20,3 +20,5 @@ require_relative 'spacex/roadster'
 require_relative 'spacex/rockets'
 require_relative 'spacex/ships'
 require_relative 'spacex/version'
+
+require_relative 'spacex/v4/cores'
