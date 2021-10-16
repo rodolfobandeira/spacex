@@ -316,9 +316,9 @@ describe SPACEX::Launches do
           ]
         },
         'details' => 'SpaceX\'s sixteenth flight of 2018 launched the Telstar '\
-          '18v GEO communication satellite for Telesat, the second launch for '\
-          'the canadian company in a few months. The first stage was a new '\
-          'Falcon 9 V1.2 Block 5 which was successfully recovered on OCISLY.',
+                     '18v GEO communication satellite for Telesat, the second launch for '\
+                     'the canadian company in a few months. The first stage was a new '\
+                     'Falcon 9 V1.2 Block 5 which was successfully recovered on OCISLY.',
         'upcoming' => false,
         'static_fire_date_utc' => '2018-09-05T07:21:00.000Z',
         'static_fire_date_unix' => 1_536_132_060
@@ -498,10 +498,10 @@ describe SPACEX::Launches do
           'flickr_images' => []
         )
         expect(subject.first.details).to eq 'SpaceX\'s eighteenth flight of 2018 will '\
-          'be its first for Es\'hailSat. Es\'hail-2 is a communications satellite '\
-          'that will deliver television and internet to Qatar and the surrounding '\
-          'region. It will be launched into a geostationary transfer orbit from '\
-          'LC-39A at Kennedy Space Center. The booster is expected to land on OCISLY.'
+                                            'be its first for Es\'hailSat. Es\'hail-2 is a communications satellite '\
+                                            'that will deliver television and internet to Qatar and the surrounding '\
+                                            'region. It will be launched into a geostationary transfer orbit from '\
+                                            'LC-39A at Kennedy Space Center. The booster is expected to land on OCISLY.'
         expect(subject.first.upcoming).to eq true
         expect(subject.first.static_fire_date_utc).to eq nil
         expect(subject.first.static_fire_date_unix).to eq nil
