@@ -57,7 +57,7 @@ describe SPACEX::LandingPads do
       expect(subject.successful_landings).to eq 2
       expect(subject.wikipedia).to eq(
         'https://en.wikipedia.org/wiki/' \
-          'Vandenberg_AFB_Space_Launch_Complex_4#LZ-4_landing_history'
+        'Vandenberg_AFB_Space_Launch_Complex_4#LZ-4_landing_history'
       )
       expect(subject.details).to eq(
         "SpaceX's west coast landing pad. The pad is adjacent to SLC-4E, " \

@@ -1,6 +1,11 @@
 AllCops:
+  Include:
+    - app/**/*.rb
+    - spec/**/*.rb
   Exclude:
     - vendor/**/*
+    - Dangerfile
+  NewCops: enable
 
 Naming/MethodName:
   Enabled: false
