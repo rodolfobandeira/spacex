@@ -28,8 +28,8 @@ describe SPACEX::LaunchPads do
         'https://en.wikipedia.org/wiki/Vandenberg_AFB_Space_Launch_Complex_3'
       )
       expect(first_subject.details).to eq 'SpaceX original ' \
-        'west coast launch pad for Falcon 1. Performed a static fire but was ' \
-        'never used for a launch and abandoned due to scheduling conflicts.'
+                                          'west coast launch pad for Falcon 1. Performed a static fire but was ' \
+                                          'never used for a launch and abandoned due to scheduling conflicts.'
       expect(first_subject.site_id).to eq 'vafb_slc_3w'
       expect(first_subject.site_name_long).to eq(
         'Vandenberg Air Force Base Space Launch Complex 3W'
@@ -65,9 +65,9 @@ describe SPACEX::LaunchPads do
       )
 
       expect(subject.details).to eq 'SpaceX primary ' \
-        'west coast launch pad for polar orbits and sun synchronous orbits, ' \
-        'primarily used for Iridium. Also intended to be capable of ' \
-        'launching Falcon Heavy.'
+                                    'west coast launch pad for polar orbits and sun synchronous orbits, ' \
+                                    'primarily used for Iridium. Also intended to be capable of ' \
+                                    'launching Falcon Heavy.'
       expect(subject.site_id).to eq 'vafb_slc_4e'
       expect(subject.site_name_long).to eq(
         'Vandenberg Air Force Base Space Launch Complex 4E'

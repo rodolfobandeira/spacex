@@ -13,8 +13,8 @@ module SPACEX
       property 'type'
       property 'water_landings'
 
-      def self.info(capsule_serial = nil, query = {})
-        SPACEX::BaseRequest.info("capsules/#{capsule_serial}", SPACEX::V4::Capsules, 'v4')
+      def self.info(id = nil, _query = {})
+        SPACEX::BaseRequest.info("capsules/#{id}", SPACEX::V4::Capsules, 'v4')
       end
     end
   end
