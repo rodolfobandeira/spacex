@@ -2,6 +2,7 @@
 
 * Your contribution here.
 * [#90](https://github.com/rodolfobandeira/spacex/pull/90): Implement V4::Cores [@mtking2](https://github.com/mtking2).
+* [#91](https://github.com/rodolfobandeira/spacex/pull/91): Implement V4::Company [@mtking2](https://github.com/mtking2).
 * [#93](https://github.com/rodolfobandeira/spacex/pull/93): Add DangerBot to help on Code Review [@rodolfobandeira](https://github.com/rodolfobandeira).
 * [#89](https://github.com/rodolfobandeira/spacex/pull/89): Add a configurable simplecov to set a coverage threshold [@razanjoshi](https://github.com/razanjoshi).
 * [#83](https://github.com/rodolfobandeira/spacex/pull/83): Implement V4::Capsules [@invacuo](https://github.com/invacuo).
