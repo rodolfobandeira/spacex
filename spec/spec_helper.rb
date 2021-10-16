@@ -6,9 +6,8 @@ if ENV['CI']
   require 'coveralls'
   Coveralls.wear!
 else
+  require 'coverage_helper'
   require 'pry'
-  require 'simplecov'
-  SimpleCov.start
 end
 
 require 'rubygems'
