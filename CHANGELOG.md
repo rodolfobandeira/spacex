@@ -1,6 +1,7 @@
 ### 1.0.5 (next)
 
 * Your contribution here.
+* [#90](https://github.com/rodolfobandeira/spacex/pull/90): Implement V4::Cores [@mtking2](https://github.com/mtking2).
 * [#83](https://github.com/rodolfobandeira/spacex/pull/83): Implement V4::Capsules [@invacuo](https://github.com/invacuo).
 * [#87](https://github.com/rodolfobandeira/spacex/pull/87): Update Rubocop version [@rodolfobandeira](https://github.com/rodolfobandeira).
 * [#86](https://github.com/rodolfobandeira/spacex/pull/86): Make Github Actions run for MacOS and Ubuntu. As well many versions of Ruby [@rodolfobandeira](https://github.com/rodolfobandeira).
