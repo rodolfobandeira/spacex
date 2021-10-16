@@ -26,7 +26,7 @@ describe SPACEX::V4::Capsules do
   end
 
   context "#info('5e9e2c5bf35918ed873b2664')",
-    vcr: { cassette_name: 'v4/capsules/5e9e2c5bf35918ed873b2664' } do
+          vcr: { cassette_name: 'v4/capsules/5e9e2c5bf35918ed873b2664' } do
     subject do
       SPACEX::V4::Capsules.info('5e9e2c5bf35918ed873b2664')
     end
