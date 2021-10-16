@@ -1,6 +1,7 @@
-### 1.0.5 (next)
+### 1.1 (next)
 
 * Your contribution here.
+* [#89](https://github.com/rodolfobandeira/spacex/pull/89): Add a configurable simplecov to set a coverage threshold [@razanjoshi](https://github.com/razanjoshi).
 * [#83](https://github.com/rodolfobandeira/spacex/pull/83): Implement V4::Capsules [@invacuo](https://github.com/invacuo).
 * [#87](https://github.com/rodolfobandeira/spacex/pull/87): Update Rubocop version [@rodolfobandeira](https://github.com/rodolfobandeira).
 * [#86](https://github.com/rodolfobandeira/spacex/pull/86): Make Github Actions run for MacOS and Ubuntu. As well many versions of Ruby [@rodolfobandeira](https://github.com/rodolfobandeira).
