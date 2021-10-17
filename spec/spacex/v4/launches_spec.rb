@@ -20,11 +20,11 @@ describe SPACEX::V4::Launches do
       expect(subject.first.flight_number).to eq 1
       expect(subject.first.name).to eq 'FalconSat'
       expect(subject.first.date_utc).to eq '2006-03-24T22:30:00.000Z'
-      expect(subject.first.date_unix).to eq 1143239400
+      expect(subject.first.date_unix).to eq 1_143_239_400
       expect(subject.first.date_local).to eq '2006-03-25T10:30:00+12:00'
       expect(subject.first.date_precision).to eq 'hour'
       expect(subject.first.static_fire_date_utc).to eq '2006-03-17T00:00:00.000Z'
-      expect(subject.first.static_fire_date_unix).to eq 1142553600
+      expect(subject.first.static_fire_date_unix).to eq 1_142_553_600
       expect(subject.first.tbd).to be false
       expect(subject.first.net).to be false
       expect(subject.first.window).to eq 0
@@ -35,9 +35,9 @@ describe SPACEX::V4::Launches do
       expect(subject.first.failures.first.reason).to eq 'merlin engine failure'
       expect(subject.first.upcoming).to be false
       expect(subject.first.details).to eq 'Engine failure at 33 seconds and loss of vehicle'
-      expect(subject.first.fairings.reused).to be false 
-      expect(subject.first.fairings.recovery_attempt).to be false 
-      expect(subject.first.fairings.recovered).to be false 
+      expect(subject.first.fairings.reused).to be false
+      expect(subject.first.fairings.recovery_attempt).to be false
+      expect(subject.first.fairings.recovered).to be false
       expect(subject.first.fairings.ships).to eq []
       expect(subject.first.crew).to eq []
       expect(subject.first.ships).to eq []
@@ -55,10 +55,10 @@ describe SPACEX::V4::Launches do
       expect(subject.first.cores.first.landpad).to be_nil
       expect(subject.first.links.patch.small).to eq 'https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png'
       expect(subject.first.links.patch.large).to eq 'https://images2.imgbox.com/40/e3/GypSkayF_o.png'
-      expect(subject.first.links.reddit.campaign).to be_nil 
-      expect(subject.first.links.reddit.launch).to be_nil 
-      expect(subject.first.links.reddit.media).to be_nil 
-      expect(subject.first.links.reddit.recovery).to be_nil 
+      expect(subject.first.links.reddit.campaign).to be_nil
+      expect(subject.first.links.reddit.launch).to be_nil
+      expect(subject.first.links.reddit.media).to be_nil
+      expect(subject.first.links.reddit.recovery).to be_nil
       expect(subject.first.links.flickr.small).to eq []
       expect(subject.first.links.flickr.original).to eq []
       expect(subject.first.links.presskit).to be_nil
@@ -74,7 +74,7 @@ describe SPACEX::V4::Launches do
       expect(subject.last.flight_number).to eq 157
       expect(subject.last.name).to eq 'NROL-85'
       expect(subject.last.date_utc).to eq '2022-01-01T00:00:00.000Z'
-      expect(subject.last.date_unix).to eq 1640995200
+      expect(subject.last.date_unix).to eq 1_640_995_200
       expect(subject.last.date_local).to eq '2021-12-31T16:00:00-08:00'
       expect(subject.last.date_precision).to eq 'quarter'
       expect(subject.last.static_fire_date_utc).to be_nil
@@ -107,10 +107,10 @@ describe SPACEX::V4::Launches do
       expect(subject.last.cores.first.landpad).to be_nil
       expect(subject.last.links.patch.small).to be_nil
       expect(subject.last.links.patch.large).to be_nil
-      expect(subject.last.links.reddit.campaign).to be_nil 
-      expect(subject.last.links.reddit.launch).to be_nil 
-      expect(subject.last.links.reddit.media).to be_nil 
-      expect(subject.last.links.reddit.recovery).to be_nil 
+      expect(subject.last.links.reddit.campaign).to be_nil
+      expect(subject.last.links.reddit.launch).to be_nil
+      expect(subject.last.links.reddit.media).to be_nil
+      expect(subject.last.links.reddit.recovery).to be_nil
       expect(subject.last.links.flickr.small).to eq []
       expect(subject.last.links.flickr.original).to eq []
       expect(subject.last.links.presskit).to be_nil
@@ -132,11 +132,11 @@ describe SPACEX::V4::Launches do
       expect(subject.flight_number).to eq 91
       expect(subject.name).to eq 'CRS-20'
       expect(subject.date_utc).to eq '2020-03-07T04:50:31.000Z'
-      expect(subject.date_unix).to eq 1583556631
+      expect(subject.date_unix).to eq 1_583_556_631
       expect(subject.date_local).to eq '2020-03-06T23:50:31-05:00'
       expect(subject.date_precision).to eq 'hour'
       expect(subject.static_fire_date_utc).to eq '2020-03-01T10:20:00.000Z'
-      expect(subject.static_fire_date_unix).to eq 1583058000
+      expect(subject.static_fire_date_unix).to eq 1_583_058_000
       expect(subject.tbd).to be false
       expect(subject.net).to be false
       expect(subject.window).to eq 0
@@ -168,11 +168,11 @@ describe SPACEX::V4::Launches do
       expect(subject.links.reddit.recovery).to be_nil
       expect(subject.links.flickr.small).to eq []
       expect(subject.links.flickr.original).to eq [
-        "https://live.staticflickr.com/65535/49635401403_96f9c322dc_o.jpg",
-        "https://live.staticflickr.com/65535/49636202657_e81210a3ca_o.jpg",
-        "https://live.staticflickr.com/65535/49636202572_8831c5a917_o.jpg",
-        "https://live.staticflickr.com/65535/49635401423_e0bef3e82f_o.jpg",
-        "https://live.staticflickr.com/65535/49635985086_660be7062f_o.jpg"
+        'https://live.staticflickr.com/65535/49635401403_96f9c322dc_o.jpg',
+        'https://live.staticflickr.com/65535/49636202657_e81210a3ca_o.jpg',
+        'https://live.staticflickr.com/65535/49636202572_8831c5a917_o.jpg',
+        'https://live.staticflickr.com/65535/49635401423_e0bef3e82f_o.jpg',
+        'https://live.staticflickr.com/65535/49635985086_660be7062f_o.jpg'
       ]
       expect(subject.links.presskit).to eq 'https://www.spacex.com/sites/spacex/files/crs-20_mission_press_kit.pdf'
       expect(subject.links.webcast).to eq 'https://youtu.be/1MkcWK2PnsU'
@@ -218,7 +218,7 @@ describe SPACEX::V4::Launches do
       expect(subject.flight_number).to eq 141
       expect(subject.name).to eq 'CRS-24'
       expect(subject.date_utc).to eq '2021-08-29T07:14:00.000Z'
-      expect(subject.date_unix).to eq 1630221240
+      expect(subject.date_unix).to eq 1_630_221_240
       expect(subject.date_local).to eq '2021-08-29T03:14:00-04:00'
       expect(subject.date_precision).to eq 'hour'
       expect(subject.static_fire_date_utc).to be_nil
@@ -248,10 +248,10 @@ describe SPACEX::V4::Launches do
       expect(subject.cores.first.landpad).to be_nil
       expect(subject.links.patch.small).to be_nil
       expect(subject.links.patch.large).to be_nil
-      expect(subject.links.reddit.campaign).to be_nil 
-      expect(subject.links.reddit.launch).to be_nil 
-      expect(subject.links.reddit.media).to be_nil 
-      expect(subject.links.reddit.recovery).to be_nil 
+      expect(subject.links.reddit.campaign).to be_nil
+      expect(subject.links.reddit.launch).to be_nil
+      expect(subject.links.reddit.media).to be_nil
+      expect(subject.links.reddit.recovery).to be_nil
       expect(subject.links.flickr.small).to eq []
       expect(subject.links.flickr.original).to eq []
       expect(subject.links.presskit).to be_nil
@@ -273,7 +273,7 @@ describe SPACEX::V4::Launches do
       expect(subject.flight_number).to eq 142
       expect(subject.name).to eq 'Crew-3'
       expect(subject.date_utc).to eq '2021-10-30T06:43:00.000Z'
-      expect(subject.date_unix).to eq 1635576180
+      expect(subject.date_unix).to eq 1_635_576_180
       expect(subject.date_local).to eq '2021-10-30T02:43:00-04:00'
       expect(subject.date_precision).to eq 'hour'
       expect(subject.static_fire_date_utc).to be_nil
@@ -287,11 +287,11 @@ describe SPACEX::V4::Launches do
       expect(subject.upcoming).to be true
       expect(subject.details).to be_nil
       expect(subject.fairings).to be_nil
-      expect(subject.crew).to eq [
-        "5fe3c587b3467846b3242198",
-        "5fe3c5beb3467846b3242199",
-        "5fe3c5f6b3467846b324219a",
-        "60c4b5ad4e041c0b356db393"
+      expect(subject.crew).to eq %w[
+        5fe3c587b3467846b3242198
+        5fe3c5beb3467846b3242199
+        5fe3c5f6b3467846b324219a
+        60c4b5ad4e041c0b356db393
       ]
       expect(subject.ships).to eq []
       expect(subject.capsules).to eq []
@@ -308,10 +308,10 @@ describe SPACEX::V4::Launches do
       expect(subject.cores.first.landpad).to be_nil
       expect(subject.links.patch.small).to eq 'https://i.imgur.com/KhQ11oo.png'
       expect(subject.links.patch.large).to eq 'https://i.imgur.com/M6GvRVe.png'
-      expect(subject.links.reddit.campaign).to be_nil 
-      expect(subject.links.reddit.launch).to be_nil 
-      expect(subject.links.reddit.media).to be_nil 
-      expect(subject.links.reddit.recovery).to be_nil 
+      expect(subject.links.reddit.campaign).to be_nil
+      expect(subject.links.reddit.launch).to be_nil
+      expect(subject.links.reddit.media).to be_nil
+      expect(subject.links.reddit.recovery).to be_nil
       expect(subject.links.flickr.small).to eq []
       expect(subject.links.flickr.original).to eq []
       expect(subject.links.presskit).to be_nil
