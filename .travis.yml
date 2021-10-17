@@ -4,7 +4,7 @@ env:
 
 language: ruby
 rvm:
-  - 2.4.2
+  - 2.7.4
 cache: bundler
 sudo: required
 
@@ -14,7 +14,7 @@ before_script:
   - ./cc-test-reporter before-build
 
 script:
-  - bundle exec rspec
+  - bundle exec danger
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
