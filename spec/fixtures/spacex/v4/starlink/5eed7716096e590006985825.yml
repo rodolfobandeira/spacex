@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/starlink/5eed7716096e590006985825
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - max-age=3600
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 17 Oct 2021 17:20:29 GMT
+      Etag:
+      - '"51c-a5pluBhY8LgfGWYsNC/g4HWjPnA"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Server:
+      - Caddy
+      Spacex-Api-Cache:
+      - HIT
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 0ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Content-Length:
+      - '802'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"spaceTrack":{"CCSDS_OMM_VERS":"2.0","COMMENT":"GENERATED VIA SPACE-TRACK.ORG
+        API","CREATION_DATE":"2021-10-17T02:25:50","ORIGINATOR":"18 SPCS","OBJECT_NAME":"STARLINK-1506","OBJECT_ID":"2020-038T","CENTER_NAME":"EARTH","REF_FRAME":"TEME","TIME_SYSTEM":"UTC","MEAN_ELEMENT_THEORY":"SGP4","EPOCH":"2021-10-16T06:56:52.356768","MEAN_MOTION":15.06385949,"ECCENTRICITY":0.000155,"INCLINATION":53.0543,"RA_OF_ASC_NODE":243.5427,"ARG_OF_PERICENTER":67.5595,"MEAN_ANOMALY":292.5558,"EPHEMERIS_TYPE":0,"CLASSIFICATION_TYPE":"U","NORAD_CAT_ID":45747,"ELEMENT_SET_NO":999,"REV_AT_EPOCH":7422,"BSTAR":0.000037393,"MEAN_MOTION_DOT":0.00000275,"MEAN_MOTION_DDOT":0,"SEMIMAJOR_AXIS":6925.392,"PERIOD":95.593,"APOAPSIS":548.33,"PERIAPSIS":546.183,"OBJECT_TYPE":"PAYLOAD","RCS_SIZE":"LARGE","COUNTRY_CODE":"US","LAUNCH_DATE":"2020-06-13","SITE":"AFETR","DECAY_DATE":null,"DECAYED":0,"FILE":3166610,"GP_ID":187355518,"TLE_LINE0":"0
+        STARLINK-1506","TLE_LINE1":"1 45747U 20038T   21289.28949487  .00000275  00000-0  37393-4
+        0  9996","TLE_LINE2":"2 45747  53.0543 243.5427 0001550  67.5595 292.5558
+        15.06385949 74225"},"launch":"5eb87d46ffd86e000604b389","version":"v1.0","height_km":548.8259541507387,"latitude":34.78016308849404,"longitude":-6.664657979647238,"velocity_kms":7.592565007060266,"id":"5eed7716096e590006985825"}'
+    http_version: 
+  recorded_at: Sun, 17 Oct 2021 17:20:29 GMT
+recorded_with: VCR 4.0.0
