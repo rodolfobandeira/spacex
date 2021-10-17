@@ -32,7 +32,7 @@ describe SPACEX::V4::Starlink do
       expect(subject.id).to eq '5eed7716096e590006985825'
       expect(subject.version).to eq 'v1.0'
       expect(subject.launch).to eq '5eb87d46ffd86e000604b389'
-      expect(subject.longitude).to eq -6.664657979647238
+      expect(subject.longitude).to eq(-6.664657979647238)
       expect(subject.latitude).to eq 34.78016308849404
       expect(subject.height_km).to eq 548.8259541507387
       expect(subject.velocity_kms).to eq 7.592565007060266
@@ -55,7 +55,7 @@ describe SPACEX::V4::Starlink do
       expect(subject.spaceTrack.MEAN_ANOMALY).to eq 292.5558
       expect(subject.spaceTrack.EPHEMERIS_TYPE).to eq 0
       expect(subject.spaceTrack.CLASSIFICATION_TYPE).to eq 'U'
-      expect(subject.spaceTrack.NORAD_CAT_ID).to eq 45747
+      expect(subject.spaceTrack.NORAD_CAT_ID).to eq 45_747
       expect(subject.spaceTrack.ELEMENT_SET_NO).to eq 999
       expect(subject.spaceTrack.REV_AT_EPOCH).to eq 7422
       expect(subject.spaceTrack.BSTAR).to eq 3.7393e-05
@@ -72,8 +72,8 @@ describe SPACEX::V4::Starlink do
       expect(subject.spaceTrack.SITE).to eq 'AFETR'
       expect(subject.spaceTrack.DECAY_DATE).to eq nil
       expect(subject.spaceTrack.DECAYED).to eq 0
-      expect(subject.spaceTrack.FILE).to eq 3166610
-      expect(subject.spaceTrack.GP_ID).to eq 187355518
+      expect(subject.spaceTrack.FILE).to eq 3_166_610
+      expect(subject.spaceTrack.GP_ID).to eq 187_355_518
       expect(subject.spaceTrack.TLE_LINE0).to eq '0 STARLINK-1506'
       expect(subject.spaceTrack.TLE_LINE1).to eq '1 45747U 20038T   21289.28949487  .00000275  00000-0  37393-4 0  9996'
       expect(subject.spaceTrack.TLE_LINE2).to eq '2 45747  53.0543 243.5427 0001550  67.5595 292.5558 15.06385949 74225'
