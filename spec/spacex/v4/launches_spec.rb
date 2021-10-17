@@ -322,4 +322,71 @@ describe SPACEX::V4::Launches do
       expect(subject.auto_update).to be true
     end
   end
+
+  context '#past', vcr: { cassette_name: 'v4/launches/past' } do
+    subject do
+      SPACEX::V4::Launches.past
+    end
+
+    it 'returns and array of launch hashes' do
+      expect(subject).to be_an Array
+      expect(subject.first).to be_a Hash
+    end
+
+    it 'returns the correct number of launches' do
+      expect(subject.count).to eq 136
+    end
+
+    context 'returns past launches' do
+      it 'returns all launches in the past' do
+        expect(subject.all? { |l| Time.at(l.date_unix) < Time.now }).to be true
+        expect(subject.none?(&:upcoming)).to be true
+      end
+
+      it 'returns the first launch' do
+        expect(subject.first.id).to eq '5eb87cd9ffd86e000604b32a'
+        expect(subject.first.flight_number).to eq 1
+        expect(subject.first.name).to eq 'FalconSat'
+        expect(subject.first.upcoming).to be false
+      end
+
+      it 'returns the last launch' do
+        expect(subject.last.id).to eq '6161d2006db1a92bfba85356'
+        expect(subject.last.flight_number).to eq 141
+        expect(subject.last.name).to eq 'CRS-24'
+        expect(subject.last.upcoming).to be false
+      end
+    end
+  end
+
+  context '#upcoming', vcr: { cassette_name: 'v4/launches/upcoming' } do
+    subject do
+      SPACEX::V4::Launches.upcoming
+    end
+
+    it 'returns and array of upcoming launch hashes' do
+      expect(subject).to be_an Array
+      expect(subject.first).to be_a Hash
+    end
+
+    it 'returns launches scheduled in the future' do
+      expect(subject.all?(&:upcoming)).to be true
+    end
+
+    context 'returns upcoming launches' do
+      it 'returns the next upcoming launch' do
+        expect(subject.first.id).to eq '5fe3b15eb3467846b324216d'
+        expect(subject.first.flight_number).to eq 142
+        expect(subject.first.name).to eq 'Crew-3'
+        expect(subject.first.upcoming).to be true
+      end
+
+      it 'returns the last upcoming launch' do
+        expect(subject.last.id).to eq '608d3d23ffcee803616cbde2'
+        expect(subject.last.flight_number).to eq 157
+        expect(subject.last.name).to eq 'NROL-85'
+        expect(subject.last.upcoming).to be true
+      end
+    end
+  end
 end
