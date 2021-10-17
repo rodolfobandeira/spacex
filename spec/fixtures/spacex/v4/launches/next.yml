@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/launches/next
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - max-age=20
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 17 Oct 2021 01:16:28 GMT
+      Etag:
+      - '"47e-QUW2ao2ysOi55SEJzXXoTX3hdL8"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Server:
+      - Caddy
+      Spacex-Api-Cache:
+      - HIT
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 1ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Content-Length:
+      - '616'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"fairings":null,"links":{"patch":{"small":"https://i.imgur.com/KhQ11oo.png","large":"https://i.imgur.com/M6GvRVe.png"},"reddit":{"campaign":null,"launch":null,"media":null,"recovery":null},"flickr":{"small":[],"original":[]},"presskit":null,"webcast":null,"youtube_id":null,"article":null,"wikipedia":null},"static_fire_date_utc":null,"static_fire_date_unix":null,"net":false,"window":0,"rocket":"5e9d0d95eda69973a809d1ec","success":null,"failures":[],"details":null,"crew":["5fe3c587b3467846b3242198","5fe3c5beb3467846b3242199","5fe3c5f6b3467846b324219a","60c4b5ad4e041c0b356db393"],"ships":[],"capsules":[],"payloads":["5fe3b3bab3467846b3242174"],"launchpad":"5e9e4502f509094188566f88","flight_number":142,"name":"Crew-3","date_utc":"2021-10-30T06:43:00.000Z","date_unix":1635576180,"date_local":"2021-10-30T02:43:00-04:00","date_precision":"hour","upcoming":true,"cores":[{"core":null,"flight":null,"gridfins":null,"legs":null,"reused":null,"landing_attempt":null,"landing_success":null,"landing_type":null,"landpad":null}],"auto_update":true,"tbd":false,"launch_library_id":"0d779392-1a36-4c1e-b0b8-ec11e3031ee6","id":"5fe3b15eb3467846b324216d"}'
+    http_version: 
+  recorded_at: Sun, 17 Oct 2021 01:16:29 GMT
+recorded_with: VCR 4.0.0

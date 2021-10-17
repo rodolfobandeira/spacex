@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/launches/latest
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - max-age=20
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 17 Oct 2021 01:10:19 GMT
+      Etag:
+      - '"3b8-Hw1uswm2l+3jfxq5Tk97pqZzb/4"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Server:
+      - Caddy
+      Spacex-Api-Cache:
+      - HIT
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 0ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Content-Length:
+      - '501'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"fairings":null,"links":{"patch":{"small":null,"large":null},"reddit":{"campaign":null,"launch":null,"media":null,"recovery":null},"flickr":{"small":[],"original":[]},"presskit":null,"webcast":null,"youtube_id":null,"article":null,"wikipedia":null},"static_fire_date_utc":null,"static_fire_date_unix":null,"net":false,"window":0,"rocket":"5e9d0d95eda69973a809d1ec","success":true,"failures":[],"details":null,"crew":[],"ships":[],"capsules":[],"payloads":["6161d22a6db1a92bfba85357"],"launchpad":"5e9e4502f509094188566f88","flight_number":141,"name":"CRS-24","date_utc":"2021-08-29T07:14:00.000Z","date_unix":1630221240,"date_local":"2021-08-29T03:14:00-04:00","date_precision":"hour","upcoming":false,"cores":[{"core":null,"flight":null,"gridfins":null,"legs":null,"reused":null,"landing_attempt":null,"landing_success":null,"landing_type":null,"landpad":null}],"auto_update":true,"tbd":false,"launch_library_id":null,"id":"6161d2006db1a92bfba85356"}'
+    http_version: 
+  recorded_at: Sun, 17 Oct 2021 01:10:20 GMT
+recorded_with: VCR 4.0.0
