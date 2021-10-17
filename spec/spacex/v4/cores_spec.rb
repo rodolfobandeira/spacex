@@ -20,7 +20,8 @@ describe SPACEX::V4::Cores do
           'last_update',
           'launches',
           'serial',
-          'id'
+          'id',
+          'status'
         )
       end
     end
