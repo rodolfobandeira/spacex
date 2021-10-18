@@ -1,6 +1,7 @@
 ### 1.1.0 (next)
 
 * Your contribution here.
+* [#98](https://github.com/rodolfobandeira/spacex/pull/98): Implement V4::Launches [@mtking2](https://github.com/mtking2).
 * [#95](https://github.com/rodolfobandeira/spacex/pull/95): Implement V4::Rockets [@invacuo](https://github.com/invacuo).
 * [#96](https://github.com/rodolfobandeira/spacex/pull/96): Implement V4::Crew [@invacuo](https://github.com/invacuo).
 * [#90](https://github.com/rodolfobandeira/spacex/pull/90): Implement V4::Cores [@mtking2](https://github.com/mtking2).
