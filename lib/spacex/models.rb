@@ -5,5 +5,6 @@ module SPACEX
     autoload :Cores, 'spacex/v4/cores'
     autoload :Crew, 'spacex/v4/crew'
     autoload :Rockets, 'spacex/v4/rockets'
+    autoload :Starlink, 'spacex/v4/starlink'
   end
 end
