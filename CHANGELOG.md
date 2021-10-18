@@ -3,6 +3,7 @@
 * Your contribution here.
 * [#98](https://github.com/rodolfobandeira/spacex/pull/98): Implement V4::Launches [@mtking2](https://github.com/mtking2).
 * [#95](https://github.com/rodolfobandeira/spacex/pull/95): Implement V4::Rockets [@invacuo](https://github.com/invacuo).
+* [#96](https://github.com/rodolfobandeira/spacex/pull/96): Implement V4::Crew [@invacuo](https://github.com/invacuo).
 * [#90](https://github.com/rodolfobandeira/spacex/pull/90): Implement V4::Cores [@mtking2](https://github.com/mtking2).
 * [#91](https://github.com/rodolfobandeira/spacex/pull/91): Implement V4::Company [@mtking2](https://github.com/mtking2).
 * [#93](https://github.com/rodolfobandeira/spacex/pull/93): Add DangerBot to help on Code Review [@rodolfobandeira](https://github.com/rodolfobandeira).
