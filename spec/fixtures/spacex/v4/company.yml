@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.spacexdata.com/v4/company
+    uri: https://api.spacexdata.com/v4/company/
     body:
       encoding: US-ASCII
       string: ''
@@ -33,7 +33,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 13 Oct 2021 22:15:50 GMT
+      - Sun, 17 Oct 2021 01:45:16 GMT
       Etag:
       - '"2ea-KLET10RDtc2RJI9HB4muV6SDyUU"'
       Expect-Ct:
@@ -43,11 +43,11 @@ http_interactions:
       Server:
       - Caddy
       Spacex-Api-Cache:
-      - HIT
+      - MISS
       Spacex-Api-Cache-Online:
       - 'true'
       Spacex-Api-Response-Time:
-      - 0ms
+      - 2ms
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
       Vary:
@@ -76,5 +76,5 @@ http_interactions:
         was founded in 2002 to revolutionize space technology, with the ultimate goal
         of enabling people to live on other planets.","id":"5eb75edc42fea42237d7f3ed"}'
     http_version: 
-  recorded_at: Wed, 13 Oct 2021 22:15:50 GMT
+  recorded_at: Sun, 17 Oct 2021 01:45:16 GMT
 recorded_with: VCR 4.0.0
