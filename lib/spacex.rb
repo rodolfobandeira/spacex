@@ -5,6 +5,7 @@ require 'hashie'
 
 require_relative 'spacex/api_info'
 require_relative 'spacex/base_request'
+
 require_relative 'spacex/capsules'
 require_relative 'spacex/company_info'
 require_relative 'spacex/cores'
