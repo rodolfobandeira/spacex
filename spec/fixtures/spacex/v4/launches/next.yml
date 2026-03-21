@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/launches/next
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.14.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 21 Mar 2026 19:44:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1449'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cache-Control:
+      - max-age=20
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"5a9-wKIeQnSkITl0wyy/ZD9anmlhR4c"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Server:
+      - cloudflare
+      Spacex-Api-Cache:
+      - HIT
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 1ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Nel:
+      - '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=H%2BvivXY9ksGhXbR9oEsdVnzcB8%2Ba736n1sI0SZzeiBCx2ozLRCvr2QELiHZh3GmobUkRjHFD0mnr%2B%2FC6rrplc%2BnH0ph99Gx3SfJOyATl1K6YEA%3D%3D"}]}'
+      Cf-Ray:
+      - 9dff73152c5cac6c-YYZ
+    body:
+      encoding: ASCII-8BIT
+      string: '{"fairings":{"reused":null,"recovery_attempt":null,"recovered":null,"ships":[]},"links":{"patch":{"small":null,"large":null},"reddit":{"campaign":null,"launch":null,"media":null,"recovery":null},"flickr":{"small":[],"original":[]},"presskit":null,"webcast":"https://youtu.be/pY628jRd6gM","youtube_id":"pY628jRd6gM","article":null,"wikipedia":null},"static_fire_date_utc":null,"static_fire_date_unix":null,"net":false,"window":null,"rocket":"5e9d0d95eda69974db09d1ed","success":null,"failures":[],"details":null,"crew":[],"ships":[],"capsules":[],"payloads":["5fe3b86eb3467846b324217c"],"launchpad":"5e9e4502f509094188566f88","flight_number":188,"name":"USSF-44","date_utc":"2022-11-01T13:41:00.000Z","date_unix":1667310060,"date_local":"2022-11-01T09:41:00-04:00","date_precision":"hour","upcoming":true,"cores":[{"core":"5fe3b8f2b3467846b3242181","flight":1,"gridfins":true,"legs":true,"reused":false,"landing_attempt":null,"landing_success":null,"landing_type":null,"landpad":null},{"core":"5fe3b8fbb3467846b3242182","flight":1,"gridfins":true,"legs":true,"reused":false,"landing_attempt":null,"landing_success":null,"landing_type":null,"landpad":null},{"core":"5fe3b906b3467846b3242183","flight":1,"gridfins":true,"legs":true,"reused":false,"landing_attempt":null,"landing_success":null,"landing_type":null,"landpad":null}],"auto_update":true,"tbd":false,"launch_library_id":"2306e0bc-e1a3-4a4a-9285-e1a94073655e","id":"6243aec2af52800c6e91925d"}'
+  recorded_at: Sat, 21 Mar 2026 19:44:08 GMT
+recorded_with: VCR 6.4.0
