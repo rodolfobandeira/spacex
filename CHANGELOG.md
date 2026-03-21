@@ -1,78 +1,33 @@
-### 1.1.0 (next)
+# Changelog
 
-* Your contribution here.
-* [#95](https://github.com/rodolfobandeira/spacex/pull/95): Implement V4::Rockets [@invacuo](https://github.com/invacuo).
-* [#96](https://github.com/rodolfobandeira/spacex/pull/96): Implement V4::Crew [@invacuo](https://github.com/invacuo).
-* [#90](https://github.com/rodolfobandeira/spacex/pull/90): Implement V4::Cores [@mtking2](https://github.com/mtking2).
-* [#91](https://github.com/rodolfobandeira/spacex/pull/91): Implement V4::Company [@mtking2](https://github.com/mtking2).
-* [#93](https://github.com/rodolfobandeira/spacex/pull/93): Add DangerBot to help on Code Review [@rodolfobandeira](https://github.com/rodolfobandeira).
-* [#89](https://github.com/rodolfobandeira/spacex/pull/89): Add a configurable simplecov to set a coverage threshold [@razanjoshi](https://github.com/razanjoshi).
-* [#83](https://github.com/rodolfobandeira/spacex/pull/83): Implement V4::Capsules [@invacuo](https://github.com/invacuo).
-* [#87](https://github.com/rodolfobandeira/spacex/pull/87): Update Rubocop version [@rodolfobandeira](https://github.com/rodolfobandeira).
-* [#86](https://github.com/rodolfobandeira/spacex/pull/86): Make Github Actions run for MacOS and Ubuntu. As well many versions of Ruby [@rodolfobandeira](https://github.com/rodolfobandeira).
-* [#79](https://github.com/rodolfobandeira/spacex/pull/79): Enable Github Actions [@rodolfobandeira](https://github.com/rodolfobandeira).
+All notable changes to this project will be documented in this file.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-### 1.0.4 (2020/03/14)
+## [2.0.0] - 2026-03-21
 
-* [#74](https://github.com/rodolfobandeira/spacex/pull/74): Security fix: CVE-2020-8130. Bump rake to version 12 [@rodolfobandeira](https://github.com/rodolfobandeira).
+### Breaking Changes
 
-### 1.0.3 (skipped)
-* Skipped
+- `SPACEX::V4::*` namespace removed; use `SPACEX::*` directly
+- V3-only endpoints removed entirely: `SPACEX::ApiInfo`, `SPACEX::Missions`,
+  `SPACEX::DragonCapsules`
+- `SPACEX::Launches` now uses `/v4/launches` (different schema from V3)
+- `SPACEX::Launches.all` removed (was a V3 alias; not carried forward)
+- `SPACEX::LandingPads` renamed to `SPACEX::Landpads` (matches V4 path `/v4/landpads`)
+- `SPACEX::LaunchPads` renamed to `SPACEX::Launchpads` (matches V4 path `/v4/launchpads`)
+- `SPACEX::CompanyInfo` renamed to `SPACEX::Company` (matches V4 path `/v4/company`)
+- `BaseRequest.info` no longer accepts a `version` parameter — always calls `/v4/`
+- All `.info(id, _query = {})` signatures reduced to `.info(id = nil)` only
 
-### 1.0.2 (2019/10/06)
+### Added
 
-* [#73](https://github.com/rodolfobandeira/spacex/pull/73): Fix Faraday adaptor failing rspec locally [@rodolfobandeira](https://github.com/rodolfobandeira).
-* [#71](https://github.com/rodolfobandeira/spacex/pull/71): Implement Landing Pads endpoint [@invacuo](https://github.com/invacuo).
-* [#70](https://github.com/rodolfobandeira/spacex/pull/70): Implement Landing Pads endpoint [@invacuo](https://github.com/invacuo).
-* [#69](https://github.com/rodolfobandeira/spacex/pull/69): Implement API Info endpoint [@fernandomaia](https://github.com/fernandomaia).
-* [#65](https://github.com/rodolfobandeira/spacex/pull/65): Add CodeClimate test coverage [@rodolfobandeira](https://github.com/rodolfobandeira).
-* [#64](https://github.com/rodolfobandeira/spacex/pull/64): Fix failing build on Travis-CI [@rodolfobandeira](https://github.com/rodolfobandeira).
-
-### 1.0.1 (2018/11/04)
-
-* [#45](https://github.com/rodolfobandeira/spacex/pull/45): Implement History endpoint [@invacuo](https://github.com/invacuo).
-* [#48](https://github.com/rodolfobandeira/spacex/pull/48): Add ability to query specific Launch via `.info('flight_number')` - [@mtking2](https://github.com/mtking2).
-* [#51](https://github.com/rodolfobandeira/spacex/pull/51): Added payloads endpoint [@maiafernando](https://github.com/maiafernando).
-* [#52](https://github.com/rodolfobandeira/spacex/pull/52): Add ability to query Past Launches - [@mtking2](https://github.com/mtking2).
-* [#54](https://github.com/rodolfobandeira/spacex/pull/54): Refactor ENDPOINT_URI - [@ludamillion](https://github.com/ludamillion).
-* [#56](https://github.com/rodolfobandeira/spacex/pull/56): Add ability to query upcoming launches - [@mtking2](https://github.com/mtking2).
-
-
-### 1.0.0 (2018/10/15)
-
-* [#41](https://github.com/rodolfobandeira/spacex/pull/41): General Refactor cleaning endpoint classes [@invacuo](https://github.com/invacuo).
-* [#44](https://github.com/rodolfobandeira/spacex/pull/44): Add flickr_images key into rockets endpoint [@Dfenniak](https://github.com/Dfenniak).
-* [#42](https://github.com/rodolfobandeira/spacex/pull/42): Add pry gem to debug - [@Dfenniak](https://github.com/Dfenniak).
-* [#40](https://github.com/rodolfobandeira/spacex/pull/40): Update and clarify information in README - [@annawinkler](https://github.com/annawinkler).
-* [#34](https://github.com/rodolfobandeira/spacex/pull/34): Implement Capsules endpoint - [@efl7a](https://github.com/efl7a).
-* [#34](https://github.com/rodolfobandeira/spacex/pull/34): Implement Cores endpoint - [@efl7a](https://github.com/efl7a).
-* [#35](https://github.com/rodolfobandeira/spacex/pull/35): Implement Rockets endpoint - [@invacuo](https://github.com/invacuo).
-* [#28](https://github.com/rodolfobandeira/spacex/pull/28): Add ability to query all launches - [@ludamillion](https://github.com/ludamillion).
-* [#26](https://github.com/rodolfobandeira/spacex/pull/26): Fix dependencies - [@harman28](https://github.com/harman28).
-* [#25](https://github.com/rodolfobandeira/spacex/pull/25): Add code coverage tools - [@harman28](https://github.com/harman28).
-* [#27](https://github.com/rodolfobandeira/spacex/pull/27): Add ability to query next launch - [@Andrey-Raspopov](https://github.com/Andrey-Raspopov)
-
-
-### 0.0.7 (2018/10/07)
-
-* Refactor responses getting multiple objects like Ships, Capsules to wrap a specific object. This helps translating specific properties like `id` and `class` to `ship_id`, `ship_class` - [@rodolfobandeira](https://github.com/rodolfobandeira).
-* Add ability to retrieve specific Ship via `.info('ship_id')` - [@rodolfobandeira](https://github.com/rodolfobandeira).
-* Add ability to retrieve specific Dragon Capsule via `.info('dragon_id')` - [@rodolfobandeira](https://github.com/rodolfobandeira).
-* [#10](https://github.com/rodolfobandeira/spacex/pull/10): Added Ships information - [@zainalmustofa](https://github.com/zainalmustofa).
-* [#9](https://github.com/rodolfobandeira/spacex/pull/9): Added Dragon Capsules information - [@JackieCalapristi](https://github.com/JackieCalapristi).
-* [#16](https://github.com/rodolfobandeira/spacex/pull/16): Added missions information - [@maiafernando](https://github.com/maiafernando).
-
-
-### 0.0.6 (2018/08/22)
-
-* Added Roadster information - [@rodolfobandeira](https://github.com/rodolfobandeira).
-
-
-### 0.0.5 (2018/08/21)
-
-* Added Company information and General Refactors - [@rodolfobandeira](https://github.com/rodolfobandeira).
-
-
-### 0.0.4 (2018/08/21)
-
-* Initial public release - [@rodolfobandeira](https://github.com/rodolfobandeira).
+- `SPACEX::Company` — V4 company endpoint (replaces `SPACEX::CompanyInfo`)
+- `SPACEX::Crew` — V4 crew endpoint with typed properties
+- `SPACEX::Dragons` — new V4 dragons endpoint
+- `SPACEX::History` — V4 history endpoint (replaces V3 version)
+- `SPACEX::Landpads` — new V4 landpads endpoint
+- `SPACEX::Launchpads` — new V4 launchpads endpoint
+- `SPACEX::Payloads` — V4 payloads endpoint (replaces V3 version)
+- `SPACEX::Roadster` — V4 roadster endpoint (replaces V3 version)
+- `SPACEX::Rockets` — V4 rockets with typed properties (replaces V3/V4 version)
+- `SPACEX::Ships` — V4 ships endpoint (replaces V3 version)
+- `SPACEX::Starlink` — new V4 starlink endpoint
