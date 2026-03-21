@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 group :development, :test do
-  gem 'danger', '~> 8.2', '>= 8.2.2'
+  gem 'danger', '~> 9.0'
   gem 'danger-rubocop'
   gem 'simplecov', require: false
 end

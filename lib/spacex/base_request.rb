@@ -45,7 +45,7 @@ module SPACEX
             params_encoder: Faraday::FlatParamsEncoder
           }
         ) do |connection|
-          connection.use ::FaradayMiddleware::ParseJson
+          connection.response :json
           connection.use Faraday::Response::RaiseError
           connection.adapter ::Faraday.default_adapter
         end
