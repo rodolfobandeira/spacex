@@ -1,22 +1,18 @@
 module SPACEX
-  class Cores < Hashie::Trash
-    include Hashie::Extensions::IgnoreUndeclared
-
-    property 'core_serial'
-    property 'block'
-    property 'status'
-    property 'original_launch'
-    property 'original_launch_unix'
-    property 'missions'
-    property 'rtls_attempts'
-    property 'rtls_landings'
+  class Cores < SPACEX::Resource
     property 'asds_attempts'
     property 'asds_landings'
-    property 'water_landing'
-    property 'details'
+    property 'block'
+    property 'id'
+    property 'last_update'
+    property 'launches'
+    property 'reuse_count'
+    property 'rtls_attempts'
+    property 'rtls_landings'
+    property 'serial'
 
-    def self.info(core_serial = nil)
-      SPACEX::BaseRequest.info("cores/#{core_serial}", SPACEX::Cores)
+    def self.info(id = nil)
+      SPACEX::BaseRequest.info("cores/#{id}", SPACEX::Cores)
     end
   end
 end
