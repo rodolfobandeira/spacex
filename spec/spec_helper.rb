@@ -2,13 +2,8 @@
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..'))
 
-if ENV['CI']
-  require 'coveralls'
-  Coveralls.wear!
-else
-  require 'coverage_helper'
-  require 'pry'
-end
+require 'coverage_helper'
+require 'pry' unless ENV['CI']
 
 require 'rubygems'
 require 'rspec'
