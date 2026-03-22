@@ -1,9 +1,16 @@
 module SPACEX
-  module V4
-    autoload :Capsules, 'spacex/v4/capsules'
-    autoload :Company, 'spacex/v4/company'
-    autoload :Cores, 'spacex/v4/cores'
-    autoload :Crew, 'spacex/v4/crew'
-    autoload :Rockets, 'spacex/v4/rockets'
-  end
+  autoload :Capsules,   'spacex/capsules'
+  autoload :Company,    'spacex/company'
+  autoload :Cores,      'spacex/cores'
+  autoload :Crew,       'spacex/crew'
+  autoload :Dragons,    'spacex/dragons'
+  autoload :History,    'spacex/history'
+  autoload :Landpads,   'spacex/landpads'
+  autoload :Launches,   'spacex/launches'
+  autoload :Launchpads, 'spacex/launchpads'
+  autoload :Payloads,   'spacex/payloads'
+  autoload :Roadster,   'spacex/roadster'
+  autoload :Rockets,    'spacex/rockets'
+  autoload :Ships,      'spacex/ships'
+  autoload :Starlink,   'spacex/starlink'
 end

@@ -1,0 +1,225 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/launchpads/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.14.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 21 Mar 2026 19:46:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '10815'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"2a3f-5t/XURehoCQY1XetRG/agXQF4ZQ"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Server:
+      - cloudflare
+      Spacex-Api-Cache:
+      - HIT
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 1ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Nel:
+      - '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=TVGLwPmOY5ppXXjQwLKGg82iE%2BpGjmwNUK6aFzysG7k2j3i1uynoleOCiSL16LYUK%2FToFfojJsgzk9ARX9HAQECRSEX0Jqp6CoWkvrk6lpGHaw%3D%3D"}]}'
+      Cf-Ray:
+      - 9dff75ff2de5f00c-YYZ
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"images":{"large":["https://i.imgur.com/7uXe1Kv.png"]},"name":"VAFB
+        SLC 3W","full_name":"Vandenberg Space Force Base Space Launch Complex 3W","locality":"Vandenberg
+        Space Force Base","region":"California","latitude":34.6440904,"longitude":-120.5931438,"launch_attempts":0,"launch_successes":0,"rockets":["5e9d0d95eda69955f709d1eb"],"timezone":"America/Los_Angeles","launches":[],"status":"retired","details":"SpaceX''s
+        original west coast launch pad for Falcon 1. It was used in a static fire
+        test but was never employed for a launch, and was abandoned due to range scheduling
+        conflicts arising from overflying other active pads.","id":"5e9e4501f5090910d4566f83"},{"images":{"large":["https://i.imgur.com/9oEMXwa.png"]},"name":"CCSFS
+        SLC 40","full_name":"Cape Canaveral Space Force Station Space Launch Complex
+        40","locality":"Cape Canaveral","region":"Florida","latitude":28.5618571,"longitude":-80.577366,"launch_attempts":99,"launch_successes":97,"rockets":["5e9d0d95eda69973a809d1ec"],"timezone":"America/New_York","launches":["5eb87cddffd86e000604b32f","5eb87cdeffd86e000604b330","5eb87cdfffd86e000604b331","5eb87ce0ffd86e000604b332","5eb87ce1ffd86e000604b333","5eb87ce2ffd86e000604b335","5eb87ce3ffd86e000604b336","5eb87ce4ffd86e000604b337","5eb87ce4ffd86e000604b338","5eb87ce5ffd86e000604b339","5eb87ce6ffd86e000604b33a","5eb87ce7ffd86e000604b33b","5eb87ce8ffd86e000604b33c","5eb87ceaffd86e000604b33d","5eb87ceaffd86e000604b33e","5eb87cecffd86e000604b33f","5eb87cedffd86e000604b340","5eb87ceeffd86e000604b341","5eb87cefffd86e000604b342","5eb87cf2ffd86e000604b344","5eb87cf3ffd86e000604b345","5eb87cf5ffd86e000604b346","5eb87cf6ffd86e000604b347","5eb87cf8ffd86e000604b348","5eb87cf9ffd86e000604b349","5eb87cfaffd86e000604b34a","5eb87cfbffd86e000604b34b","5eb87d0effd86e000604b35c","5eb87d10ffd86e000604b35e","5eb87d11ffd86e000604b35f","5eb87d15ffd86e000604b362","5eb87d16ffd86e000604b364","5eb87d18ffd86e000604b365","5eb87d1bffd86e000604b368","5eb87d1cffd86e000604b369","5eb87d1effd86e000604b36a","5eb87d20ffd86e000604b36c","5eb87d22ffd86e000604b36d","5eb87d26ffd86e000604b371","5eb87d27ffd86e000604b372","5eb87d2affd86e000604b374","5eb87d2effd86e000604b377","5eb87d30ffd86e000604b378","5eb87d36ffd86e000604b37b","5eb87d37ffd86e000604b37c","5eb87d39ffd86e000604b37d","5eb87d39ffd86e000604b37e","5eb87d3bffd86e000604b37f","5eb87d3cffd86e000604b380","5eb87d3fffd86e000604b382","5eb87d41ffd86e000604b383","5eb87d42ffd86e000604b384","5eb87d45ffd86e000604b387","5eb87d46ffd86e000604b389","5eb87d4affd86e000604b38b","5eb87d50ffd86e000604b394","5ed981d91f30554030d45c2a","5eb87d47ffd86e000604b38a","5ef6a2e70059c33cee4a8293","5eb87d4cffd86e000604b38d","5fb95b3f3a88ae63c954603c","5eb87d4bffd86e000604b38c","5eb87d4fffd86e000604b393","5fd386aa7faea57d297c86c1","5ff6554f9257f579ee3a6c5f","600f9a5e8f798e2a4d5f979c","600f9a718f798e2a4d5f979d","60428aafc041c16716f73cd7","60428ac4c041c16716f73cd8","605b4b6aaa5433645e37d03f","6079bd1c9a06446e8c61bf76","6079bd399a06446e8c61bf77","5fe3af6db3467846b3242160","5eb87d4effd86e000604b390","600f9b6d8f798e2a4d5f979f","618faad2563d69573ed8ca9d","6161c94c6db1a92bfba85349","5fe3afc1b3467846b3242164","61bf3e31cd5ab50b0d936345","6161d32d6db1a92bfba85359","61fc01dae0dc5662b76489a7","61fc0243e0dc5662b76489ae","6234908cf051102e1fcedac4","6243ad8baf52800c6e919252","6243ada6af52800c6e919253","62582a6f5988f159024b964b","625828f25988f159024b9643","6243ae24af52800c6e919258","6243ae0aaf52800c6e919257","62a9f08b20413d2695d88711","6243aea5af52800c6e91925c","62a9f0c920413d2695d88712","62a9f0f820413d2695d88714","62a9f12820413d2695d88716","62a9f86420413d2695d88719","62f3b5200f55c50e192a4e6c","62f3b5330f55c50e192a4e6e","63161329ffc78f3b8567070b","63161339ffc78f3b8567070c"],"status":"active","details":"SpaceX''s
+        primary Falcon 9 pad, where all east coast Falcon 9s launched prior to the
+        AMOS-6 anomaly. Previously used alongside SLC-41 to launch Titan rockets for
+        the US Air Force, the pad was heavily damaged by the AMOS-6 anomaly in September
+        2016. It returned to flight with CRS-13 on December 15, 2017, boasting an
+        upgraded throwback-style Transporter-Erector modeled after that at LC-39A.","id":"5e9e4501f509094ba4566f84"},{"images":{"large":["https://i.imgur.com/ZzTTC5p.png"]},"name":"STLS","full_name":"SpaceX
+        South Texas Launch Site","locality":"Boca Chica Village","region":"Texas","latitude":25.9972641,"longitude":-97.1560845,"launch_attempts":0,"launch_successes":0,"rockets":[],"timezone":"America/Chicago","launches":[],"status":"under
+        construction","details":"SpaceX''s new private launch site currently under
+        construction for suborbital test flights of Starship, and potentially orbital
+        flights of the full super heavy stack (previously referred to as BFR) in the
+        future. Currently planned to enter use with static fires and test hops of
+        the Starhopper, with the first tethered hop successfully occurring in March
+        2019. It was previously going to be used for Falcon 9 and Falcon Heavy flights,
+        but this no longer appears to be likely due to its construction timeline and
+        existing launch sites being sufficient to handle present demand. Due to the
+        Caribbean islands and off-shore oil wells, it will be limited to very few
+        possible launch trajectories, and current Texas law only allows a limited
+        number of beach closures per year for orbital launches.","id":"5e9e4502f5090927f8566f85"},{"images":{"large":["https://i.imgur.com/GGPgsVs.png"]},"name":"Kwajalein
+        Atoll","full_name":"Kwajalein Atoll Omelek Island","locality":"Omelek Island","region":"Marshall
+        Islands","latitude":9.0477206,"longitude":167.7431292,"launch_attempts":5,"launch_successes":2,"rockets":["5e9d0d95eda69955f709d1eb"],"timezone":"Pacific/Kwajalein","launches":["5eb87cd9ffd86e000604b32a","5eb87cdaffd86e000604b32b","5eb87cdbffd86e000604b32c","5eb87cdbffd86e000604b32d","5eb87cdcffd86e000604b32e"],"status":"retired","details":"SpaceX''s
+        original pad, where all of the Falcon 1 flights occurred (from 2006 to 2009).
+        It would have also been the launch site of the Falcon 1e and the Falcon 9,
+        but it was abandoned as SpaceX ended the Falcon 1 program and decided against
+        upgrading it to support Falcon 9, likely due to its remote location and ensuing
+        logistics complexities.","id":"5e9e4502f5090995de566f86"},{"images":{"large":["https://i.imgur.com/asp5L08.png"]},"name":"VAFB
+        SLC 4E","full_name":"Vandenberg Space Force Base Space Launch Complex 4E","locality":"Vandenberg
+        Space Force Base","region":"California","latitude":34.632093,"longitude":-120.610829,"launch_attempts":28,"launch_successes":27,"rockets":["5e9d0d95eda69973a809d1ec"],"timezone":"America/Los_Angeles","launches":["5eb87ce1ffd86e000604b334","5eb87cf0ffd86e000604b343","5eb87cfdffd86e000604b34c","5eb87d05ffd86e000604b354","5eb87d08ffd86e000604b357","5eb87d0affd86e000604b359","5eb87d0fffd86e000604b35d","5eb87d14ffd86e000604b361","5eb87d16ffd86e000604b363","5eb87d1affd86e000604b367","5eb87d1fffd86e000604b36b","5eb87d23ffd86e000604b36e","5eb87d25ffd86e000604b370","5eb87d28ffd86e000604b373","5eb87d31ffd86e000604b379","5ed983aa1f30554030d45c31","60e3bf0d73359e1e20335c37","5fe3b107b3467846b324216b","61bba806437241381bf7061e","607a34e35a906a44023e085e","61fc0203e0dc5662b76489a8","6243adcaaf52800c6e919254","6258290d5988f159024b9644","5fe3af43b3467846b324215e","62a9f0e320413d2695d88713","62a9f10b20413d2695d88715","62f3b4ff0f55c50e192a4e6b","62f3b53a0f55c50e192a4e6f"],"status":"active","details":"SpaceX''s
+        primary west coast launch pad for polar orbits and sun-synchronous orbits,
+        primarily used for Iridium NEXT and scientific satellite launches. The pad
+        was used for the debut of Falcon 9 v1.1 in the rocket''s first ever non-dragon
+        mission, CASSIOPE, in September 2013. It is SpaceX''s only remaining pad with
+        the old-style transporter/erector, which reclines prior to launch instead
+        of using a throwback procedure. It is also capable of launching Falcon Heavy
+        (although some pad modifications would be needed, but no west coast Falcon
+        Heavy missions are currently planned).","id":"5e9e4502f509092b78566f87"},{"images":{"large":["https://i.imgur.com/1jwU0Pk.png"]},"name":"KSC
+        LC 39A","full_name":"Kennedy Space Center Historic Launch Complex 39A","locality":"Cape
+        Canaveral","region":"Florida","latitude":28.6080585,"longitude":-80.6039558,"launch_attempts":55,"launch_successes":55,"rockets":["5e9d0d95eda69973a809d1ec","5e9d0d95eda69974db09d1ed"],"timezone":"America/New_York","launches":["5eb87cfeffd86e000604b34d","5eb87cfeffd86e000604b34e","5eb87d00ffd86e000604b34f","5eb87d01ffd86e000604b350","5eb87d01ffd86e000604b351","5eb87d03ffd86e000604b352","5eb87d04ffd86e000604b353","5eb87d06ffd86e000604b355","5eb87d07ffd86e000604b356","5eb87d09ffd86e000604b358","5eb87d0cffd86e000604b35a","5eb87d0dffd86e000604b35b","5eb87d13ffd86e000604b360","5eb87d19ffd86e000604b366","5eb87d24ffd86e000604b36f","5eb87d2bffd86e000604b375","5eb87d2dffd86e000604b376","5eb87d35ffd86e000604b37a","5eb87d3dffd86e000604b381","5eb87d43ffd86e000604b385","5eb87d44ffd86e000604b386","5eb87d46ffd86e000604b388","5ed9819a1f30554030d45c29","5ef6a1e90059c33cee4a828a","5ef6a2090059c33cee4a828b","5ef6a2bf0059c33cee4a828c","5eb87d4dffd86e000604b38e","5eb87d4effd86e000604b391","5f8399fb818d8b59f5740d43","5fbfecce54ceb10a5664c80a","5fbfecfe54ceb10a5664c80b","600f9a8d8f798e2a4d5f979e","5fe3af58b3467846b324215f","605b4b7daa5433645e37d040","605b4b95aa5433645e37d041","5fe3af84b3467846b3242161","5fe3b11eb3467846b324216c","607a37565a906a44023e0866","5fe3b15eb3467846b324216d","6161c88d6db1a92bfba85348","6161d2006db1a92bfba85356","61d5eca1f88e4c5fc91f1eb7","61e048bbbe8d8b66799018d0","61e048ffbe8d8b66799018d1","61fc0224e0dc5662b76489ab","61eefaa89eb1064137a1bd73","6243ade2af52800c6e919255","62582a855988f159024b964c","62615ebc0ec008379be596fa","6278481757b51b752c5c5a5f","6243ae40af52800c6e919259","62a9f8b320413d2695d8871b","62f3b5290f55c50e192a4e6d","62a9f89a20413d2695d8871a","62dd70d5202306255024d139"],"status":"active","details":"NASA''s
+        historic pad that launched most of the Saturn V and Space Shuttle missions,
+        including Apollo 11. SpaceX initially leased solely for Falcon Heavy and Crew
+        Dragon launches, but the company has also used it for others as well following
+        the damage to SLC-40 in the AMOS-6 explosion. After completing the necessary
+        modifications, the first launch SpaceX performed on the pad was CRS-10 in
+        February 2017. After SLC-40 was back online, 39A was upgraded to support Falcon
+        Heavy and complete the removal of the shuttle-era Rotating Service Structure.
+        More recently, a crew access arm and other safety equipment has been installed
+        in order to launch commercial crew missions. 39A also occasionally launches
+        other Falcon 9 missions between Falcon Heavy and Crew Dragon launches, depending
+        on pad scheduling. The pad may also potentially be upgraded in the future
+        for use with the BFR.","id":"5e9e4502f509094188566f88"}]'
+  recorded_at: Sat, 21 Mar 2026 19:46:07 GMT
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/launchpads/5e9e4501f5090910d4566f83
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.14.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 21 Mar 2026 19:46:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '663'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"297-/gZsDoW++6s7l3GGCJYyLWSMvss"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Server:
+      - cloudflare
+      Spacex-Api-Cache:
+      - MISS
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 3ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Nel:
+      - '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=UB9UyaQSw0%2BpzUJg4uQ3JcnvtLuN773I8X45MZ%2FtwaLBx7Ymev7lqikcG6zJQVWem8z5uIal40pHz%2FPdaJR3udns8Ax9nk6SNuZkqvtLpsTPMQ%3D%3D"}]}'
+      Cf-Ray:
+      - 9dff76644e32ac31-YYZ
+    body:
+      encoding: ASCII-8BIT
+      string: '{"images":{"large":["https://i.imgur.com/7uXe1Kv.png"]},"name":"VAFB
+        SLC 3W","full_name":"Vandenberg Space Force Base Space Launch Complex 3W","locality":"Vandenberg
+        Space Force Base","region":"California","latitude":34.6440904,"longitude":-120.5931438,"launch_attempts":0,"launch_successes":0,"rockets":["5e9d0d95eda69955f709d1eb"],"timezone":"America/Los_Angeles","launches":[],"status":"retired","details":"SpaceX''s
+        original west coast launch pad for Falcon 1. It was used in a static fire
+        test but was never employed for a launch, and was abandoned due to range scheduling
+        conflicts arising from overflying other active pads.","id":"5e9e4501f5090910d4566f83"}'
+  recorded_at: Sat, 21 Mar 2026 19:46:24 GMT
+recorded_with: VCR 6.4.0

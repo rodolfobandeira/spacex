@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/launches/latest
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.14.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 21 Mar 2026 19:44:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1427'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cache-Control:
+      - max-age=20
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"593-+Fiu3XKvmfUy10xCx7PQ7s+kCOI"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Server:
+      - cloudflare
+      Spacex-Api-Cache:
+      - HIT
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 1ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Nel:
+      - '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Z3Ib2QcU2U71hLMgge%2F8WxSay4DfNc82rAtEG08DoROlqhqLuX8YiBm0%2FlZoinRRha01OYTYTl1iMkrVx0fR3QWRU3%2FSAInD0XCKB%2Bi7NVzf1Q%3D%3D"}]}'
+      Cf-Ray:
+      - 9dff731468aa97b9-YYZ
+    body:
+      encoding: ASCII-8BIT
+      string: '{"fairings":null,"links":{"patch":{"small":"https://images2.imgbox.com/eb/d8/D1Yywp0w_o.png","large":"https://images2.imgbox.com/33/2e/k6VE4iYl_o.png"},"reddit":{"campaign":null,"launch":"https://www.reddit.com/r/spacex/comments/xvm76j/rspacex_crew5_launchcoast_docking_discussion_and/","media":null,"recovery":null},"flickr":{"small":[],"original":[]},"presskit":null,"webcast":"https://youtu.be/5EwW8ZkArL4","youtube_id":"5EwW8ZkArL4","article":null,"wikipedia":"https://en.wikipedia.org/wiki/SpaceX_Crew-5"},"static_fire_date_utc":null,"static_fire_date_unix":null,"net":false,"window":null,"rocket":"5e9d0d95eda69973a809d1ec","success":true,"failures":[],"details":null,"crew":["62dd7196202306255024d13c","62dd71c9202306255024d13d","62dd7210202306255024d13e","62dd7253202306255024d13f"],"ships":[],"capsules":["617c05591bad2c661a6e2909"],"payloads":["62dd73ed202306255024d145"],"launchpad":"5e9e4502f509094188566f88","flight_number":187,"name":"Crew-5","date_utc":"2022-10-05T16:00:00.000Z","date_unix":1664985600,"date_local":"2022-10-05T12:00:00-04:00","date_precision":"hour","upcoming":false,"cores":[{"core":"633d9da635a71d1d9c66797b","flight":1,"gridfins":true,"legs":true,"reused":false,"landing_attempt":true,"landing_success":true,"landing_type":"ASDS","landpad":"5e9e3033383ecbb9e534e7cc"}],"auto_update":true,"tbd":false,"launch_library_id":"f33d5ece-e825-4cd8-809f-1d4c72a2e0d3","id":"62dd70d5202306255024d139"}'
+  recorded_at: Sat, 21 Mar 2026 19:44:08 GMT
+recorded_with: VCR 6.4.0

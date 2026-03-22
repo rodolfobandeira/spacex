@@ -1,0 +1,189 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/dragons/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.14.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 21 Mar 2026 19:40:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '3533'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cache-Control:
+      - max-age=86400
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"dcd-IqPihHZDJbKdE8+gQotiCLba+cI"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Server:
+      - cloudflare
+      Spacex-Api-Cache:
+      - HIT
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 1ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Nel:
+      - '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=oOsRZdFuLBz065pcOjL5p9%2F5drblIyt4GRjkQu%2Boy36hUEpUhioGTycW2QintUEWU%2BqywTn%2Fm13nx%2BNQlJJy%2BUwz8p4KK3BE34sBi5ws4E3dBQ%3D%3D"}]}'
+      Cf-Ray:
+      - 9dff6e5e0afbab27-YYZ
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"heat_shield":{"material":"PICA-X","size_meters":3.6,"temp_degrees":3000,"dev_partner":"NASA"},"launch_payload_mass":{"kg":6000,"lb":13228},"launch_payload_vol":{"cubic_meters":25,"cubic_feet":883},"return_payload_mass":{"kg":3000,"lb":6614},"return_payload_vol":{"cubic_meters":11,"cubic_feet":388},"pressurized_capsule":{"payload_volume":{"cubic_meters":11,"cubic_feet":388}},"trunk":{"trunk_volume":{"cubic_meters":14,"cubic_feet":494},"cargo":{"solar_array":2,"unpressurized_cargo":true}},"height_w_trunk":{"meters":7.2,"feet":23.6},"diameter":{"meters":3.7,"feet":12},"first_flight":"2010-12-08","flickr_images":["https://i.imgur.com/9fWdwNv.jpg","https://live.staticflickr.com/8578/16655995541_078768dea2_b.jpg","https://farm3.staticflickr.com/2815/32761844973_4b55b27d3c_b.jpg","https://farm9.staticflickr.com/8618/16649075267_d18cbb4342_b.jpg"],"name":"Dragon
+        1","type":"capsule","active":true,"crew_capacity":0,"sidewall_angle_deg":15,"orbit_duration_yr":2,"dry_mass_kg":4200,"dry_mass_lb":9300,"thrusters":[{"type":"Draco","amount":18,"pods":4,"fuel_1":"nitrogen
+        tetroxide","fuel_2":"monomethylhydrazine","isp":300,"thrust":{"kN":0.4,"lbf":90}}],"wikipedia":"https://en.wikipedia.org/wiki/SpaceX_Dragon","description":"Dragon
+        is a reusable spacecraft developed by SpaceX, an American private space transportation
+        company based in Hawthorne, California. Dragon is launched into space by the
+        SpaceX Falcon 9 two-stage-to-orbit launch vehicle. The Dragon spacecraft was
+        originally designed for human travel, but so far has only been used to deliver
+        cargo to the International Space Station (ISS).","id":"5e9d058759b1ff74a7ad5f8f"},{"heat_shield":{"material":"PICA-X","size_meters":3.6,"temp_degrees":3000,"dev_partner":"NASA"},"launch_payload_mass":{"kg":6000,"lb":13228},"launch_payload_vol":{"cubic_meters":25,"cubic_feet":883},"return_payload_mass":{"kg":3000,"lb":6614},"return_payload_vol":{"cubic_meters":11,"cubic_feet":388},"pressurized_capsule":{"payload_volume":{"cubic_meters":11,"cubic_feet":388}},"trunk":{"trunk_volume":{"cubic_meters":14,"cubic_feet":494},"cargo":{"solar_array":2,"unpressurized_cargo":true}},"height_w_trunk":{"meters":7.2,"feet":23.6},"diameter":{"meters":3.7,"feet":12},"first_flight":"2019-03-02","flickr_images":["https://farm8.staticflickr.com/7647/16581815487_6d56cb32e1_b.jpg","https://farm1.staticflickr.com/780/21119686299_c88f63e350_b.jpg","https://farm9.staticflickr.com/8588/16661791299_a236e2f5dc_b.jpg"],"name":"Dragon
+        2","type":"capsule","active":true,"crew_capacity":7,"sidewall_angle_deg":15,"orbit_duration_yr":2,"dry_mass_kg":6350,"dry_mass_lb":14000,"thrusters":[{"type":"Draco","amount":18,"pods":4,"fuel_1":"nitrogen
+        tetroxide","fuel_2":"monomethylhydrazine","isp":300,"thrust":{"kN":0.4,"lbf":90}},{"type":"SuperDraco","amount":8,"pods":4,"fuel_1":"dinitrogen
+        tetroxide","fuel_2":"monomethylhydrazine","isp":235,"thrust":{"kN":71,"lbf":16000}}],"wikipedia":"https://en.wikipedia.org/wiki/Dragon_2","description":"Dragon
+        2 (also Crew Dragon, Dragon V2, or formerly DragonRider) is the second version
+        of the SpaceX Dragon spacecraft, which will be a human-rated vehicle. It includes
+        a set of four side-mounted thruster pods with two SuperDraco engines each,
+        which can serve as a launch escape system or launch abort system (LAS). In
+        addition, it has much larger windows, new flight computers and avionics, and
+        redesigned solar arrays, and a modified outer mold line from the initial cargo
+        Dragon that has been flying for several years.","id":"5e9d058859b1ffd8e2ad5f90"}]'
+  recorded_at: Sat, 21 Mar 2026 19:40:55 GMT
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/dragons/5e9d058759b1ff74a7ad5f8f
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.14.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 21 Mar 2026 19:41:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1638'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cache-Control:
+      - max-age=86400
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"666-D4yDE+8rA8EDOJAmOtI4U5LN1ag"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Server:
+      - cloudflare
+      Spacex-Api-Cache:
+      - HIT
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 1ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Nel:
+      - '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=iaFpdivHmQQ8Oy3titXHNCtw5tSASOl5y062XUHur6p5kPvz9H4o1YR%2B%2Fpz25KB1m0iVYkrigIFGXfFEble9hLGWyBzCL61xUGow9YiUkjQSsA%3D%3D"}]}'
+      Cf-Ray:
+      - 9dff6ed35d72ab4c-YYZ
+    body:
+      encoding: ASCII-8BIT
+      string: '{"heat_shield":{"material":"PICA-X","size_meters":3.6,"temp_degrees":3000,"dev_partner":"NASA"},"launch_payload_mass":{"kg":6000,"lb":13228},"launch_payload_vol":{"cubic_meters":25,"cubic_feet":883},"return_payload_mass":{"kg":3000,"lb":6614},"return_payload_vol":{"cubic_meters":11,"cubic_feet":388},"pressurized_capsule":{"payload_volume":{"cubic_meters":11,"cubic_feet":388}},"trunk":{"trunk_volume":{"cubic_meters":14,"cubic_feet":494},"cargo":{"solar_array":2,"unpressurized_cargo":true}},"height_w_trunk":{"meters":7.2,"feet":23.6},"diameter":{"meters":3.7,"feet":12},"first_flight":"2010-12-08","flickr_images":["https://i.imgur.com/9fWdwNv.jpg","https://live.staticflickr.com/8578/16655995541_078768dea2_b.jpg","https://farm3.staticflickr.com/2815/32761844973_4b55b27d3c_b.jpg","https://farm9.staticflickr.com/8618/16649075267_d18cbb4342_b.jpg"],"name":"Dragon
+        1","type":"capsule","active":true,"crew_capacity":0,"sidewall_angle_deg":15,"orbit_duration_yr":2,"dry_mass_kg":4200,"dry_mass_lb":9300,"thrusters":[{"type":"Draco","amount":18,"pods":4,"fuel_1":"nitrogen
+        tetroxide","fuel_2":"monomethylhydrazine","isp":300,"thrust":{"kN":0.4,"lbf":90}}],"wikipedia":"https://en.wikipedia.org/wiki/SpaceX_Dragon","description":"Dragon
+        is a reusable spacecraft developed by SpaceX, an American private space transportation
+        company based in Hawthorne, California. Dragon is launched into space by the
+        SpaceX Falcon 9 two-stage-to-orbit launch vehicle. The Dragon spacecraft was
+        originally designed for human travel, but so far has only been used to deliver
+        cargo to the International Space Station (ISS).","id":"5e9d058759b1ff74a7ad5f8f"}'
+  recorded_at: Sat, 21 Mar 2026 19:41:14 GMT
+recorded_with: VCR 6.4.0

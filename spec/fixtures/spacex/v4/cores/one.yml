@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/cores/60b800111f83cc1e59f16438
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - max-age=300
+      Content-Length:
+      - '261'
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Oct 2021 23:51:22 GMT
+      Etag:
+      - '"105-UdzG/qTHbRTybB7j8xxqG6PAJ5A"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Server:
+      - Caddy
+      Spacex-Api-Cache:
+      - MISS
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 2ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: '{"block":5,"reuse_count":0,"rtls_attempts":0,"rtls_landings":0,"asds_attempts":1,"asds_landings":1,"last_update":"Landed
+        on OCISLY* as of June 3, 2021 ","launches":["5fe3af84b3467846b3242161"],"serial":"B1067","status":"unknown","id":"60b800111f83cc1e59f16438"}'
+    http_version: 
+  recorded_at: Mon, 11 Oct 2021 23:51:23 GMT
+recorded_with: VCR 4.0.0

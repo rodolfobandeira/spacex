@@ -1,19 +1,21 @@
 module SPACEX
+  BASE_URI = 'https://api.spacexdata.com'.freeze
+
   class Response < Hashie::Mash
     disable_warnings
   end
 
   module BaseRequest
     class << self
-      def info(path, klass = nil, version = 'v3')
-        response_body = get(path, version).body
+      def info(path, klass = nil)
+        response_body = get(path).body
         process(response_body, klass)
       end
 
       private
 
-      def get(path, version)
-        conn(path, version).get
+      def get(path)
+        conn(path).get
       end
 
       def process(response_body, klass)
@@ -38,9 +40,9 @@ module SPACEX
         SPACEX::Response.new(response)
       end
 
-      def conn(path, version)
+      def conn(path)
         Faraday.new(
-          url: "#{SPACEX::BASE_URI}/#{version}/#{path}",
+          url: "#{SPACEX::BASE_URI}/v4/#{path}",
           request: {
             params_encoder: Faraday::FlatParamsEncoder
           }
