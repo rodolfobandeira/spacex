@@ -31,6 +31,12 @@ describe SPACEX::Rockets do
       expect(subject.engines).to be_a Hash
       expect(subject.height).to be_a Hash
       expect(subject.mass).to be_a Hash
+      expect(subject.diameter).to be_a Hash
+      expect(subject.first_stage).to be_a Hash
+      expect(subject.second_stage).to be_a Hash
+      expect(subject.landing_legs).to be_a Hash
+      expect(subject.payload_weights).to be_an Array
+      expect(subject.description).not_to be_nil
     end
   end
 end
