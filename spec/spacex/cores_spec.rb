@@ -25,6 +25,7 @@ describe SPACEX::Cores do
       expect(subject.launches).to be_an Array
       expect(subject.launches.first).to eq '5fe3af84b3467846b3242161'
       expect(subject.serial).to eq 'B1067'
+      expect(subject.status).to eq 'unknown'
       expect(subject.id).to eq '60b800111f83cc1e59f16438'
     end
   end

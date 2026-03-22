@@ -10,6 +10,7 @@ module SPACEX
     property 'rtls_attempts'
     property 'rtls_landings'
     property 'serial'
+    property 'status'
 
     def self.info(id = nil)
       SPACEX::BaseRequest.info("cores/#{id}", SPACEX::Cores)
