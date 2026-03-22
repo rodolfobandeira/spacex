@@ -2,10 +2,7 @@ SpaceX Ruby Client
 ===============
 
 [![Gem Version](https://badge.fury.io/rb/spacex.svg)](https://badge.fury.io/rb/spacex)
-![Github Actions](https://github.com/rodolfobandeira/spacex/workflows/Ruby/badge.svg)
-[![Coverage Status - Coverall](https://coveralls.io/repos/github/rodolfobandeira/spacex/badge.svg?branch=master)](https://coveralls.io/github/rodolfobandeira/spacex?branch=master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/d125a8ff6d902eb48c8f/maintainability)](https://codeclimate.com/github/rodolfobandeira/spacex/maintainability)
-[![Test Coverage - CodeClimate](https://api.codeclimate.com/v1/badges/d125a8ff6d902eb48c8f/test_coverage)](https://codeclimate.com/github/rodolfobandeira/spacex/test_coverage)
+[![Tests](https://github.com/rodolfobandeira/spacex/actions/workflows/ruby.yml/badge.svg)](https://github.com/rodolfobandeira/spacex/actions/workflows/ruby.yml)
 
 A Ruby library that consumes the [SpaceX API](https://github.com/r-spacex/SpaceX-API).
 
