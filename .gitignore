@@ -51,3 +51,4 @@ Gemfile.lock
 
 *.gem
 .byebug_history
+.claude
